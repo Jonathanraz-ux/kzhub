@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#2a2a2a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c5a880"/>
+      <stop offset="100%" stop-color="#a8935e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="60" y="60" width="180" height="180" rx="4" fill="none" stroke="#6b5344" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="150" cy="150" r="40" fill="none" stroke="url(#gold)" stroke-width="1" opacity="0.5"/>
+  <text x="150" y="260" text-anchor="middle" fill="#c5a880" font-family="serif" font-size="12" opacity="0.6">MINERAL</text>
+  <text x="400" y="310" text-anchor="middle" fill="#9a9590" font-family="sans-serif" font-size="13" opacity="0.4">RESOURCE IMAGE</text>
+</svg>

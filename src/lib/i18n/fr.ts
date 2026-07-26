@@ -1,0 +1,200 @@
+import type { TranslationKeys } from "./types";
+
+export const fr: TranslationKeys = {
+  navHome: "Accueil",
+  navOpportunities: "Opportunités",
+  navAbout: "À propos",
+  navServices: "Services",
+  navResources: "Ressources",
+  navPortfolio: "Portefeuille",
+  navContact: "Contact",
+  investorPortal: "Portail Investisseur",
+
+  heroBrand: "Kazak Mining Hub",
+  heroTitle: "Votre Partenaire de Confiance pour l'Investissement Minier à Madagascar",
+  heroSubtitle:
+    "Achetez des sites miniers vérifiés. Investissez en toute confiance. Connecter les investisseurs internationaux aux opportunités commerciales à haut potentiel à Madagascar.",
+  heroCtaPrimary: "Explorer les Opportunités",
+  heroCtaSecondary: "Télécharger le Dossier",
+  heroTrustLine: "Projets Vérifiés • Diligence Locale • Accompagnement Réglementaire",
+
+  statOpportunities: "Opportunités Vérifiées",
+  statMinerals: "Minéraux Stratégiques",
+  statExperience: "Années d'Expérience",
+  statConnections: "Connexions Internationales",
+
+  partnersTitle: "Approuvé par des Partenaires Internationaux de Premier Plan",
+
+  aboutLabel: "À Propos",
+  aboutTitle: "Bâti sur l'Expertise Locale et les Standards Internationaux",
+  aboutDesc:
+    "Fondé en 2008, Kazak Mining Hub s'est imposé comme la plateforme d'investissement minier de référence à Madagascar, connectant les capitaux internationaux aux opportunités minérales de classe mondiale.",
+  missionTitle: "Notre Mission",
+  visionTitle: "Notre Vision",
+  valuesTitle: "Nos Valeurs",
+  teamTitle: "Équipe Dirigeante",
+
+  servicesLabel: "Services",
+  servicesTitle: "Services Miniers Complets",
+  servicesDesc:
+    "De la sélection des sites au lancement des projets, nous offrons un accompagnement complet aux investisseurs internationaux dans le secteur minier malgache.",
+
+  mineralsLabel: "Ressources",
+  mineralsTitle: "La Richesse Minérale de Madagascar",
+  mineralsDesc:
+    "L'île abrite des gisements de classe mondiale dans neuf catégories minérales clés essentielles à la transition énergétique mondiale.",
+
+  whyChooseLabel: "Pourquoi Nous",
+  whyChooseTitle: "Pourquoi Choisir Kazak Mining Hub",
+
+  responsibleLabel: "Responsabilité",
+  responsibleTitle: "Notre Engagement pour une Exploitation Minière Responsable",
+  responsibleDesc:
+    "Nous intégrons la gestion environnementale, la responsabilité sociale et la gouvernance transparente dans chaque projet.",
+
+  processLabel: "Processus",
+  processTitle: "Votre Parcours d'Investissement",
+  processDesc:
+    "Un chemin structuré de la découverte au lancement, guidé à chaque étape par notre équipe d'experts.",
+
+  testimonialsLabel: "Témoignages",
+  testimonialsTitle: "Ce Que Disent Nos Partenaires",
+
+  portfolioLabel: "Portefeuille",
+  portfolioTitle: "Portefeuille Minier",
+  portfolioDesc:
+    "Une sélection de projets d'exploration et de développement à travers les régions minières les plus prometteuses de Madagascar.",
+
+  faqLabel: "FAQ",
+  faqTitle: "Foire Aux Questions",
+  faqQuestion1: "Sur quels minéraux Kazak Mining Hub se concentre-t-il ?",
+  faqAnswer1:
+    "Nous nous concentrons sur l'or, le lithium, le graphite, les terres rares, le nickel, le cobalt, le vanadium, les pierres précieuses et les minéraux industriels — des ressources essentielles à la transition énergétique mondiale.",
+  faqQuestion2: "Comment fonctionne le processus de diligence raisonnable ?",
+  faqAnswer2:
+    "Notre équipe pluridisciplinaire mène des évaluations géologiques, juridiques, financières et ESG pour garantir que chaque opportunité répond à des normes rigoureuses avant sa présentation.",
+  faqQuestion3: "Les investisseurs étrangers peuvent-ils participer ?",
+  faqAnswer3:
+    "Oui — nous facilitons des structures de co-entreprises conformes à la législation minière malgache avec des cadres de gouvernance transparents.",
+  faqQuestion4: "Quel est le calendrier typique d'un investissement ?",
+  faqAnswer4:
+    "De l'exploration initiale à la production, les projets s'étendent généralement sur 3 à 7 ans, selon les permis, le développement des infrastructures et les marchés.",
+  faqQuestion5: "Qu'est-ce qui rend Madagascar attractif pour l'investissement minier ?",
+  faqAnswer5:
+    "Madagascar possède certains des gisements les plus riches au monde en terres rares, nickel, cobalt, graphite et or, avec un contexte géologique favorable.",
+  faqQuestion6: "Fournissez-vous un soutien continu après l'acquisition ?",
+  faqAnswer6:
+    "Oui — nous offrons un suivi continu, un soutien opérationnel, une liaison communautaire et des rapports réguliers pour garantir la performance optimale de votre investissement.",
+
+  contactLabel: "Contact",
+  contactTitle: "Lancez la Conversation",
+  contactDesc:
+    "Prêt à explorer le potentiel minier de Madagascar ? Notre équipe est à votre disposition pour discuter des opportunités adaptées à vos critères d'investissement.",
+  officeLabel: "Bureau",
+  emailLabel: "E-mail",
+  phoneLabel: "Téléphone",
+  whatsappLabel: "WhatsApp",
+  formName: "Nom Complet",
+  formEmail: "Adresse E-mail",
+  formCompany: "Entreprise / Organisation",
+  formInterest: "Domaine d'Intérêt",
+  formInterestInvestment: "Opportunité d'Investissement",
+  formInterestPartnership: "Partenariat Stratégique",
+  formInterestDueDiligence: "Services de Due Diligence",
+  formInterestOther: "Autre",
+  formMessage: "Votre Message",
+  formSubmit: "Envoyer le Message",
+  formSuccessTitle: "Message Reçu",
+  formSuccessDesc:
+    "Merci pour votre intérêt. Notre équipe vous répondra sous 48 heures.",
+
+  footerHome: "Accueil",
+  footerOpportunities: "Opportunités",
+  footerAbout: "À propos",
+  footerServices: "Services",
+  footerResources: "Ressources",
+  footerContact: "Contact",
+  footerRights: "Tous droits réservés.",
+  footerLegal: "Mentions Légales",
+  footerPrivacy: "Politique de Confidentialité",
+
+  // Values
+  valIntegrityTitle: "Intégrité",
+  valIntegrityDesc: "Chaque projet fait l'objet d'une vérification indépendante avant d'être présenté.",
+  valTransparencyTitle: "Transparence",
+  valTransparencyDesc: "Accès complet aux rapports de due diligence, statut des permis et modèles financiers.",
+  valSustainabilityTitle: "Durabilité",
+  valSustainabilityDesc: "Approche axée sur les critères ESG garantissant un impact environnemental et social maîtrisé.",
+  valCollaborationTitle: "Collaboration",
+  valCollaborationDesc: "Partenariats solides avec les communautés locales, le gouvernement et les opérateurs.",
+
+  // Services
+  serMiningSitesTitle: "Sites Miniers Vérifiés à Vendre",
+  serMiningSitesDesc: "Accédez à un portefeuille de sites miniers vérifiés avec permis accordés et potentiel géologique prouvé à Madagascar.",
+  serAdvisoryTitle: "Accompagnement d'Investissement Global",
+  serAdvisoryDesc: "Support complet avant, pendant et après l'acquisition. Conseils de l'évaluation du projet au suivi opérationnel.",
+  serAdminTitle: "Support Administratif & Permis Miniers",
+  serAdminDesc: "Assistance pour l'obtention de permis miniers, licences et démarches réglementaires auprès des autorités.",
+  serDueDiligenceTitle: "Diligence Raisonnable & Évaluation",
+  serDueDiligenceDesc: "Évaluations géologiques, juridiques, financières et ESG menées par notre équipe d'experts pluridisciplinaires.",
+  serCommunityTitle: "Relations Communautaires & Parties Prenantes",
+  serCommunityDesc: "Coordination avec les autorités gouvernementales, engagement communautaire et support aux entreprises locales.",
+
+  // Minerals
+  minGoldName: "Or",
+  minGoldDesc: "Gisements alluvionnaires et roches dures à haute teneur dans la ceinture métamorphique orientale.",
+  minLithiumName: "Lithium",
+  minLithiumDesc: "Pegmatites à spodumène essentielles à la production de batteries pour véhicules électriques.",
+  minGraphiteName: "Graphite",
+  minGraphiteDesc: "Gisements à grandes paillettes idéaux pour les anodes de batteries et réfractaires industriels.",
+  minNickelName: "Nickel",
+  minNickelDesc: "Gisements latéritiques répondant à la demande croissante en cathodes de batteries.",
+  minCobaltName: "Cobalt",
+  minCobaltDesc: "Essentiel au stockage d'énergie et aux alliages haute température.",
+  minRareEarthsName: "Terres Rares",
+  minRareEarthsDesc: "Sables à monazite avec un fort potentiel d'extraction de néodyme et praséodyme.",
+  minVanadiumName: "Vanadium",
+  minVanadiumDesc: "Idéal pour les batteries à flux et les alliages d'acier haute résistance.",
+  minGemstonesName: "Pierres Précieuses",
+  minGemstonesDesc: "Saphirs, rubis et émeraudes issus des gisements malgaches de renommée mondiale.",
+  minIndustrialName: "Minéraux Industriels",
+  minIndustrialDesc: "Calcaire, kaolin et quartz pour la construction et l'industrie.",
+
+  // Why Choose
+  whyVerifiedTitle: "Sites Miniers Vérifiés à Vendre",
+  whyVerifiedDesc: "Projets miniers prêts à l'exploitation et sites vérifiés à vendre à Madagascar.",
+  whyLocalTitle: "Expertise Locale & Partenariats de Confiance",
+  whyLocalDesc: "Notre équipe sur le terrain possède une connaissance approfondie de la réglementation et des communautés.",
+  whySupportTitle: "Support d'Investissement de Bout en Bout",
+  whySupportDesc: "Accompagnement administratif et opérationnel complet avant, pendant et après l'acquisition.",
+  whyTranspTitle: "Processus d'Acquisition Transparent",
+  whyTranspDesc: "Accès transparent aux rapports de due diligence, permis et modélisations de projets.",
+  whyNetworkTitle: "Exploitation Minière Responsable & Durable",
+  whyNetworkDesc: "Engagement pour une exploitation respectant la dignité humaine et protégeant l'environnement.",
+
+  // Responsible
+  respHumanTitle: "Respect de la Dignité Humaine",
+  respHumanDesc: "Respect strict des droits humains et promotion des normes sociales dans tous nos projets.",
+  respEnvTitle: "Protection de l'Environnement",
+  respEnvDesc: "Évaluations d'impact environnemental rigoureuses, plans de réhabilitation et préservation de la biodiversité.",
+  respSustTitle: "Développement Économique Durable",
+  respSustDesc: "Création d'investissements miniers générant une prospérité partagée pour les investisseurs et les communautés.",
+  respEmployTitle: "Support aux Entreprises Locales",
+  respEmployDesc: "Priorité à l'emploi local, aux programmes de formation et au soutien du tissu économique local.",
+  respEconomicTitle: "Partenariat Gouvernement & Communautés",
+  respEconomicDesc: "Travail étroit avec les communautés locales, les autorités publiques et les acteurs industriels.",
+
+  // Process Steps
+  procExploreTitle: "Découverte des Opportunités",
+  procExploreDesc: "Parcourez notre catalogue sélectionné de projets miniers vérifiés adaptés à vos critères.",
+  procEvalTitle: "Évaluation du Projet",
+  procEvalDesc: "Recevez des dossiers complets comprenant données géologiques, modèles financiers et analyse des risques.",
+  procVisitTitle: "Visite de Site & Vérification",
+  procVisitDesc: "Visitez les gisements, rencontrez les équipes locales et inspectez les opérations directement sur le terrain.",
+  procDueTitle: "Diligence Raisonnable",
+  procDueDesc: "Évaluation juridique, géologique, financière et ESG complète par notre équipe pluridisciplinaire.",
+  procAcqTitle: "Contrats & Acquisition",
+  procAcqDesc: "Préparation et négociation de contrats, soutien aux démarches d'obtention de permis et licences.",
+  procLaunchTitle: "Lancement du Projet & Suivi Local",
+  procLaunchDesc: "Sécurisation de vos opérations avec accompagnement continu et coordination réglementaire locale.",
+};
