@@ -389,7 +389,7 @@ export const portfolio = [
     description:
       "Spodumene-bearing pegmatites in the Sahatany Valley, positioned to supply the global EV battery market.",
     image:
-      "https://images.unsplash.com/photo-1578328819058-b69f3a3b0f6b?auto=format&fit=crop&w=600&q=85",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=85",
     tall: true,
   },
   {
