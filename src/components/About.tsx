@@ -10,8 +10,13 @@ const About: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-background">
-      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
+    <section id="about" className="py-20 md:py-28 bg-background relative overflow-hidden">
+      {/* Background ambient gold glows */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12 relative z-10">
+        {/* Section Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -22,11 +27,118 @@ const About: React.FC = () => {
           <p className="text-gold-400 text-sm font-medium tracking-[0.2em] uppercase mb-4">
             {t.aboutLabel}
           </p>
-          <h2 className="text-3xl md:text-5xl text-cream max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-5xl text-cream max-w-3xl mx-auto font-serif leading-tight">
             {t.aboutTitle}
           </h2>
+          <p className="text-cream/60 mt-4 max-w-2xl mx-auto text-base">
+            {t.aboutDesc}
+          </p>
         </motion.div>
 
+        {/* Executive Biography Showcase featuring Client Headshots */}
+        <motion.div
+          className="mb-24 border border-gold-500/20 rounded-2xl p-6 md:p-10 lg:p-12 bg-gradient-to-br from-white/[0.04] via-black/40 to-gold-950/10 backdrop-blur-md shadow-2xl relative"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            {/* Client Portraits Grid */}
+            <div className="lg:col-span-5 grid grid-cols-2 gap-4 relative">
+              <motion.div
+                className="relative rounded-xl overflow-hidden border-2 border-gold-500/30 shadow-xl group aspect-[3/4]"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <SafeImage
+                  src="/images/client/client-portrait-1.jpg"
+                  alt="Client Leadership Portrait 1"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 300px"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
+                <div className="absolute bottom-3 left-3 right-3 text-left">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-gold-400 block mb-0.5">
+                    Kazak Ltd.
+                  </span>
+                  <p className="text-xs font-semibold text-cream">
+                    Leadership Exécutif
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="relative rounded-xl overflow-hidden border-2 border-gold-500/30 shadow-xl group aspect-[3/4] translate-y-4 md:translate-y-6"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <SafeImage
+                  src="/images/client/client-portrait-2.jpg"
+                  alt="Client Leadership Portrait 2"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 300px"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
+                <div className="absolute bottom-3 left-3 right-3 text-left">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-gold-400 block mb-0.5">
+                    Kazak Mining Hub
+                  </span>
+                  <p className="text-xs font-semibold text-cream">
+                    Direction Stratégique
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Biography Text & Company Overview */}
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-medium tracking-wide">
+                <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse" />
+                {t.bioLabel}
+              </div>
+
+              <h3 className="text-2xl md:text-3xl font-serif text-cream font-bold leading-snug">
+                {t.bioTitle}
+              </h3>
+
+              <p className="text-gold-200/90 font-medium text-sm md:text-base border-l-2 border-gold-400 pl-4 py-1">
+                {t.bioSubtitle}
+              </p>
+
+              <p className="text-cream/70 text-sm md:text-base leading-relaxed">
+                {t.bioDesc1}
+              </p>
+
+              <p className="text-cream/70 text-sm md:text-base leading-relaxed">
+                {t.bioDesc2}
+              </p>
+
+              <div className="pt-2 grid grid-cols-2 gap-4 border-t border-white/10 text-xs md:text-sm text-cream/80">
+                <div className="flex items-center gap-2">
+                  <Icon name="CheckCircle2" className="w-4 h-4 text-gold-400 shrink-0" />
+                  <span>Sites Miniers Vérifiés</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="CheckCircle2" className="w-4 h-4 text-gold-400 shrink-0" />
+                  <span>Accompagnement de Bout en Bout</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="CheckCircle2" className="w-4 h-4 text-gold-400 shrink-0" />
+                  <span>Expertise Locale & Réseau</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Icon name="CheckCircle2" className="w-4 h-4 text-gold-400 shrink-0" />
+                  <span>Exploitation Durable & ESG</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
           <motion.div
             className="relative border border-white/[0.06] rounded-xl p-8 bg-gradient-to-b from-white/[0.03] to-transparent hover:border-gold-500/20 transition-colors"
@@ -41,7 +153,7 @@ const About: React.FC = () => {
             <h3 className="text-lg font-semibold text-gold-400 mb-3 font-serif">
               {t.missionTitle}
             </h3>
-            <p className="text-cream/60 leading-relaxed text-sm">
+            <p className="text-cream/70 leading-relaxed text-sm">
               {about.mission}
             </p>
           </motion.div>
@@ -58,12 +170,13 @@ const About: React.FC = () => {
             <h3 className="text-lg font-semibold text-gold-400 mb-3 font-serif">
               {t.visionTitle}
             </h3>
-            <p className="text-cream/60 leading-relaxed text-sm">
+            <p className="text-cream/70 leading-relaxed text-sm">
               {about.vision}
             </p>
           </motion.div>
         </div>
 
+        {/* Values */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -93,13 +206,14 @@ const About: React.FC = () => {
               <h4 className="text-sm font-semibold text-cream mb-1.5">
                 {t[val.titleKey as keyof typeof t]}
               </h4>
-              <p className="text-xs text-cream/40 leading-relaxed">
+              <p className="text-xs text-cream/50 leading-relaxed">
                 {t[val.descKey as keyof typeof t]}
               </p>
             </motion.div>
           ))}
         </div>
 
+        {/* Leadership Team Cards */}
         <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
@@ -107,34 +221,34 @@ const About: React.FC = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm text-cream/40 tracking-widest uppercase mb-2">
+          <p className="text-sm text-gold-400 tracking-widest uppercase mb-2">
             {t.teamTitle}
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-8 max-w-3xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
           {team.map((member, idx) => (
             <motion.div
               key={member.id}
-              className="text-center group"
+              className="p-6 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent text-center group hover:border-gold-500/30 transition-all shadow-lg"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: idx * 0.15, duration: 0.5 }}
             >
-              <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-white/[0.06] mx-auto mb-4 transition-all group-hover:border-gold-500/30">
+              <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-gold-400/40 mx-auto mb-5 transition-all group-hover:border-gold-400 shadow-md">
                 <SafeImage
                   src={member.image}
                   alt={member.name}
                   fill
-                  sizes="112px"
-                  className="object-cover"
+                  sizes="144px"
+                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <h4 className="text-sm font-semibold text-cream">
+              <h4 className="text-base md:text-lg font-semibold text-cream font-serif">
                 {member.name}
               </h4>
-              <p className="text-xs text-cream/40 mt-0.5">{member.role}</p>
+              <p className="text-xs text-gold-400/90 mt-1 font-medium">{member.role}</p>
             </motion.div>
           ))}
         </div>

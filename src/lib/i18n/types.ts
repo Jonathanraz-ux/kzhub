@@ -31,6 +31,13 @@ export type TranslationKeys = {
   visionTitle: string;
   valuesTitle: string;
   teamTitle: string;
+  bioLabel: string;
+  bioTitle: string;
+  bioSubtitle: string;
+  bioDesc1: string;
+  bioDesc2: string;
+  bioFounderTitle: string;
+  bioFounderSub: string;
 
   servicesLabel: string;
   servicesTitle: string;

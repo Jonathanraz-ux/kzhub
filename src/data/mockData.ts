@@ -22,24 +22,15 @@ export const partners = [
 export const team = [
   {
     id: 1,
-    name: "Rakotoarisoa Jean",
-    role: "CEO & Founder",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80",
+    name: "Kazak Ltd. Executive Leadership",
+    role: "CEO & Founder - Kazak Ltd. & Kazak Mining Hub",
+    image: "/images/client/client-portrait-1.jpg",
   },
   {
     id: 2,
-    name: "Sarah Mitchell",
-    role: "Director of Investments",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
-  },
-  {
-    id: 3,
-    name: "Andrianantenaina H.",
-    role: "Head of Operations",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+    name: "Direction Développement & Stratégie",
+    role: "Director of Business Development & Mining Projects",
+    image: "/images/client/client-portrait-2.jpg",
   },
 ];
 
@@ -403,12 +394,11 @@ export const portfolio = [
   },
   {
     id: 4,
-    title: "REE Sampling Campaign",
-    category: "Rare Earth Projects",
+    title: "Prélèvement d'Échantillons & Analyses",
+    category: "Mineral Samples",
     description:
-      "Monazite-bearing sand sampling across the central highlands for neodymium and praseodymium extraction.",
-    image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=85",
+      "Vérification sur le terrain et prélèvement d'échantillons minéraux de haute teneur par nos experts géologues.",
+    image: "/images/projects/raw-mineral-sample.jpg",
     wide: true,
   },
   {
@@ -423,12 +413,11 @@ export const portfolio = [
   },
   {
     id: 6,
-    title: "Field Exploration Camp",
+    title: "Site Minier & Concession Hydraulique",
     category: "Field Exploration",
     description:
-      "Remote exploration camp supporting geologists and field teams across Madagascar's mineral-rich regions.",
-    image:
-      "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=85",
+      "Visite de sites miniers vérifiés et inspection des périmètres d'exploitation et réserves hydriques à Madagascar.",
+    image: "/images/projects/mining-site-landscape.jpg",
   },
   {
     id: 7,
