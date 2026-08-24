@@ -6,10 +6,9 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const NAV_ITEMS = [
   { key: "navHome", href: "#hero" },
-  { key: "navOpportunities", href: "#resources" },
+  { key: "navOpportunities", href: "#portfolio" },
   { key: "navServices", href: "#services" },
   { key: "navResources", href: "#minerals" },
-  { key: "navPortfolio", href: "#portfolio" },
   { key: "navAbout", href: "#about" },
   { key: "navContact", href: "#contact" },
 ] as const;
@@ -38,7 +37,7 @@ const Header: React.FC = () => {
       { rootMargin: "-40% 0px -55% 0px" }
     );
 
-    const ids = ["hero", "resources", "services", "minerals", "portfolio", "about", "contact"];
+    const ids = ["hero", "services", "minerals", "portfolio", "about", "contact"];
     ids.forEach((id) => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);

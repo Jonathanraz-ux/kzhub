@@ -6,7 +6,6 @@ export const fr: TranslationKeys = {
   navAbout: "À propos",
   navServices: "Services",
   navResources: "Ressources",
-  navPortfolio: "Portefeuille",
   navContact: "Contact",
   investorPortal: "Portail Investisseur",
 

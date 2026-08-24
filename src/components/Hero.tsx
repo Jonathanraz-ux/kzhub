@@ -107,7 +107,7 @@ const Hero: React.FC = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <a
-              href="#resources"
+              href="#portfolio"
               className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-graphite font-semibold rounded-md hover:bg-gold-400 transition-all text-sm overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">

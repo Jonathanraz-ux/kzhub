@@ -6,7 +6,6 @@ export type TranslationKeys = {
   navAbout: string;
   navServices: string;
   navResources: string;
-  navPortfolio: string;
   navContact: string;
   investorPortal: string;
 

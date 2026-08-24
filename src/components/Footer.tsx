@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             </p>
             <nav className="flex flex-col gap-2.5">
               <a href="#hero" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerHome}</a>
-              <a href="#resources" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerOpportunities}</a>
+              <a href="#portfolio" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerOpportunities}</a>
               <a href="#services" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerServices}</a>
               <a href="#about" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerAbout}</a>
               <a href="#contact" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerContact}</a>
