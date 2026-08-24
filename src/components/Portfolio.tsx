@@ -296,7 +296,7 @@ const Portfolio: React.FC = () => {
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/5 text-xs text-cream/50">
                     <span className="flex items-center gap-2">
                       <ShieldCheck size={16} className="text-gold-400" />
-                      Dossier d'acquisition & due-diligence disponible sur demande.
+                      Dossier d&apos;acquisition & due-diligence disponible sur demande.
                     </span>
                     <a
                       href="#contact"

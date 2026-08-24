@@ -541,8 +541,8 @@ export const portfolio = [
 export const contactInfo = {
   address: "3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar",
   email: "contact@kazakmininghub.com",
-  phone: "+261 34 567 8901",
-  whatsapp: "+261 32 987 6543",
+  phone: "+261 34 56 789 01",
+  whatsapp: "+261 32 98 765 43",
   mapSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.14329383084!2d46.876!3d-17.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQ1JzAwLjAiUyA0NsKwNTInMzMuNiJF!5e0!3m2!1sfr!2smg!4v1",
 };

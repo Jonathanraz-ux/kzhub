@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
                 contact@kazakmininghub.com
               </a>
               <a href="tel:+261345678901" className="block text-xs text-cream/30 hover:text-gold-400 transition-colors">
-                +261 34 567 8901
+                +261 34 56 789 01
               </a>
             </div>
             <div className="flex gap-2.5">
