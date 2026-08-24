@@ -11,13 +11,12 @@ const Footer: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-12 md:py-16">
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-1.5 mb-4">
-              <span className="text-lg font-bold tracking-tight text-gold-400">
-                Kazak
-              </span>
-              <span className="text-lg font-bold tracking-tight text-cream">
-                Mining Hub
-              </span>
+            <div className="mb-4">
+              <img
+                src="/images/kazak-logo.png"
+                alt="Kazak.mg — The real Africa"
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <p className="text-xs text-cream/30 leading-relaxed max-w-xs mb-4">
               Your trusted partner for mining investment in Madagascar. Connecting international investors with verified mineral projects.

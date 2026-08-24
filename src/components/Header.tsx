@@ -58,15 +58,12 @@ const Header: React.FC = () => {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12 flex items-center justify-between h-16 md:h-20">
-        <a href="#hero" className="flex items-center gap-3 group">
-          <div className="flex items-center gap-1.5">
-            <span className="text-xl md:text-2xl font-bold tracking-tight text-gold-400 transition-colors">
-              Kazak
-            </span>
-            <span className="text-xl md:text-2xl font-bold tracking-tight text-cream">
-              Mining Hub
-            </span>
-          </div>
+        <a href="#hero" className="flex items-center gap-3 group shrink-0">
+          <img
+            src="/images/kazak-logo.png"
+            alt="Kazak.mg — The real Africa"
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </a>
 
         <nav className="hidden lg:flex items-center gap-1">
