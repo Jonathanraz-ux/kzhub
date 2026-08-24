@@ -41,6 +41,12 @@ export const en: TranslationKeys = {
   bioFounderTitle: "Executive Board & Leadership",
   bioFounderSub: "Kazak Ltd. & Kazak Mining Hub",
 
+  videoLabel: "Kazak Immersive",
+  videoTitle: "Inside Madagascar's Mining Sites",
+  videoDesc:
+    "Immerse yourself in the field: landscapes, deposits and on-site operations filmed on location, to feel the real potential of every project.",
+  videoCaption: "Showcase Film — Madagascar Field Footage",
+
   servicesLabel: "Services",
   servicesTitle: "Comprehensive Mining Services",
   servicesDesc:

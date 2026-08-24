@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
 import About from "@/components/About";
+import VideoShowcase from "@/components/VideoShowcase";
 import Services from "@/components/Services";
 import WhyMadagascar from "@/components/WhyMadagascar";
 import Portfolio from "@/components/Portfolio";
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <Partners />
       <About />
+      <VideoShowcase />
       <Services />
       <WhyMadagascar />
       <Portfolio />

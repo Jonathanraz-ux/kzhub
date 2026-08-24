@@ -39,6 +39,11 @@ export type TranslationKeys = {
   bioFounderTitle: string;
   bioFounderSub: string;
 
+  videoLabel: string;
+  videoTitle: string;
+  videoDesc: string;
+  videoCaption: string;
+
   servicesLabel: string;
   servicesTitle: string;
   servicesDesc: string;
