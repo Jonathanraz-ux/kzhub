@@ -11,6 +11,29 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const data = new FormData(e.currentTarget);
+    const interest = String(data.get("interest") ?? "");
+    const interestLabels: Record<string, string> = {
+      "buy-site": t.formInterestInvestment,
+      "joint-venture": t.formInterestPartnership,
+      "expand-portfolio": t.formInterestPortfolio,
+      "due-diligence": t.formInterestDueDiligence,
+      other: t.formInterestOther,
+    };
+    const lines = [
+      t.waGreeting,
+      "",
+      `${t.formName}: ${data.get("name")}`,
+      `${t.formEmail}: ${data.get("email")}`,
+      `${t.formCompany}: ${data.get("company") || "-"}`,
+      `${t.formInterest}: ${interestLabels[interest] ?? "-"}`,
+      "",
+      String(data.get("message") ?? ""),
+    ];
+    const url = `https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
+      lines.join("\n")
+    )}`;
+    window.open(url, "_blank", "noopener,noreferrer");
     setSubmitted(true);
   };
 
@@ -86,7 +109,7 @@ const Contact: React.FC = () => {
                 <div>
                   <p className="text-sm font-medium text-cream mb-1">{t.whatsappLabel}</p>
                   <a
-                    href={`https://wa.me/${contactInfo.whatsapp.replace(/\s+/g, "")}`}
+                    href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}`}
                     className="text-sm text-cream/40 hover:text-gold-400 transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -121,7 +144,7 @@ const Contact: React.FC = () => {
                   {t.formSuccessDesc}
                 </p>
                 <p className="text-[10px] text-cream/20 mt-6 uppercase tracking-wider">
-                  Demo Version &mdash; Mockup
+                  WhatsApp &mdash; {contactInfo.whatsapp}
                 </p>
               </motion.div>
             ) : (
@@ -156,10 +179,10 @@ const Contact: React.FC = () => {
                   <option value="" disabled className="bg-anthracite">
                     {t.formInterest}
                   </option>
-                  <option value="buy-site" className="bg-anthracite">Buy Verified Mining Site</option>
-                  <option value="joint-venture" className="bg-anthracite">Establish Joint Venture</option>
-                  <option value="expand-portfolio" className="bg-anthracite">Expand Mining Portfolio</option>
-                  <option value="due-diligence" className="bg-anthracite">Due Diligence & Permits Support</option>
+                  <option value="buy-site" className="bg-anthracite">{t.formInterestInvestment}</option>
+                  <option value="joint-venture" className="bg-anthracite">{t.formInterestPartnership}</option>
+                  <option value="expand-portfolio" className="bg-anthracite">{t.formInterestPortfolio}</option>
+                  <option value="due-diligence" className="bg-anthracite">{t.formInterestDueDiligence}</option>
                   <option value="other" className="bg-anthracite">{t.formInterestOther}</option>
                 </select>
                 <textarea
@@ -176,9 +199,6 @@ const Contact: React.FC = () => {
                   >
                     {t.formSubmit}
                   </button>
-                  <span className="text-[10px] text-cream/15 uppercase tracking-wider">
-                    Demo
-                  </span>
                 </div>
               </form>
             )}

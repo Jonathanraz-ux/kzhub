@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
               <a href="#minerals" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerResources}</a>
               <a href="#process" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">Investment Process</a>
               <a href="#faq" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">FAQ</a>
-              <a href="#" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerLegal}</a>
-              <a href="#" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerPrivacy}</a>
+              <a href="/legal" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerLegal}</a>
+              <a href="/privacy" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerPrivacy}</a>
             </nav>
           </div>
 
