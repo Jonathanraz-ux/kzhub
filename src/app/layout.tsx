@@ -5,6 +5,7 @@ import { Layout } from "@/components/Layout";
 import Preloader from "@/components/Preloader";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import LangUpdater from "@/components/LangUpdater";
+import { siteUrl, siteName, siteDescription } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,13 +21,15 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kazakmininghub.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Kazak Mining Hub — Your Trusted Partner for Mining Investment in Madagascar",
     template: "%s | Kazak Mining Hub",
   },
-  description:
-    "Buy Verified Mining Sites. Invest with Confidence. Kazak Mining Hub connects international investors with high-potential mining projects in Madagascar.",
+  description: siteDescription,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "Kazak Mining Hub",
     "Madagascar mining",
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://kazakmininghub.com",
+    url: siteUrl,
     siteName: "Kazak Mining Hub",
     title: "Kazak Mining Hub — Your Trusted Partner for Mining Investment in Madagascar",
     description:
@@ -82,6 +85,24 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: siteName,
+              url: siteUrl,
+              logo: `${siteUrl}/images/kazak-logo.png`,
+              description: siteDescription,
+              areaServed: {
+                "@type": "Country",
+                name: "Madagascar",
+              },
+              sameAs: [],
+            }),
+          }}
+        />
         <Preloader />
         <LanguageProvider>
           <LangUpdater />
