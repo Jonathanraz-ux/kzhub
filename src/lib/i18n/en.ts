@@ -23,8 +23,6 @@ export const en: TranslationKeys = {
   statExperience: "Years Local Experience",
   statConnections: "International Connections",
 
-  partnersTitle: "Trusted by Leading International Partners",
-
   aboutLabel: "About Us",
   aboutTitle: "Built on Local Expertise & International Standards",
   aboutDesc:
@@ -70,9 +68,6 @@ export const en: TranslationKeys = {
   processDesc:
     "A structured path from discovery to launch, guided at every step by our team of experts.",
 
-  testimonialsLabel: "Testimonials",
-  testimonialsTitle: "What Our Partners Say",
-
   portfolioLabel: "Portfolio",
   portfolioTitle: "Mining Portfolio",
   portfolioDesc:
@@ -80,21 +75,21 @@ export const en: TranslationKeys = {
 
   faqLabel: "FAQ",
   faqTitle: "Frequently Asked Questions",
-  faqQuestion1: "What minerals does Kazak Mining Hub focus on?",
+  faqQuestion1: "Can foreign investors own mining projects in Madagascar?",
   faqAnswer1:
-    "We focus on gold, lithium, graphite, rare earth elements, nickel, cobalt, vanadium, gemstones and industrial minerals — resources critical to the global energy transition and high-tech industries.",
-  faqQuestion2: "How does the due-diligence process work?",
+    "Yes. Foreign investors can participate in mining projects in accordance with Madagascar's mining regulations, whether through direct acquisition or joint-venture structures.",
+  faqQuestion2: "Do you assist with mining licenses?",
   faqAnswer2:
-    "Our multidisciplinary team conducts geological, legal, financial and ESG assessments to ensure each opportunity meets rigorous standards before presentation to investors.",
-  faqQuestion3: "Can foreign investors participate?",
+    "Yes. We provide guidance and support throughout the licensing and administrative process.",
+  faqQuestion3: "Can I visit the mining site before investing?",
   faqAnswer3:
-    "Yes — we facilitate joint-venture structures that comply with Madagascar's mining legislation and offer transparent governance frameworks.",
-  faqQuestion4: "What is the typical investment timeline?",
+    "Absolutely. We organize site visits and meetings with relevant stakeholders.",
+  faqQuestion4: "Do you offer joint venture opportunities?",
   faqAnswer4:
-    "From initial exploration to production, projects usually span 3-7 years, depending on permitting, infrastructure development and commodity markets.",
-  faqQuestion5: "What makes Madagascar attractive for mining investment?",
+    "Yes. We work with investors seeking acquisitions, strategic partnerships, or joint ventures.",
+  faqQuestion5: "How does the due-diligence process work?",
   faqAnswer5:
-    "Madagascar sits on some of the world's richest deposits of rare earths, nickel, cobalt, graphite and gold, with a favorable geological setting and growing regulatory framework.",
+    "Our multidisciplinary team conducts geological, legal, financial and ESG assessments to ensure each opportunity meets rigorous standards before presentation to investors.",
   faqQuestion6: "Do you provide ongoing support after acquisition?",
   faqAnswer6:
     "Yes — we offer continuous monitoring, operational support, community liaison and regular reporting to ensure your investment performs optimally.",
@@ -113,6 +108,7 @@ export const en: TranslationKeys = {
   formInterest: "Area of Interest",
   formInterestInvestment: "Investment Opportunity",
   formInterestPartnership: "Strategic Partnership",
+  formInterestPortfolio: "Expand Mining Portfolio",
   formInterestDueDiligence: "Due Diligence Services",
   formInterestOther: "Other",
   formMessage: "Your Message",
@@ -130,6 +126,10 @@ export const en: TranslationKeys = {
   footerRights: "All rights reserved.",
   footerLegal: "Legal Notice",
   footerPrivacy: "Privacy Policy",
+
+  legalBackHome: "Back to Home",
+  legalLastUpdated: "Last updated:",
+  waGreeting: "Hello Kazak Mining Hub,",
 
   // Values
   valIntegrityTitle: "Integrity",

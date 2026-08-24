@@ -22,8 +22,6 @@ export type TranslationKeys = {
   statExperience: string;
   statConnections: string;
 
-  partnersTitle: string;
-
   aboutLabel: string;
   aboutTitle: string;
   aboutDesc: string;
@@ -63,9 +61,6 @@ export type TranslationKeys = {
   processTitle: string;
   processDesc: string;
 
-  testimonialsLabel: string;
-  testimonialsTitle: string;
-
   portfolioLabel: string;
   portfolioTitle: string;
   portfolioDesc: string;
@@ -98,6 +93,7 @@ export type TranslationKeys = {
   formInterest: string;
   formInterestInvestment: string;
   formInterestPartnership: string;
+  formInterestPortfolio: string;
   formInterestDueDiligence: string;
   formInterestOther: string;
   formMessage: string;
@@ -114,6 +110,10 @@ export type TranslationKeys = {
   footerRights: string;
   footerLegal: string;
   footerPrivacy: string;
+
+  legalBackHome: string;
+  legalLastUpdated: string;
+  waGreeting: string;
 
   // Values
   valIntegrityTitle: string;

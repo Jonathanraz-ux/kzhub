@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Partners from "@/components/Partners";
 import About from "@/components/About";
 import VideoShowcase from "@/components/VideoShowcase";
 import Services from "@/components/Services";
@@ -9,7 +8,6 @@ import Portfolio from "@/components/Portfolio";
 import WhyChoose from "@/components/WhyChoose";
 import Responsible from "@/components/Responsible";
 import Process from "@/components/Process";
-import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -21,7 +19,6 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <Partners />
       <About />
       <VideoShowcase />
       <Services />
@@ -30,7 +27,6 @@ export default function Home() {
       <WhyChoose />
       <Responsible />
       <Process />
-      <Testimonials />
       <FAQ />
       <Contact />
       <Footer />

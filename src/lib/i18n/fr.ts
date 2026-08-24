@@ -23,8 +23,6 @@ export const fr: TranslationKeys = {
   statExperience: "Années d'Expérience",
   statConnections: "Connexions Internationales",
 
-  partnersTitle: "Approuvé par des Partenaires Internationaux de Premier Plan",
-
   aboutLabel: "À Propos",
   aboutTitle: "Bâti sur l'Expertise Locale et les Standards Internationaux",
   aboutDesc:
@@ -70,9 +68,6 @@ export const fr: TranslationKeys = {
   processDesc:
     "Un chemin structuré de la découverte au lancement, guidé à chaque étape par notre équipe d'experts.",
 
-  testimonialsLabel: "Témoignages",
-  testimonialsTitle: "Ce Que Disent Nos Partenaires",
-
   portfolioLabel: "Portefeuille",
   portfolioTitle: "Portefeuille Minier",
   portfolioDesc:
@@ -80,21 +75,22 @@ export const fr: TranslationKeys = {
 
   faqLabel: "FAQ",
   faqTitle: "Foire Aux Questions",
-  faqQuestion1: "Sur quels minéraux Kazak Mining Hub se concentre-t-il ?",
+  faqQuestion1:
+    "Les investisseurs étrangers peuvent-ils détenir des projets miniers à Madagascar ?",
   faqAnswer1:
-    "Nous nous concentrons sur l'or, le lithium, le graphite, les terres rares, le nickel, le cobalt, le vanadium, les pierres précieuses et les minéraux industriels — des ressources essentielles à la transition énergétique mondiale.",
-  faqQuestion2: "Comment fonctionne le processus de diligence raisonnable ?",
+    "Oui. Les investisseurs étrangers peuvent participer à des projets miniers conformément à la réglementation minière malgache, que ce soit par acquisition directe ou par des structures de coentreprise.",
+  faqQuestion2: "Accompagnez-vous l'obtention des licences minières ?",
   faqAnswer2:
-    "Notre équipe pluridisciplinaire mène des évaluations géologiques, juridiques, financières et ESG pour garantir que chaque opportunité répond à des normes rigoureuses avant sa présentation.",
-  faqQuestion3: "Les investisseurs étrangers peuvent-ils participer ?",
+    "Oui. Nous fournissons conseils et soutien tout au long du processus d'obtention des licences et des démarches administratives.",
+  faqQuestion3: "Puis-je visiter le site minier avant d'investir ?",
   faqAnswer3:
-    "Oui — nous facilitons des structures de co-entreprises conformes à la législation minière malgache avec des cadres de gouvernance transparents.",
-  faqQuestion4: "Quel est le calendrier typique d'un investissement ?",
+    "Absolument. Nous organisons des visites de sites et des rencontres avec les parties prenantes concernées.",
+  faqQuestion4: "Proposez-vous des opportunités de coentreprise ?",
   faqAnswer4:
-    "De l'exploration initiale à la production, les projets s'étendent généralement sur 3 à 7 ans, selon les permis, le développement des infrastructures et les marchés.",
-  faqQuestion5: "Qu'est-ce qui rend Madagascar attractif pour l'investissement minier ?",
+    "Oui. Nous travaillons avec des investisseurs cherchant à réaliser des acquisitions, des partenariats stratégiques ou des coentreprises.",
+  faqQuestion5: "Comment fonctionne le processus de diligence raisonnable ?",
   faqAnswer5:
-    "Madagascar possède certains des gisements les plus riches au monde en terres rares, nickel, cobalt, graphite et or, avec un contexte géologique favorable.",
+    "Notre équipe pluridisciplinaire mène des évaluations géologiques, juridiques, financières et ESG pour garantir que chaque opportunité répond à des normes rigoureuses avant sa présentation aux investisseurs.",
   faqQuestion6: "Fournissez-vous un soutien continu après l'acquisition ?",
   faqAnswer6:
     "Oui — nous offrons un suivi continu, un soutien opérationnel, une liaison communautaire et des rapports réguliers pour garantir la performance optimale de votre investissement.",
@@ -113,6 +109,7 @@ export const fr: TranslationKeys = {
   formInterest: "Domaine d'Intérêt",
   formInterestInvestment: "Opportunité d'Investissement",
   formInterestPartnership: "Partenariat Stratégique",
+  formInterestPortfolio: "Élargir son Portefeuille Minier",
   formInterestDueDiligence: "Services de Due Diligence",
   formInterestOther: "Autre",
   formMessage: "Votre Message",
@@ -130,6 +127,10 @@ export const fr: TranslationKeys = {
   footerRights: "Tous droits réservés.",
   footerLegal: "Mentions Légales",
   footerPrivacy: "Politique de Confidentialité",
+
+  legalBackHome: "Retour à l'accueil",
+  legalLastUpdated: "Dernière mise à jour :",
+  waGreeting: "Bonjour Kazak Mining Hub,",
 
   // Values
   valIntegrityTitle: "Intégrité",

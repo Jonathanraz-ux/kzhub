@@ -10,15 +10,6 @@ export const stats = [
   { id: 4, value: "24" },
 ];
 
-export const partners = [
-  { id: 1, name: "Global Mining Fund" },
-  { id: 2, name: "Emerald Capital" },
-  { id: 3, name: "African Resources Corp" },
-  { id: 4, name: "Pacific Ventures" },
-  { id: 5, name: "StoneBridge Partners" },
-  { id: 6, name: "Meridian Group" },
-];
-
 export const team = [
   {
     id: 1,
@@ -287,78 +278,6 @@ export const processSteps = [
     icon: "Rocket",
     titleKey: "procLaunchTitle",
     descKey: "procLaunchDesc",
-  },
-];
-
-export const testimonials = [
-  {
-    id: 1,
-    name: "David K. Chen",
-    role: "Managing Partner, StoneBridge Capital",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
-    quote:
-      "Kazak Mining Hub's due diligence process is world-class. They identified critical geological risks that other firms had overlooked. Our investment is in far better hands with their team.",
-  },
-  {
-    id: 2,
-    name: "Amélie Fontaine",
-    role: "Director, Meridian Resources Group",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
-    quote:
-      "Their local expertise in Madagascar is unmatched. From navigating regulatory frameworks to community engagement, the Kazak team turned what could have been a two-year process into six months.",
-  },
-  {
-    id: 3,
-    name: "James O'Brien",
-    role: "CEO, African Development Corp",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
-    quote:
-      "We evaluated three intermediaries for our Madagascar entry. Kazak Mining Hub was the only one with boots on the ground, verified data and a clear roadmap. They earned our trust.",
-  },
-];
-
-export const faq = [
-  {
-    id: 1,
-    question:
-      "What minerals does Kazak Mining Hub focus on?",
-    answer:
-      "We focus on gold, lithium, graphite, rare earth elements, nickel, cobalt, vanadium, gemstones and industrial minerals — resources critical to the global energy transition and high-tech industries.",
-  },
-  {
-    id: 2,
-    question: "How does the due-diligence process work?",
-    answer:
-      "Our multidisciplinary team conducts geological, legal, financial and ESG assessments to ensure each opportunity meets rigorous standards before presentation to investors.",
-  },
-  {
-    id: 3,
-    question: "Can foreign investors participate?",
-    answer:
-      "Yes — we facilitate joint-venture structures that comply with Madagascar's mining legislation and offer transparent governance frameworks.",
-  },
-  {
-    id: 4,
-    question: "What is the typical investment timeline?",
-    answer:
-      "From initial exploration to production, projects usually span 3-7 years, depending on permitting, infrastructure development and commodity markets.",
-  },
-  {
-    id: 5,
-    question:
-      "What makes Madagascar attractive for mining investment?",
-    answer:
-      "Madagascar sits on some of the world's richest deposits of rare earths, nickel, cobalt, graphite and gold, with a favorable geological setting and growing regulatory framework.",
-  },
-  {
-    id: 6,
-    question:
-      "Do you provide ongoing support after acquisition?",
-    answer:
-      "Yes — we offer continuous monitoring, operational support, community liaison and regular reporting to ensure your investment performs optimally.",
   },
 ];
 
