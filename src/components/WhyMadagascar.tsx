@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { minerals } from "@/data/mockData";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import * as Icons from "lucide-react";
@@ -17,106 +17,126 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Building2: Icons.Building2,
 };
 
-const MadagascarMap: React.FC = () => (
-  <svg viewBox="0 0 280 520" className="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+interface MapMarker {
+  id: number;
+  symbol: string;
+  name: string;
+  cx: number;
+  cy: number;
+  r: number;
+  region: string;
+  depositType: string;
+}
+
+const MAP_MARKERS: MapMarker[] = [
+  { id: 1, symbol: "Au", name: "Gold", cx: 130, cy: 90, r: 7, region: "Eastern Metamorphic Belt", depositType: "Hard-rock & Alluvial Shear Veins" },
+  { id: 2, symbol: "Li", name: "Lithium", cx: 155, cy: 140, r: 6, region: "Sahatany Valley", depositType: "Spodumene Pegmatite Field" },
+  { id: 3, symbol: "Gr", name: "Graphite", cx: 120, cy: 180, r: 6.5, region: "Toamasina Hinterland", depositType: "Flake Graphite Schist" },
+  { id: 6, symbol: "REE", name: "Rare Earths", cx: 145, cy: 220, r: 5.5, region: "Ambatofinandrahana", depositType: "Monazite & Bastnäsite Carbonatite" },
+  { id: 4, symbol: "Ni", name: "Nickel", cx: 125, cy: 260, r: 6, region: "Ambatovy Corridor", depositType: "Lateritic Nickel Ore" },
+  { id: 5, symbol: "Co", name: "Cobalt", cx: 150, cy: 310, r: 5.5, region: "Eastern Belt Central", depositType: "Cobalt-bearing Laterites" },
+  { id: 7, symbol: "V", name: "Vanadium", cx: 160, cy: 360, r: 5, region: "Green Giant Trend", depositType: "Vanadiferous Titanomagnetite" },
+];
+
+const InteractiveMadagascarMap: React.FC<{
+  hoveredId: number | null;
+  onHoverMarker: (id: number | null) => void;
+}> = ({ hoveredId, onHoverMarker }) => (
+  <svg viewBox="0 0 280 520" className="w-full h-auto drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="mg-grad" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stopColor="#c5a880" stopOpacity="0.15" />
-        <stop offset="100%" stopColor="#c5a880" stopOpacity="0.05" />
+        <stop offset="0%" stopColor="#c5a880" stopOpacity="0.25" />
+        <stop offset="100%" stopColor="#c5a880" stopOpacity="0.08" />
       </linearGradient>
+
+      <radialGradient id="marker-glow" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stopColor="#c5a880" stopOpacity="0.9" />
+        <stop offset="100%" stopColor="#c5a880" stopOpacity="0" />
+      </radialGradient>
     </defs>
 
-    <path
+    {/* Island Boundary */}
+    <motion.path
       d="M140 30 C115 45 92 70 85 95 C76 125 65 155 62 185 C58 210 54 235 57 260 C60 280 66 300 72 315 C78 330 86 345 95 360 C104 375 112 390 120 405 C128 420 135 435 140 450 C145 435 152 420 160 405 C168 390 176 375 184 360 C193 345 201 330 207 315 C213 300 219 280 222 260 C225 235 221 210 217 185 C214 155 203 125 194 95 C187 70 165 45 140 30Z"
       fill="url(#mg-grad)"
       stroke="#c5a880"
       strokeWidth="1.5"
-      strokeOpacity="0.3"
+      strokeOpacity="0.4"
     />
 
+    {/* Inner Contour */}
     <path
       d="M140 30 C115 45 92 70 85 95 C76 125 65 155 62 185 C58 210 54 235 57 260 C60 280 66 300 72 315 C78 330 86 345 95 360 C104 375 112 390 120 405 C128 420 135 435 140 450 C145 435 152 420 160 405 C168 390 176 375 184 360 C193 345 201 330 207 315 C213 300 219 280 222 260 C225 235 221 210 217 185 C214 155 203 125 194 95 C187 70 165 45 140 30Z"
       fill="none"
       stroke="#c5a880"
       strokeWidth="0.5"
-      strokeOpacity="0.15"
+      strokeOpacity="0.2"
     />
 
-    <motion.circle
-      cx="130" cy="90" r="6" fill="#c5a880" opacity="0.8"
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.2 }}
-    />
-    <text x="130" y="78" textAnchor="middle" fill="#c5a880" fontSize="8" fontWeight="600" opacity="0.6">Au</text>
-
-    <motion.circle
-      cx="155" cy="140" r="5" fill="#c5a880" opacity="0.7"
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.3 }}
-    />
-    <text x="155" y="128" textAnchor="middle" fill="#c5a880" fontSize="7" fontWeight="600" opacity="0.5">Li</text>
-
-    <motion.circle
-      cx="120" cy="180" r="5.5" fill="#c5a880" opacity="0.75"
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.4 }}
-    />
-    <text x="120" y="168" textAnchor="middle" fill="#c5a880" fontSize="7" fontWeight="600" opacity="0.5">Gr</text>
-
-    <motion.circle
-      cx="145" cy="220" r="4" fill="#c5a880" opacity="0.6"
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.5 }}
-    />
-    <text x="145" y="210" textAnchor="middle" fill="#c5a880" fontSize="7" fontWeight="600" opacity="0.5">REE</text>
-
-    <motion.circle
-      cx="125" cy="260" r="5" fill="#c5a880" opacity="0.7"
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.6 }}
-    />
-    <text x="125" y="250" textAnchor="middle" fill="#c5a880" fontSize="7" fontWeight="600" opacity="0.5">Ni</text>
-
-    <motion.circle
-      cx="150" cy="310" r="4.5" fill="#c5a880" opacity="0.65"
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.7 }}
-    />
-    <text x="150" y="300" textAnchor="middle" fill="#c5a880" fontSize="7" fontWeight="600" opacity="0.5">Co</text>
-
-    <motion.circle
-      cx="160" cy="360" r="4" fill="#c5a880" opacity="0.55"
-      initial={{ scale: 0 }}
-      whileInView={{ scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.8 }}
-    />
-    <text x="160" y="350" textAnchor="middle" fill="#c5a880" fontSize="7" fontWeight="600" opacity="0.5">V</text>
-
+    {/* Central Fault Corridor Axis */}
     <motion.line
-      x1="140" y1="35" x2="140" y2="445" stroke="#c5a880" strokeWidth="0.5" strokeOpacity="0.1" strokeDasharray="4 4"
+      x1="140" y1="35" x2="140" y2="445" stroke="#c5a880" strokeWidth="0.75" strokeOpacity="0.2" strokeDasharray="4 4"
       initial={{ pathLength: 0 }}
       whileInView={{ pathLength: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 2 }}
     />
+
+    {/* Deposit Markers */}
+    {MAP_MARKERS.map((marker) => {
+      const isSelected = hoveredId === marker.id;
+
+      return (
+        <g
+          key={marker.id}
+          className="cursor-pointer group"
+          onMouseEnter={() => onHoverMarker(marker.id)}
+          onMouseLeave={() => onHoverMarker(null)}
+          onClick={() => onHoverMarker(isSelected ? null : marker.id)}
+        >
+          {isSelected && (
+            <motion.circle
+              cx={marker.cx}
+              cy={marker.cy}
+              r={marker.r * 2.5}
+              fill="url(#marker-glow)"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: [1, 1.3, 1], opacity: [0.8, 0.4, 0.8] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            />
+          )}
+
+          <motion.circle
+            cx={marker.cx}
+            cy={marker.cy}
+            r={isSelected ? marker.r * 1.4 : marker.r}
+            fill={isSelected ? "#f59e0b" : "#c5a880"}
+            opacity={isSelected ? 1 : 0.75}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          />
+
+          <text
+            x={marker.cx}
+            y={marker.cy - marker.r - 4}
+            textAnchor="middle"
+            fill={isSelected ? "#fef3c7" : "#c5a880"}
+            fontSize={isSelected ? "9" : "7.5"}
+            fontWeight={isSelected ? "700" : "600"}
+            opacity={isSelected ? 1 : 0.65}
+          >
+            {marker.symbol}
+          </text>
+        </g>
+      );
+    })}
   </svg>
 );
 
 const WhyMadagascar: React.FC = () => {
   const { t } = useLanguage();
+  const [hoveredMineralId, setHoveredMineralId] = useState<number | null>(null);
+
+  const activeMarker = MAP_MARKERS.find((m) => m.id === hoveredMineralId);
 
   return (
     <section id="minerals" className="py-20 md:py-28 bg-background relative overflow-hidden">
@@ -134,54 +154,103 @@ const WhyMadagascar: React.FC = () => {
           <p className="text-gold-400 text-sm font-medium tracking-[0.2em] uppercase mb-4">
             {t.mineralsLabel}
           </p>
-          <h2 className="text-3xl md:text-5xl text-cream mb-4">
+          <h2 className="text-3xl md:text-5xl text-cream mb-4 font-serif">
             {t.mineralsTitle}
           </h2>
-          <p className="text-cream/40 max-w-2xl mx-auto text-sm">
+          <p className="text-cream/50 max-w-2xl mx-auto text-sm md:text-base">
             {t.mineralsDesc}
+          </p>
+          <p className="text-xs text-gold-400/80 mt-3 flex items-center justify-center gap-1">
+            <Icons.Sparkles size={13} />
+            {t.mapHoverHint}
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-10 items-start">
+          {/* Interactive Map Column */}
           <motion.div
-            className="lg:col-span-1 hidden lg:flex justify-center pt-4"
+            className="lg:col-span-2 flex flex-col items-center justify-center pt-2"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="w-44">
-              <MadagascarMap />
-              <p className="text-center text-[10px] text-cream/15 tracking-wider mt-2 uppercase">
-                Madagascar
+            <div className="w-52 md:w-64 relative">
+              <InteractiveMadagascarMap
+                hoveredId={hoveredMineralId}
+                onHoverMarker={setHoveredMineralId}
+              />
+              <p className="text-center text-[10px] text-cream/20 tracking-[0.2em] mt-3 uppercase font-semibold">
+                Carte des Concessions & Gisèments • Madagascar
               </p>
+            </div>
+
+            {/* Deposit Detail Tooltip Box */}
+            <div className="w-full max-w-xs mt-6 min-h-[90px]">
+              <AnimatePresence mode="wait">
+                {activeMarker ? (
+                  <motion.div
+                    key={activeMarker.id}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="p-4 rounded-xl border border-gold-500/30 bg-graphite/90 backdrop-blur-md shadow-xl text-left"
+                  >
+                    <div className="flex items-center justify-between mb-1">
+                      <span className="text-xs font-bold text-gold-400 uppercase tracking-wider">
+                        {activeMarker.name} ({activeMarker.symbol})
+                      </span>
+                      <span className="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-medium">
+                        Gisement Identifié
+                      </span>
+                    </div>
+                    <p className="text-xs font-medium text-cream/90">{activeMarker.region}</p>
+                    <p className="text-[11px] text-cream/50 mt-1">{activeMarker.depositType}</p>
+                  </motion.div>
+                ) : (
+                  <div className="p-4 rounded-xl border border-white/5 bg-white/[0.02] text-center text-xs text-cream/30 flex items-center justify-center h-full">
+                    {t.mapHoverHint}
+                  </div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
 
-          <div className="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {/* Minerals Grid */}
+          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
             {minerals.map((mineral, idx) => {
               const IconComp = iconMap[mineral.icon] || Icons.Hexagon;
+              const isHovered = hoveredMineralId === mineral.id;
+
               return (
                 <motion.div
                   key={mineral.id}
-                  className="group border border-white/[0.06] rounded-xl p-5 bg-gradient-to-b from-white/[0.02] to-transparent hover:border-gold-500/15 transition-all duration-300"
+                  onMouseEnter={() => setHoveredMineralId(mineral.id)}
+                  onMouseLeave={() => setHoveredMineralId(null)}
+                  className={`group border rounded-xl p-5 cursor-pointer transition-all duration-300 ${
+                    isHovered
+                      ? "border-gold-500/40 bg-gold-500/10 shadow-lg shadow-gold-500/10 scale-[1.02]"
+                      : "border-white/[0.06] bg-gradient-to-b from-white/[0.02] to-transparent hover:border-gold-500/20"
+                  }`}
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
-                  transition={{ delay: idx * 0.05, duration: 0.4 }}
+                  transition={{ delay: idx * 0.04, duration: 0.4 }}
                   whileHover={{ y: -3 }}
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-9 h-9 rounded-lg bg-white/[0.03] flex items-center justify-center group-hover:bg-gold-500/10 transition-colors">
+                    <div className={`w-9 h-9 rounded-lg flex items-center justify-center transition-colors ${
+                      isHovered ? "bg-gold-500/20 text-gold-400" : "bg-white/[0.03] group-hover:bg-gold-500/10"
+                    }`}>
                       <IconComp
-                        className={`w-4 h-4 ${mineral.color} opacity-70`}
+                        className={`w-4 h-4 ${mineral.color} ${isHovered ? "opacity-100 scale-110" : "opacity-70"}`}
                       />
                     </div>
-                    <h3 className="text-sm font-semibold text-cream">
+                    <h3 className={`text-sm font-semibold transition-colors ${isHovered ? "text-gold-300" : "text-cream"}`}>
                       {t[mineral.nameKey as keyof typeof t] || mineral.name}
                     </h3>
                   </div>
-                  <p className="text-xs text-cream/40 leading-relaxed pl-12">
+                  <p className="text-xs text-cream/50 leading-relaxed pl-12">
                     {t[mineral.descKey as keyof typeof t] || mineral.desc}
                   </p>
                 </motion.div>
@@ -195,3 +264,4 @@ const WhyMadagascar: React.FC = () => {
 };
 
 export default WhyMadagascar;
+

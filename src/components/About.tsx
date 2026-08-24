@@ -138,6 +138,60 @@ const About: React.FC = () => {
           </div>
         </motion.div>
 
+        {/* Corporate & Strategic Investment Pillars Grid */}
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="text-center mb-10">
+            <h3 className="text-xl md:text-2xl font-serif text-cream mb-2 font-semibold">
+              {t.pillarsTitle}
+            </h3>
+            <div className="w-16 h-0.5 bg-gold-500/50 mx-auto" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-sm hover:border-gold-500/30 transition-all">
+              <div className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center mb-4 text-gold-400 font-bold">
+                01
+              </div>
+              <h4 className="text-base font-semibold text-cream mb-2 font-serif">
+                {t.pillar1Title}
+              </h4>
+              <p className="text-xs text-cream/60 leading-relaxed">
+                {t.pillar1Desc}
+              </p>
+            </div>
+
+            <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-sm hover:border-gold-500/30 transition-all">
+              <div className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center mb-4 text-gold-400 font-bold">
+                02
+              </div>
+              <h4 className="text-base font-semibold text-cream mb-2 font-serif">
+                {t.pillar2Title}
+              </h4>
+              <p className="text-xs text-cream/60 leading-relaxed">
+                {t.pillar2Desc}
+              </p>
+            </div>
+
+            <div className="p-6 rounded-xl border border-white/10 bg-white/[0.02] backdrop-blur-sm hover:border-gold-500/30 transition-all">
+              <div className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center mb-4 text-gold-400 font-bold">
+                03
+              </div>
+              <h4 className="text-base font-semibold text-cream mb-2 font-serif">
+                {t.pillar3Title}
+              </h4>
+              <p className="text-xs text-cream/60 leading-relaxed">
+                {t.pillar3Desc}
+              </p>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
           <motion.div

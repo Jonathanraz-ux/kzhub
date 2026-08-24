@@ -204,4 +204,32 @@ export const fr: TranslationKeys = {
   procAcqDesc: "Préparation et négociation de contrats, soutien aux démarches d'obtention de permis et licences.",
   procLaunchTitle: "Lancement du Projet & Suivi Local",
   procLaunchDesc: "Sécurisation de vos opérations avec accompagnement continu et coordination réglementaire locale.",
+
+  // New Corporate & Technical UI Keys
+  heroSpecsTicker: "Substances Principales : Or, Lithium, Terres Rares, Graphite • Juridiction : Madagascar • Concessions Vérifiées",
+  filterAll: "Tous les Projets",
+  filterGold: "Or (Au)",
+  filterLithium: "Lithium & Batteries",
+  filterGraphite: "Graphite & Terres Rares",
+  filterSurveys: "Relevés Géologiques",
+
+  tableCommodity: "Substance",
+  tableStage: "Phase du Projet",
+  tableRegion: "Localisation",
+  tableArea: "Superficie",
+  tablePermit: "Statut des Permis",
+  tableGeology: "Contexte Géologique",
+  tableAccess: "Accès & Infrastructure",
+
+  pillarsTitle: "Nos Piliers de Crédibilité et d'Excellence",
+  pillar1Title: "Cadre Juridique et Titres Vérifiés",
+  pillar1Desc: "100% des concessions présentées font l'objet d'une vérification cadastrale et légale préalable approfondie.",
+  pillar2Title: "Géologie de Classe Mondiale",
+  pillar2Desc: "Accès à des ceintures métamorphiques et pegmatites à fort potentiel dans l'Océan Indien.",
+  pillar3Title: "Accompagnement Local Intégral",
+  pillar3Desc: "Une équipe multidisciplinaire implantée sur le terrain pour gérer les autorisations et les relations communautaires.",
+
+  mapHoverHint: "Survolez ou cliquez sur une substance pour explorer son gisement géologique",
+  mapViewDeposit: "Voir les détails du gisement",
 };
+

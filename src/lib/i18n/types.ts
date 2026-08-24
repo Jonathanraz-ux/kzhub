@@ -189,4 +189,32 @@ export type TranslationKeys = {
   procAcqDesc: string;
   procLaunchTitle: string;
   procLaunchDesc: string;
+
+  // New Corporate & Technical UI Keys
+  heroSpecsTicker: string;
+  filterAll: string;
+  filterGold: string;
+  filterLithium: string;
+  filterGraphite: string;
+  filterSurveys: string;
+  
+  tableCommodity: string;
+  tableStage: string;
+  tableRegion: string;
+  tableArea: string;
+  tablePermit: string;
+  tableGeology: string;
+  tableAccess: string;
+
+  pillarsTitle: string;
+  pillar1Title: string;
+  pillar1Desc: string;
+  pillar2Title: string;
+  pillar2Desc: string;
+  pillar3Title: string;
+  pillar3Desc: string;
+
+  mapHoverHint: string;
+  mapViewDeposit: string;
 };
+

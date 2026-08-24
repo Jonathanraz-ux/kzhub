@@ -81,13 +81,24 @@ const Hero: React.FC = () => {
           </motion.h1>
 
           <motion.p
-            className="text-base md:text-lg text-cream/60 max-w-2xl mx-auto mb-10 leading-relaxed"
+            className="text-base md:text-lg text-cream/60 max-w-2xl mx-auto mb-6 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45, duration: 0.6 }}
           >
             {t.heroSubtitle}
           </motion.p>
+
+          {/* Corporate Spotlight / Specs Bar */}
+          <motion.div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-gold-500/20 backdrop-blur-md mb-10 text-xs text-cream/80 max-w-3xl mx-auto shadow-lg"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.55, duration: 0.5 }}
+          >
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
+            <span className="truncate">{t.heroSpecsTicker}</span>
+          </motion.div>
 
           <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"

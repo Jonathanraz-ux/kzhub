@@ -204,4 +204,32 @@ export const en: TranslationKeys = {
   procAcqDesc: "Contract preparation, negotiation, and assistance with mining licenses and permits.",
   procLaunchTitle: "Project Launch & Local Support",
   procLaunchDesc: "Secure your operations with ongoing local business support and regulatory coordination.",
+
+  // New Corporate & Technical UI Keys
+  heroSpecsTicker: "Primary Commodities: Gold, Lithium, REE, Graphite • Jurisdiction: Madagascar • Status: Verified Concessions",
+  filterAll: "All Projects",
+  filterGold: "Gold (Au)",
+  filterLithium: "Lithium & Battery Metals",
+  filterGraphite: "Graphite & REE",
+  filterSurveys: "Geological Surveys",
+
+  tableCommodity: "Commodity",
+  tableStage: "Project Stage",
+  tableRegion: "Region / Location",
+  tableArea: "Concession Area",
+  tablePermit: "Permit Status",
+  tableGeology: "Geological Setting",
+  tableAccess: "Infrastructure & Access",
+
+  pillarsTitle: "Pillars of Corporate Credibility & Excellence",
+  pillar1Title: "Verified Legal Titles & Cadastre",
+  pillar1Desc: "100% of listed concessions undergo rigorous legal, cadastral, and title due-diligence.",
+  pillar2Title: "Tier-1 Geological Setting",
+  pillar2Desc: "Direct access to high-potential metamorphic belts, pegmatites, and monazite sands in Madagascar.",
+  pillar3Title: "Full On-The-Ground Support",
+  pillar3Desc: "A local multidisciplinary team managing government permitting, licensing, and community liaison.",
+
+  mapHoverHint: "Hover or click on any mineral marker to explore geological deposit details",
+  mapViewDeposit: "View Deposit Details",
 };
+
