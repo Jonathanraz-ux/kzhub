@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import { Layout } from "@/components/Layout";
+import Preloader from "@/components/Preloader";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import LangUpdater from "@/components/LangUpdater";
 
@@ -81,6 +82,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen bg-background text-foreground font-sans">
+        <Preloader />
         <LanguageProvider>
           <LangUpdater />
           <Layout>{children}</Layout>
