@@ -8,6 +8,7 @@ import Portfolio from "@/components/Portfolio";
 import WhyChoose from "@/components/WhyChoose";
 import Responsible from "@/components/Responsible";
 import Process from "@/components/Process";
+import ExpertTeam from "@/components/ExpertTeam";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -27,6 +28,7 @@ export default function Home() {
       <WhyChoose />
       <Responsible />
       <Process />
+      <ExpertTeam />
       <FAQ />
       <Contact />
       <Footer />

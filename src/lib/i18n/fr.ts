@@ -42,6 +42,14 @@ export const fr: TranslationKeys = {
   bioFounderTitle: "Présidence et direction exécutive",
   bioFounderSub: "Kazak Ltd. et Kazak Mining Hub",
 
+  expertsLabel: "Notre équipe",
+  expertsTitle: "Notre équipe d'experts",
+  expertsSubtitle: "Des professionnels expérimentés qui vous accompagnent à chaque étape de votre projet.",
+  expertRole1: "Expert en exploration minière",
+  expertRole2: "Expert juridique minier",
+  expertRole3: "Responsable des relations communautaires et de la liaison locale",
+  expertRole4: "Responsable visas, voyages et hébergement",
+
   videoLabel: "Kazak en immersion",
   videoTitle: "Au cœur des sites miniers de Madagascar",
   videoDesc:

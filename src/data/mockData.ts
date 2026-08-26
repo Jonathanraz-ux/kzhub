@@ -32,6 +32,49 @@ export const team = [
   },
 ];
 
+export const expertTeam = [
+  {
+    id: 1,
+    name: "Willy Raharijaona",
+    roleKey: "expertRole1",
+    photo: null as string | null,
+    photoAlt: {
+      en: "Portrait of Willy Raharijaona, Mining Exploration Expert",
+      fr: "Portrait de Willy Raharijaona, expert en exploration minière",
+    },
+  },
+  {
+    id: 2,
+    name: "Hery Rakoto be",
+    roleKey: "expertRole2",
+    photo: null as string | null,
+    photoAlt: {
+      en: "Portrait of Hery Rakoto be, Mining Legal Expert",
+      fr: "Portrait de Hery Rakoto be, expert juridique minier",
+    },
+  },
+  {
+    id: 3,
+    name: "Lalao Rabeson",
+    roleKey: "expertRole3",
+    photo: null as string | null,
+    photoAlt: {
+      en: "Portrait of Lalao Rabeson, Community Relations & Local Liaison Officer",
+      fr: "Portrait de Lalao Rabeson, responsable des relations communautaires et de la liaison locale",
+    },
+  },
+  {
+    id: 4,
+    name: "Rova Minadrisoa",
+    roleKey: "expertRole4",
+    photo: null as string | null,
+    photoAlt: {
+      en: "Portrait of Rova Minadrisoa, Visa, Travel and Accommodation Officer",
+      fr: "Portrait de Rova Minadrisoa, responsable visas, voyages et hébergement",
+    },
+  },
+];
+
 export const about = {
   mission:
     "Deliver reliable, high-value mining projects through rigorous due diligence and local expertise.",

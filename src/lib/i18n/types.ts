@@ -38,6 +38,14 @@ export type TranslationKeys = {
   bioFounderTitle: string;
   bioFounderSub: string;
 
+  expertsLabel: string;
+  expertsTitle: string;
+  expertsSubtitle: string;
+  expertRole1: string;
+  expertRole2: string;
+  expertRole3: string;
+  expertRole4: string;
+
   videoLabel: string;
   videoTitle: string;
   videoDesc: string;
