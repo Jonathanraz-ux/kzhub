@@ -5,6 +5,7 @@ import { values, team } from "@/data/mockData";
 import { Icon } from "@/components/Icon";
 import SafeImage from "@/components/SafeImage";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { localized } from "@/lib/i18n/localize";
 
 const About: React.FC = () => {
   const { t, locale } = useLanguage();
@@ -53,7 +54,7 @@ const About: React.FC = () => {
               >
                 <SafeImage
                   src="/images/client/client-portrait-1.jpg"
-                  alt="Client Leadership Portrait 1"
+                  alt={locale === "en" ? "Client Leadership Portrait 1" : "Portrait dirigeant 1"}
                   fill
                   sizes="(max-width: 768px) 50vw, 300px"
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -76,7 +77,7 @@ const About: React.FC = () => {
               >
                 <SafeImage
                   src="/images/client/client-portrait-2.jpg"
-                  alt="Client Leadership Portrait 2"
+                  alt={locale === "en" ? "Client Leadership Portrait 2" : "Portrait dirigeant 2"}
                   fill
                   sizes="(max-width: 768px) 50vw, 300px"
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
@@ -281,7 +282,9 @@ const About: React.FC = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-          {team.map((member, idx) => (
+          {team.map((rawMember, idx) => {
+            const member = localized(locale, rawMember, rawMember.fr);
+            return (
             <motion.div
               key={member.id}
               className="p-6 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent text-center group hover:border-gold-500/30 transition-all shadow-lg"
@@ -304,7 +307,8 @@ const About: React.FC = () => {
               </h4>
               <p className="text-xs text-gold-400/90 mt-1 font-medium">{member.role}</p>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

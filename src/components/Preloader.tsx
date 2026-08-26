@@ -1,9 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const Preloader: React.FC = () => {
   const [done, setDone] = useState(false);
+  const { locale } = useLanguage();
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -72,7 +74,9 @@ const Preloader: React.FC = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9, duration: 0.8 }}
           >
-            Madagascar · Strategic Minerals
+            {locale === "en"
+              ? "Madagascar · Strategic Minerals"
+              : "Madagascar · Minéraux stratégiques"}
           </motion.p>
         </motion.div>
       )}

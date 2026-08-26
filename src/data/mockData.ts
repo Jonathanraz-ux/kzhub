@@ -16,12 +16,20 @@ export const team = [
     name: "Kazak Ltd. Executive Leadership",
     role: "CEO & Founder - Kazak Ltd. & Kazak Mining Hub",
     image: "/images/client/client-portrait-1.jpg",
+    fr: {
+      name: "Direction exécutive — Kazak Ltd.",
+      role: "PDG et Fondateur — Kazak Ltd. et Kazak Mining Hub",
+    },
   },
   {
     id: 2,
     name: "Business Development & Strategy",
     role: "Director of Business Development & Mining Projects",
     image: "/images/client/client-portrait-2.jpg",
+    fr: {
+      name: "Développement commercial et stratégie",
+      role: "Direction du développement commercial et des projets miniers",
+    },
   },
 ];
 
@@ -296,6 +304,18 @@ export const portfolio = [
     accessInfo: "RN2 Highway + Local access road",
     description:
       "Advanced exploration site in Madagascar's eastern gold belt, featuring high-grade alluvial and hard-rock deposits with multi-ounce target zones.",
+    fr: {
+      title: "Exploration aurifère d'Andekaleka",
+      category: "Exploration aurifère",
+      commodity: "Or (Au)",
+      stage: "Exploration avancée",
+      region: "Ceinture métamorphique orientale",
+      permitStatus: "Actif / PR vérifié",
+      geologyType: "Filons de quartz en zone de cisaillement et dépôts alluviaux de terrasse",
+      accessInfo: "Route nationale RN2 + piste d'accès locale",
+      description:
+        "Site d'exploration avancé dans la ceinture aurifère orientale de Madagascar : dépôts alluviaux et filoniens à haute teneur avec des zones cibles multi-onces.",
+    },
     image:
       "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=800&q=85",
     wide: true,
@@ -314,6 +334,18 @@ export const portfolio = [
     accessInfo: "Antsirabe road corridor + Track access",
     description:
       "Spodumene-bearing pegmatites in the Sahatany Valley, positioned to supply high-purity lithium to the global EV battery supply chain.",
+    fr: {
+      title: "Lithium de la vallée de Sahatany",
+      category: "Opérations lithium",
+      commodity: "Lithium (Li / spodumène)",
+      stage: "Définition de cibles et échantillonnage",
+      region: "Champ de pegmatites de Sahatany",
+      permitStatus: "Actif / PR vérifié",
+      geologyType: "Pegmatites à spodumène de type LCT",
+      accessInfo: "Corridor routier d'Antsirabe + piste",
+      description:
+        "Pegmatites à spodumène dans la vallée de Sahatany, positionnées pour approvisionner la chaîne mondiale de batteries pour véhicules électriques en lithium haute pureté.",
+    },
     image:
       "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=85",
     tall: true,
@@ -332,6 +364,18 @@ export const portfolio = [
     accessInfo: "Direct rail & paved road to Port of Toamasina",
     description:
       "Large-flake graphite processing operations supplying battery anode precursor and industrial refractory markets.",
+    fr: {
+      title: "Usine de traitement du graphite",
+      category: "Opérations graphite",
+      commodity: "Graphite en paillettes",
+      stage: "Étude de faisabilité et usine pilote",
+      region: "Arrière-pays de Toamasina",
+      permitStatus: "Permis PE demandé / titre propre",
+      geologyType: "Graphite cristallin en paillettes haute pureté dans un gneiss altéré",
+      accessInfo: "Accès ferroviaire direct et route goudronnée jusqu'au port de Toamasina",
+      description:
+        "Opérations de traitement du graphite en grandes paillettes destinées aux précurseurs d'anodes de batteries et aux marchés réfractaires industriels.",
+    },
     image:
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=85",
   },
@@ -349,6 +393,19 @@ export const portfolio = [
     accessInfo: "Mobile field laboratory team",
     description:
       "Field verification and collection of high-grade mineral samples by our certified geologists.",
+    fr: {
+      title: "Prélèvement d'échantillons et analyses",
+      category: "Échantillons minéraux",
+      commodity: "Analyse multi-éléments",
+      stage: "Protocole QA/QC sur le terrain",
+      region: "Districts centraux et orientaux",
+      concessionArea: "Protocole multi-sites",
+      permitStatus: "Géologues certifiés",
+      geologyType: "Spécimens minéraux à haute teneur vérifiés par ICP-MS / pyroanalyse",
+      accessInfo: "Laboratoire de terrain mobile",
+      description:
+        "Vérification sur le terrain et prélèvement d'échantillons minéraux à haute teneur par nos géologues certifiés.",
+    },
     image: "/images/projects/raw-mineral-sample.jpg",
     wide: true,
   },
@@ -366,6 +423,19 @@ export const portfolio = [
     accessInfo: "Regional Helipad & Airport base",
     description:
       "Helicopter-borne geophysical surveys covering over 5,000 km² of prospective terrain, identifying key structural traps.",
+    fr: {
+      title: "Levé géologique aérien",
+      category: "Levés géologiques",
+      commodity: "Données géophysiques",
+      stage: "Exploration régionale",
+      region: "Zone 4 de la ceinture orientale",
+      concessionArea: "Couverture de 5 000 km²",
+      permitStatus: "Licence gouvernementale accordée",
+      geologyType: "Levés aéroportés magnétiques, radiométriques et VTEM",
+      accessInfo: "Héliport régional et base aéroportuaire",
+      description:
+        "Levés géophysiques héliportés couvrant plus de 5 000 km² de terrain prospectif, permettant d'identifier les pièges structuraux clés.",
+    },
     image:
       "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=85",
     tall: true,
@@ -384,6 +454,18 @@ export const portfolio = [
     accessInfo: "Perennial river transport + Gravel road",
     description:
       "Visits to verified mining sites with inspection of operating areas and water reserves for gravity-based processing.",
+    fr: {
+      title: "Site minier et concession hydraulique",
+      category: "Exploration de terrain",
+      commodity: "Ressources aurifères et hydriques",
+      stage: "Inspection pré-faisabilité",
+      region: "Bassin de la rivière Mangoro",
+      permitStatus: "Concessions minières et hydriques vérifiées",
+      geologyType: "Chenaux de graviers alluviaux et structures filoniennes en roche dure adjacentes",
+      accessInfo: "Transport fluvial permanent + route en gravier",
+      description:
+        "Visites de sites miniers vérifiés et inspection des périmètres d'exploitation et des réserves en eau pour traitement gravimétrique.",
+    },
     image: "/images/projects/mining-site-landscape.jpg",
   },
   {
@@ -400,6 +482,19 @@ export const portfolio = [
     accessInfo: "City center logistics access",
     description:
       "Certified sample preparation and assay laboratory for gold, lithium, REE and base metal analysis with rapid turnaround times.",
+    fr: {
+      title: "Laboratoire d'échantillons minéraux",
+      category: "Échantillons minéraux",
+      commodity: "Certification de laboratoire",
+      stage: "Plateforme opérationnelle",
+      region: "Zone industrielle d'Antananarivo",
+      concessionArea: "Laboratoire de 1 500 m²",
+      permitStatus: "Partenaire conforme ISO/IEC",
+      geologyType: "Instrumentation XRF, AAS et analyses gravimétriques",
+      accessInfo: "Accès logistique centre-ville",
+      description:
+        "Laboratoire certifié de préparation d'échantillons et d'analyses pour l'or, le lithium, les terres rares et les métaux de base, avec des délais rapides.",
+    },
     image:
       "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=85",
     wide: true,
@@ -418,6 +513,19 @@ export const portfolio = [
     accessInfo: "Direct local village liaison offices",
     description:
       "Building lasting partnerships with local communities through education, healthcare, clean water, and local employment initiatives.",
+    fr: {
+      title: "Programme d'engagement communautaire",
+      category: "Communautés locales",
+      commodity: "ESG et communautés",
+      stage: "Suivi continu",
+      region: "Atsinanana et Analamanga",
+      concessionArea: "Zones tampons communautaires",
+      permitStatus: "Acceptabilité sociale (SLO)",
+      geologyType: "Développement communautaire durable et renforcement des capacités locales",
+      accessInfo: "Bureaux de liaison villageois directs",
+      description:
+        "Des partenariats durables avec les communautés locales grâce à des initiatives en faveur de l'éducation, de la santé, de l'eau potable et de l'emploi local.",
+    },
     image:
       "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=600&q=85",
   },
@@ -435,6 +543,19 @@ export const portfolio = [
     accessInfo: "Regional nursery network access",
     description:
       "Post-mining land rehabilitation programs ensuring long-term environmental stewardship, erosion prevention, and biodiversity protection.",
+    fr: {
+      title: "Réhabilitation durable",
+      category: "Exploitation minière durable",
+      commodity: "ESG — Environnement",
+      stage: "Suivi actif",
+      region: "Lisière forestière orientale",
+      concessionArea: "Concessions de reboisement",
+      permitStatus: "Permis environnemental ONE",
+      geologyType: "Restauration des sols post-exploration et réintroduction de flore endémique",
+      accessInfo: "Accès au réseau régional de pépinières",
+      description:
+        "Programmes de réhabilitation des terrains après exploitation garantissant une gestion environnementale durable, la prévention de l'érosion et la protection de la biodiversité.",
+    },
     image:
       "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=85",
   },
@@ -452,6 +573,19 @@ export const portfolio = [
     accessInfo: "Port & Heavy Haul Highway connections",
     description:
       "Building reliable access roads, power supply and logistics networks to support mining operations from pit to port.",
+    fr: {
+      title: "Développement d'infrastructures minières",
+      category: "Infrastructures",
+      commodity: "Logistique et énergie",
+      stage: "Planification des infrastructures",
+      region: "Corridor logistique de la côte Est",
+      concessionArea: "Axe de transport",
+      permitStatus: "Autorisation d'infrastructures",
+      geologyType: "Routes de transport lourd, micro-réseaux solaires et gestion de l'eau",
+      accessInfo: "Raccordements au port et à l'axe routier de transport lourd",
+      description:
+        "Construction de routes d'accès fiables, d'alimentations électriques et de réseaux logistiques pour soutenir les opérations minières, de la fosse au port.",
+    },
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=85",
   },

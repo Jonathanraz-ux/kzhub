@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { minerals } from "@/data/mockData";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { localized } from "@/lib/i18n/localize";
 import * as Icons from "lucide-react";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -26,16 +27,17 @@ interface MapMarker {
   r: number;
   region: string;
   depositType: string;
+  fr?: { region: string; depositType: string };
 }
 
 const MAP_MARKERS: MapMarker[] = [
-  { id: 1, symbol: "Au", name: "Gold", cx: 130, cy: 90, r: 7, region: "Eastern Metamorphic Belt", depositType: "Hard-rock & Alluvial Shear Veins" },
-  { id: 2, symbol: "Li", name: "Lithium", cx: 155, cy: 140, r: 6, region: "Sahatany Valley", depositType: "Spodumene Pegmatite Field" },
-  { id: 3, symbol: "Gr", name: "Graphite", cx: 120, cy: 180, r: 6.5, region: "Toamasina Hinterland", depositType: "Flake Graphite Schist" },
-  { id: 6, symbol: "REE", name: "Rare Earths", cx: 145, cy: 220, r: 5.5, region: "Ambatofinandrahana", depositType: "Monazite & Bastnäsite Carbonatite" },
-  { id: 4, symbol: "Ni", name: "Nickel", cx: 125, cy: 260, r: 6, region: "Ambatovy Corridor", depositType: "Lateritic Nickel Ore" },
-  { id: 5, symbol: "Co", name: "Cobalt", cx: 150, cy: 310, r: 5.5, region: "Eastern Belt Central", depositType: "Cobalt-bearing Laterites" },
-  { id: 7, symbol: "V", name: "Vanadium", cx: 160, cy: 360, r: 5, region: "Green Giant Trend", depositType: "Vanadiferous Titanomagnetite" },
+  { id: 1, symbol: "Au", name: "Gold", cx: 130, cy: 90, r: 7, region: "Eastern Metamorphic Belt", depositType: "Hard-rock & Alluvial Shear Veins", fr: { region: "Ceinture métamorphique orientale", depositType: "Filons en roche dure et alluvions" } },
+  { id: 2, symbol: "Li", name: "Lithium", cx: 155, cy: 140, r: 6, region: "Sahatany Valley", depositType: "Spodumene Pegmatite Field", fr: { region: "Vallée de Sahatany", depositType: "Champ de pegmatites à spodumène" } },
+  { id: 3, symbol: "Gr", name: "Graphite", cx: 120, cy: 180, r: 6.5, region: "Toamasina Hinterland", depositType: "Flake Graphite Schist", fr: { region: "Arrière-pays de Toamasina", depositType: "Schistes à graphite en paillettes" } },
+  { id: 6, symbol: "REE", name: "Rare Earths", cx: 145, cy: 220, r: 5.5, region: "Ambatofinandrahana", depositType: "Monazite & Bastnäsite Carbonatite", fr: { region: "Ambatofinandrahana", depositType: "Carbonatites à monazite et bastnäsite" } },
+  { id: 4, symbol: "Ni", name: "Nickel", cx: 125, cy: 260, r: 6, region: "Ambatovy Corridor", depositType: "Lateritic Nickel Ore", fr: { region: "Corridor d'Ambatovy", depositType: "Minerai de nickel latéritique" } },
+  { id: 5, symbol: "Co", name: "Cobalt", cx: 150, cy: 310, r: 5.5, region: "Eastern Belt Central", depositType: "Cobalt-bearing Laterites", fr: { region: "Centre de la ceinture orientale", depositType: "Latérites cobaltifères" } },
+  { id: 7, symbol: "V", name: "Vanadium", cx: 160, cy: 360, r: 5, region: "Green Giant Trend", depositType: "Vanadiferous Titanomagnetite", fr: { region: "Couloir de Green Giant", depositType: "Titanomagnétite vanadifère" } },
 ];
 
 const InteractiveMadagascarMap: React.FC<{
@@ -145,6 +147,9 @@ const WhyMadagascar: React.FC = () => {
         t[activeMarkerMineral.nameKey as keyof typeof t]) ||
       activeMarker.name
     : "";
+  const activeMarkerLocalized = activeMarker
+    ? localized(locale, activeMarker, activeMarker.fr)
+    : undefined;
 
   return (
     <section id="minerals" className="py-20 md:py-28 bg-background relative overflow-hidden">
@@ -214,8 +219,8 @@ const WhyMadagascar: React.FC = () => {
                         {locale === "en" ? "Identified Deposit" : "Gisement identifié"}
                       </span>
                     </div>
-                    <p className="text-xs font-medium text-cream/90">{activeMarker.region}</p>
-                    <p className="text-[11px] text-cream/50 mt-1">{activeMarker.depositType}</p>
+                    <p className="text-xs font-medium text-cream/90">{activeMarkerLocalized?.region}</p>
+                    <p className="text-[11px] text-cream/50 mt-1">{activeMarkerLocalized?.depositType}</p>
                   </motion.div>
                 ) : (
                   <div className="p-4 rounded-xl border border-white/5 bg-white/[0.02] text-center text-xs text-cream/30 flex items-center justify-center h-full">

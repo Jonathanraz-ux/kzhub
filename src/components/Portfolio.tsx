@@ -5,6 +5,7 @@ import { portfolio } from "@/data/mockData";
 import SafeImage from "@/components/SafeImage";
 import { X, ArrowUpRight, MapPin, Layers, ShieldCheck, Maximize2 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { localized } from "@/lib/i18n/localize";
 
 type FilterType = "all" | "gold" | "lithium" | "graphite" | "surveys";
 
@@ -22,11 +23,17 @@ const Portfolio: React.FC = () => {
   ];
 
   const filteredProjects = useMemo(() => {
-    if (activeFilter === "all") return portfolio;
-    return portfolio.filter((item) => item.filterKey === activeFilter);
-  }, [activeFilter]);
+    const list =
+      activeFilter === "all"
+        ? portfolio
+        : portfolio.filter((item) => item.filterKey === activeFilter);
+    return list.map((item) => localized(locale, item, item.fr));
+  }, [activeFilter, locale]);
 
-  const openItem = portfolio.find((p) => p.id === openId);
+  const openItemRaw = portfolio.find((p) => p.id === openId);
+  const openItem = openItemRaw
+    ? localized(locale, openItemRaw, openItemRaw.fr)
+    : undefined;
 
   const close = useCallback(() => setOpenId(null), []);
 

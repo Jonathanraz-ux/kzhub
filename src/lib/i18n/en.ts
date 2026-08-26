@@ -148,7 +148,7 @@ export const en: TranslationKeys = {
   serMiningSitesTitle: "Verified Mining Sites for Sale",
   serMiningSitesDesc: "Access a curated portfolio of verified mining sites with granted licenses and proven geological potential across Madagascar.",
   serAdvisoryTitle: "End-to-End Investment Support",
-  serAdvisoryDesc: "Comprehensive support before, during and after acquisition — from project evaluation to ongoing operational support.",
+  serAdvisoryDesc: "Comprehensive support before, during and after acquisition — from project evaluation to exit planning.",
   serAdminTitle: "Administrative & Permits Support",
   serAdminDesc: "Assistance with mining licenses, permits and administrative procedures — clear guidance through every step of Malagasy mining law.",
   serDueDiligenceTitle: "Due Diligence & Evaluation",

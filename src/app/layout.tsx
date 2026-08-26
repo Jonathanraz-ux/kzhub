@@ -103,9 +103,9 @@ export default function RootLayout({
             }),
           }}
         />
-        <Preloader />
         <LanguageProvider>
           <LangUpdater />
+          <Preloader />
           <Layout>{children}</Layout>
         </LanguageProvider>
       </body>
