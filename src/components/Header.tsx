@@ -60,7 +60,7 @@ const Header: React.FC = () => {
         <a href="#hero" className="flex items-center gap-3 group shrink-0">
           <img
             src="/images/kazak-logo.png"
-            alt="Kazak.mg — The real Africa"
+            alt="Kazak Mining Hub"
             className="h-10 md:h-12 w-auto object-contain"
           />
         </a>

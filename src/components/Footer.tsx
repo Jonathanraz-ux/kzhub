@@ -4,7 +4,7 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { Globe, Share2, Mail, ShieldCheck } from "lucide-react";
 
 const Footer: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <footer className="border-t border-white/[0.04] bg-background">
@@ -14,23 +14,25 @@ const Footer: React.FC = () => {
             <div className="mb-4">
               <img
                 src="/images/kazak-logo.png"
-                alt="Kazak.mg — The real Africa"
+                alt="Kazak Mining Hub"
                 className="h-10 w-auto object-contain"
               />
             </div>
             <p className="text-xs text-cream/30 leading-relaxed max-w-xs mb-4">
-              Your trusted partner for mining investment in Madagascar. Connecting international investors with verified mineral projects.
+              {locale === "en"
+                ? "Your trusted partner for mining investment in Madagascar. We connect international investors with verified mineral projects."
+                : "Votre partenaire de confiance pour l'investissement minier à Madagascar. Nous mettons en relation les investisseurs internationaux et des projets miniers vérifiés."}
             </p>
             <div className="flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-gold-400/50 border border-gold-500/15 rounded-full">
                 <ShieldCheck size={10} />
-                Verified
+                {locale === "en" ? "Verified" : "Vérifié"}
               </span>
               <span className="inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-cream/30 border border-white/[0.06] rounded-full">
-                ESG Compliant
+                {locale === "en" ? "ESG Compliant" : "Conforme ESG"}
               </span>
               <span className="inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-cream/30 border border-white/[0.06] rounded-full">
-                Licensed
+                {locale === "en" ? "Licensed" : "Autorisée"}
               </span>
             </div>
           </div>
@@ -50,11 +52,13 @@ const Footer: React.FC = () => {
 
           <div>
             <p className="text-[11px] font-semibold text-cream/40 tracking-widest uppercase mb-4">
-              Resources
+              {locale === "en" ? "Resources" : "Ressources"}
             </p>
             <nav className="flex flex-col gap-2.5">
               <a href="#minerals" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerResources}</a>
-              <a href="#process" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">Investment Process</a>
+              <a href="#process" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">
+                {locale === "en" ? "Investment Process" : "Processus d'investissement"}
+              </a>
               <a href="#faq" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">FAQ</a>
               <a href="/legal" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerLegal}</a>
               <a href="/privacy" className="text-sm text-cream/30 hover:text-gold-400 transition-colors">{t.footerPrivacy}</a>
@@ -106,7 +110,11 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} Kazak Mining Hub. {t.footerRights}
           </p>
           <p className="text-[10px] text-cream/10">
-            Demo Version &mdash; Mockup Design
+            {locale === "en" ? (
+              <>Demo Version &mdash; Mockup Design</>
+            ) : (
+              <>Version de démonstration &mdash; Maquette</>
+            )}
           </p>
         </div>
       </div>

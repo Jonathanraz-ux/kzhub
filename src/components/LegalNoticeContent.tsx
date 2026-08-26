@@ -53,7 +53,7 @@ const CONTENT: Record<"en" | "fr", Content> = {
     ],
   },
   fr: {
-    title: "Mentions Légales",
+    title: "Mentions légales",
     updated: "24 août 2026",
     sections: [
       {
@@ -65,9 +65,9 @@ const CONTENT: Record<"en" | "fr", Content> = {
         ],
       },
       {
-        heading: "Directeur de la Publication",
+        heading: "Directeur de la publication",
         paras: [
-          "Direction Exécutive de Kazak Ltd. — coordonnées ci-dessus.",
+          "Direction exécutive de Kazak Ltd. — coordonnées ci-dessus.",
         ],
       },
       {
@@ -77,7 +77,7 @@ const CONTENT: Record<"en" | "fr", Content> = {
         ],
       },
       {
-        heading: "Propriété Intellectuelle",
+        heading: "Propriété intellectuelle",
         paras: [
           "L'ensemble des contenus de ce site (textes, images, logos, vidéos, données), sauf mention contraire, est la propriété de Kazak Ltd. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est interdite.",
         ],
@@ -85,11 +85,11 @@ const CONTENT: Record<"en" | "fr", Content> = {
       {
         heading: "Avertissement",
         paras: [
-          "Les informations présentées sur ce site, y compris les listes de projets, statuts de permis et descriptions géologiques, sont fournies à titre indicatif et ne constituent ni une offre, ni une garantie juridique, ni un conseil en investissement. Les investisseurs restent responsables de leur propre due diligence. Kazak Ltd. ne saurait être tenue responsable des décisions prises sur la base du contenu de ce site.",
+          "Les informations présentées sur ce site, y compris les listes de projets, les statuts de permis et les descriptions géologiques, sont fournies à titre indicatif et ne constituent ni une offre, ni une garantie juridique, ni un conseil en investissement. Les investisseurs restent responsables de leur propre due diligence. Kazak Ltd. ne saurait être tenue responsable des décisions prises sur la base du contenu de ce site.",
         ],
       },
       {
-        heading: "Droit Applicable",
+        heading: "Droit applicable",
         paras: [
           "Le présent site et ses mentions légales sont régis par le droit de la République de Madagascar. Tout litige sera soumis aux tribunaux compétents d'Antananarivo.",
         ],

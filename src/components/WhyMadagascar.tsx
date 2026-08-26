@@ -133,10 +133,18 @@ const InteractiveMadagascarMap: React.FC<{
 );
 
 const WhyMadagascar: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const [hoveredMineralId, setHoveredMineralId] = useState<number | null>(null);
 
   const activeMarker = MAP_MARKERS.find((m) => m.id === hoveredMineralId);
+  const activeMarkerMineral = activeMarker
+    ? minerals.find((m) => m.id === activeMarker.id)
+    : undefined;
+  const activeMarkerName = activeMarker
+    ? (activeMarkerMineral &&
+        t[activeMarkerMineral.nameKey as keyof typeof t]) ||
+      activeMarker.name
+    : "";
 
   return (
     <section id="minerals" className="py-20 md:py-28 bg-background relative overflow-hidden">
@@ -181,7 +189,9 @@ const WhyMadagascar: React.FC = () => {
                 onHoverMarker={setHoveredMineralId}
               />
               <p className="text-center text-[10px] text-cream/20 tracking-[0.2em] mt-3 uppercase font-semibold">
-                Carte des Concessions & Gisèments • Madagascar
+                {locale === "en"
+                  ? "Concessions & Deposits Map • Madagascar"
+                  : "Carte des concessions et gisements • Madagascar"}
               </p>
             </div>
 
@@ -198,10 +208,10 @@ const WhyMadagascar: React.FC = () => {
                   >
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-bold text-gold-400 uppercase tracking-wider">
-                        {activeMarker.name} ({activeMarker.symbol})
+                        {activeMarkerName} ({activeMarker.symbol})
                       </span>
                       <span className="text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-medium">
-                        Gisement Identifié
+                        {locale === "en" ? "Identified Deposit" : "Gisement identifié"}
                       </span>
                     </div>
                     <p className="text-xs font-medium text-cream/90">{activeMarker.region}</p>

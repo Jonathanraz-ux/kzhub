@@ -19,7 +19,7 @@ export const team = [
   },
   {
     id: 2,
-    name: "Direction Développement & Stratégie",
+    name: "Business Development & Strategy",
     role: "Director of Business Development & Mining Projects",
     image: "/images/client/client-portrait-2.jpg",
   },
@@ -27,7 +27,7 @@ export const team = [
 
 export const about = {
   mission:
-    "Deliver reliable, high-value mining projects through rigorous due-diligence and local expertise.",
+    "Deliver reliable, high-value mining projects through rigorous due diligence and local expertise.",
   vision:
     "Become the leading conduit for sustainable mining investment in Madagascar and the Indian Ocean region.",
 };
@@ -337,7 +337,7 @@ export const portfolio = [
   },
   {
     id: 4,
-    title: "Prélèvement d'Échantillons & Analyses",
+    title: "Sample Collection & Assays",
     category: "Mineral Samples",
     filterKey: "surveys",
     commodity: "Multi-element Assay",
@@ -348,7 +348,7 @@ export const portfolio = [
     geologyType: "ICP-MS / Fire Assay verified high-grade mineral specimens",
     accessInfo: "Mobile field laboratory team",
     description:
-      "Vérification sur le terrain et prélèvement d'échantillons minéraux de haute teneur par nos experts géologues certifiés.",
+      "Field verification and collection of high-grade mineral samples by our certified geologists.",
     image: "/images/projects/raw-mineral-sample.jpg",
     wide: true,
   },
@@ -372,7 +372,7 @@ export const portfolio = [
   },
   {
     id: 6,
-    title: "Site Minier & Concession Hydraulique",
+    title: "Mining Site & Hydraulic Concession",
     category: "Field Exploration",
     filterKey: "gold",
     commodity: "Gold & Hydro Resources",
@@ -383,7 +383,7 @@ export const portfolio = [
     geologyType: "Alluvial gravel channels with adjacent hard-rock vein structures",
     accessInfo: "Perennial river transport + Gravel road",
     description:
-      "Visite de sites miniers vérifiés et inspection des périmètres d'exploitation et réserves hydriques pour traitement gravimétrique.",
+      "Visits to verified mining sites with inspection of operating areas and water reserves for gravity-based processing.",
     image: "/images/projects/mining-site-landscape.jpg",
   },
   {

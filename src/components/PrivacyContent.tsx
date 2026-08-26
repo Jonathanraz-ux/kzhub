@@ -65,38 +65,38 @@ const CONTENT: Record<"en" | "fr", Content> = {
     ],
   },
   fr: {
-    title: "Politique de Confidentialité",
+    title: "Politique de confidentialité",
     updated: "24 août 2026",
     sections: [
       {
-        heading: "Aperçu",
+        heading: "Présentation",
         paras: [
           'Kazak Mining Hub, division de Kazak Ltd. (« nous »), respecte votre vie privée. La présente politique explique quelles données personnelles sont collectées via ce site et comment elles sont utilisées.',
         ],
       },
       {
-        heading: "Données Collectées",
+        heading: "Données collectées",
         paras: [
           "Le formulaire de contact de ce site collecte les informations que vous choisissez de fournir : nom complet, adresse e-mail, entreprise/organisation, domaine d'intérêt et message.",
           "Lorsque vous soumettez le formulaire, votre message est transmis via WhatsApp à notre équipe. Il n'est pas stocké sur les serveurs du site.",
         ],
       },
       {
-        heading: "Utilisation de Vos Données",
+        heading: "Utilisation de vos données",
         bullets: [
           "Répondre à vos demandes et questions.",
           "Fournir des informations sur les opportunités d'investissement minier.",
-          "Nous ne vendons, ne louons et ne partageons pas vos données personnelles avec des tiers à des fins commerciales.",
+          "Nous ne vendons, ne louons ni ne partageons vos données personnelles avec des tiers à des fins commerciales.",
         ],
       },
       {
-        heading: "Cookies & Analytique",
+        heading: "Cookies et mesure d'audience",
         paras: [
           "Ce site ne dépose actuellement pas de cookies publicitaires. Une intégration Google Analytics 4 est préparée mais désactivée ; si elle est activée à l'avenir, des statistiques d'utilisation anonymes pourront être collectées et la présente politique sera mise à jour en conséquence.",
         ],
       },
       {
-        heading: "Services Tiers",
+        heading: "Services tiers",
         paras: [
           "Ce site intègre des contenus de tiers susceptibles de traiter des données selon leurs propres politiques de confidentialité :",
         ],
@@ -113,7 +113,7 @@ const CONTENT: Record<"en" | "fr", Content> = {
         ],
       },
       {
-        heading: "Modifications de Cette Politique",
+        heading: "Modifications de cette politique",
         paras: [
           "Nous pouvons mettre à jour cette politique de temps à autre. Toute modification sera publiée sur cette page avec une date de révision mise à jour.",
         ],

@@ -25,7 +25,9 @@ export type TranslationKeys = {
   aboutTitle: string;
   aboutDesc: string;
   missionTitle: string;
+  missionText: string;
   visionTitle: string;
+  visionText: string;
   valuesTitle: string;
   teamTitle: string;
   bioLabel: string;

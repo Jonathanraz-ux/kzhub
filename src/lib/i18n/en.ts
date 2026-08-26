@@ -12,14 +12,14 @@ export const en: TranslationKeys = {
   heroBrand: "Kazak Mining Hub",
   heroTitle: "Your Trusted Partner for Mining Investment in Madagascar",
   heroSubtitle:
-    "Buy Verified Mining Sites. Invest with Confidence. Connecting international investors with high-potential business opportunities in Madagascar.",
+    "Buy verified mining sites and invest with confidence: we connect international investors with high-potential business opportunities in Madagascar.",
   heroCtaPrimary: "Explore Opportunities",
   heroCtaSecondary: "Download Investor Brief",
   heroTrustLine: "Verified Projects • Local Due Diligence • Regulatory Guidance",
 
   statOpportunities: "Verified Opportunities",
   statMinerals: "Strategic Minerals",
-  statExperience: "Years Local Experience",
+  statExperience: "Years of Local Experience",
   statConnections: "International Connections",
 
   aboutLabel: "About Us",
@@ -27,21 +27,25 @@ export const en: TranslationKeys = {
   aboutDesc:
     "Kazak Mining Hub is a specialized division of Kazak Ltd., a business development company dedicated to promoting strategic investment opportunities in Madagascar.",
   missionTitle: "Our Mission",
+  missionText:
+    "Deliver reliable, high-value mining projects through rigorous due diligence and local expertise.",
   visionTitle: "Our Vision",
+  visionText:
+    "Become the reference partner for sustainable mining investment in Madagascar and the Indian Ocean region.",
   valuesTitle: "Our Values",
   teamTitle: "Leadership Team",
   bioLabel: "Biography & Leadership",
   bioTitle: "Strategic Vision & Executive Leadership",
   bioSubtitle: "Kazak Mining Hub is a division of Kazak Ltd., a business development company operating across strategic sectors in Madagascar.",
-  bioDesc1: "Operating across strategic sectors—including agriculture, education, technology, and mining—Kazak Ltd. connects international investors with high-potential business opportunities in one of Africa's most resource-rich countries.",
-  bioDesc2: "Recognizing Madagascar's exceptional mineral wealth, Kazak Mining Hub serves as your trusted local partner. We support investors before, during, and after project acquisition to simplify procedures and deliver sustainable, profitable mining investments.",
+  bioDesc1: "Operating across strategic sectors—including agriculture, education, technology and mining—Kazak Ltd. connects international investors with high-potential business opportunities in one of Africa's most resource-rich countries.",
+  bioDesc2: "Recognizing Madagascar's exceptional mineral wealth, Kazak Mining Hub serves as your trusted local partner. We support investors before, during and after project acquisition to simplify procedures and deliver sustainable, profitable mining investments.",
   bioFounderTitle: "Executive Board & Leadership",
   bioFounderSub: "Kazak Ltd. & Kazak Mining Hub",
 
   videoLabel: "Kazak Immersive",
   videoTitle: "Inside Madagascar's Mining Sites",
   videoDesc:
-    "Immerse yourself in the field: landscapes, deposits and on-site operations filmed on location, to feel the real potential of every project.",
+    "Immerse yourself in Madagascar's mining regions: landscapes, deposits and day-to-day operations captured on site to reveal the true potential of every project.",
   videoCaption: "Showcase Film — Madagascar Field Footage",
 
   servicesLabel: "Services",
@@ -67,7 +71,7 @@ export const en: TranslationKeys = {
   processDesc:
     "A structured path from discovery to launch, guided at every step by our team of experts.",
 
-  portfolioLabel: "Portfolio",
+  portfolioLabel: "Opportunities",
   portfolioTitle: "Mining Portfolio",
   portfolioDesc:
     "A curated selection of exploration and development projects across Madagascar's most promising mineral regions.",
@@ -76,7 +80,7 @@ export const en: TranslationKeys = {
   faqTitle: "Frequently Asked Questions",
   faqQuestion1: "Can foreign investors own mining projects in Madagascar?",
   faqAnswer1:
-    "Yes. Foreign investors can participate in mining projects in accordance with Madagascar's mining regulations, whether through direct acquisition or joint-venture structures.",
+    "Yes. Foreign investors can participate in mining projects in accordance with Madagascar's mining regulations, whether through direct acquisition or joint venture structures.",
   faqQuestion2: "Do you assist with mining licenses?",
   faqAnswer2:
     "Yes. We provide guidance and support throughout the licensing and administrative process.",
@@ -85,8 +89,8 @@ export const en: TranslationKeys = {
     "Absolutely. We organize site visits and meetings with relevant stakeholders.",
   faqQuestion4: "Do you offer joint venture opportunities?",
   faqAnswer4:
-    "Yes. We work with investors seeking acquisitions, strategic partnerships, or joint ventures.",
-  faqQuestion5: "How does the due-diligence process work?",
+    "Yes. We work with investors seeking acquisitions, strategic partnerships or joint ventures.",
+  faqQuestion5: "How does the due diligence process work?",
   faqAnswer5:
     "Our multidisciplinary team conducts geological, legal, financial and ESG assessments to ensure each opportunity meets rigorous standards before presentation to investors.",
   faqQuestion6: "Do you provide ongoing support after acquisition?",
@@ -107,7 +111,7 @@ export const en: TranslationKeys = {
   formInterest: "Area of Interest",
   formInterestInvestment: "Investment Opportunity",
   formInterestPartnership: "Strategic Partnership",
-  formInterestPortfolio: "Expand Mining Portfolio",
+  formInterestPortfolio: "Portfolio Expansion",
   formInterestDueDiligence: "Due Diligence Services",
   formInterestOther: "Other",
   formMessage: "Your Message",
@@ -144,9 +148,9 @@ export const en: TranslationKeys = {
   serMiningSitesTitle: "Verified Mining Sites for Sale",
   serMiningSitesDesc: "Access a curated portfolio of verified mining sites with granted licenses and proven geological potential across Madagascar.",
   serAdvisoryTitle: "End-to-End Investment Support",
-  serAdvisoryDesc: "Comprehensive support before, during, and after acquisition. Guidance from project evaluation to exit planning.",
+  serAdvisoryDesc: "Comprehensive support before, during and after acquisition — from project evaluation to ongoing operational support.",
   serAdminTitle: "Administrative & Permits Support",
-  serAdminDesc: "Assistance with mining licenses, permits, administrative and regulatory procedures. Navigating Malagasy mining laws made seamless.",
+  serAdminDesc: "Assistance with mining licenses, permits and administrative procedures — clear guidance through every step of Malagasy mining law.",
   serDueDiligenceTitle: "Due Diligence & Evaluation",
   serDueDiligenceDesc: "Comprehensive geological, legal, financial and ESG assessments conducted by our multidisciplinary team of experts.",
   serCommunityTitle: "Community & Stakeholder Relations",
@@ -174,27 +178,27 @@ export const en: TranslationKeys = {
 
   // Why Choose
   whyVerifiedTitle: "Verified Mining Sites for Sale",
-  whyVerifiedDesc: "Verified mining sites for sale in Madagascar with ready-to-operate mining projects.",
+  whyVerifiedDesc: "Verified mining sites for sale in Madagascar, with ready-to-operate projects.",
   whyLocalTitle: "Local Expertise & Trusted Partnerships",
-  whyLocalDesc: "Our on-the-ground team possesses deep regulatory, geological and community knowledge.",
+  whyLocalDesc: "Our on-the-ground team brings deep regulatory, geological and community knowledge.",
   whySupportTitle: "End-to-End Investment Support",
-  whySupportDesc: "Comprehensive investment and administrative support before, during, and after acquisition.",
+  whySupportDesc: "Comprehensive investment and administrative support before, during and after acquisition.",
   whyTranspTitle: "Transparent Acquisition Process",
   whyTranspDesc: "Full access to due diligence reports, licensing documentation and financial models.",
   whyNetworkTitle: "Responsible & Sustainable Mining",
   whyNetworkDesc: "Commitment to responsible mining that respects human dignity and protects the environment.",
 
   // Responsible
-  respHumanTitle: "Respect Human Dignity",
+  respHumanTitle: "Respect for Human Dignity",
   respHumanDesc: "We uphold the highest human rights standards in all our operations and local partnerships.",
-  respEnvTitle: "Protect Environment",
+  respEnvTitle: "Environmental Protection",
   respEnvDesc: "Strict environmental impact assessments, reclamation plans and biodiversity conservation.",
   respSustTitle: "Sustainable Economic Development",
   respSustDesc: "Creating mining investments that generate shared prosperity for investors and local communities.",
   respEmployTitle: "Local Business Support",
   respEmployDesc: "Prioritizing local hiring, training programs and community development agreements.",
   respEconomicTitle: "Government & Local Partnerships",
-  respEconomicDesc: "Working closely with local communities, government authorities, and industry partners.",
+  respEconomicDesc: "Working closely with local communities, government authorities and industry partners.",
 
   // Process Steps
   procExploreTitle: "Explore Opportunities",
@@ -202,13 +206,13 @@ export const en: TranslationKeys = {
   procEvalTitle: "Project Evaluation",
   procEvalDesc: "Receive comprehensive briefs including geological data, financial models and risk assessments.",
   procVisitTitle: "Site Visit & Verification",
-  procVisitDesc: "Visit extraction sites, meet local teams and inspect operations firsthand on the ground.",
+  procVisitDesc: "Visit extraction sites, meet local teams and inspect operations firsthand.",
   procDueTitle: "Due Diligence",
   procDueDesc: "Multidisciplinary team conducts legal, geological, financial and ESG evaluations.",
   procAcqTitle: "Contract & Acquisition",
-  procAcqDesc: "Contract preparation, negotiation, and assistance with mining licenses and permits.",
+  procAcqDesc: "Contract preparation, negotiation and assistance with mining licenses and permits.",
   procLaunchTitle: "Project Launch & Local Support",
-  procLaunchDesc: "Secure your operations with ongoing local business support and regulatory coordination.",
+  procLaunchDesc: "Secure your operations with ongoing on-the-ground support and regulatory coordination.",
 
   // New Corporate & Technical UI Keys
   heroSpecsTicker: "Primary Commodities: Gold, Lithium, REE, Graphite • Jurisdiction: Madagascar • Status: Verified Concessions",
@@ -226,15 +230,15 @@ export const en: TranslationKeys = {
   tableGeology: "Geological Setting",
   tableAccess: "Infrastructure & Access",
 
-  pillarsTitle: "Pillars of Corporate Credibility & Excellence",
+  pillarsTitle: "Our Pillars of Credibility & Excellence",
   pillar1Title: "Verified Legal Titles & Cadastre",
-  pillar1Desc: "100% of listed concessions undergo rigorous legal, cadastral, and title due-diligence.",
+  pillar1Desc: "100% of listed concessions undergo rigorous legal, cadastral and title due diligence.",
   pillar2Title: "Tier-1 Geological Setting",
-  pillar2Desc: "Direct access to high-potential metamorphic belts, pegmatites, and monazite sands in Madagascar.",
-  pillar3Title: "Full On-The-Ground Support",
-  pillar3Desc: "A local multidisciplinary team managing government permitting, licensing, and community liaison.",
+  pillar2Desc: "Direct access to high-potential metamorphic belts, pegmatites and monazite sands in Madagascar.",
+  pillar3Title: "Full On-the-Ground Support",
+  pillar3Desc: "A local multidisciplinary team managing government permitting, licensing and community liaison.",
 
-  mapHoverHint: "Hover or click on any mineral marker to explore geological deposit details",
+  mapHoverHint: "Hover over or click any mineral marker to explore its geological deposit details",
   mapViewDeposit: "View Deposit Details",
 };
 

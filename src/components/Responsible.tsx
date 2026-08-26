@@ -6,7 +6,7 @@ import { Icon } from "@/components/Icon";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const Responsible: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section className="py-20 md:py-28 bg-background">
@@ -64,7 +64,15 @@ const Responsible: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p className="text-sm text-cream/40 leading-relaxed italic">
-            &ldquo;We believe that responsible mining is not just an obligation — it is the foundation of lasting value creation for investors, communities and the environment.&rdquo;
+            {locale === "en" ? (
+              <>
+                &ldquo;We believe that responsible mining is not just an obligation — it is the foundation of lasting value creation for investors, communities and the environment.&rdquo;
+              </>
+            ) : (
+              <>
+                {"«\u00A0Une exploitation minière responsable n'est pas seulement une obligation\u00A0: elle est le fondement d'une création de valeur durable pour les investisseurs, les communautés et l'environnement.\u00A0»"}
+              </>
+            )}
           </p>
         </motion.div>
       </div>

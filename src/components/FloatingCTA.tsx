@@ -2,9 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Calendar } from "lucide-react";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const FloatingCTA: React.FC = () => {
   const [visible, setVisible] = useState(false);
+  const { locale } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 600);
@@ -24,7 +26,7 @@ const FloatingCTA: React.FC = () => {
           className="fixed bottom-6 right-6 z-40 flex items-center gap-2.5 px-5 py-3 bg-gold-500 text-graphite font-semibold text-sm rounded-full shadow-2xl shadow-gold-500/25 hover:bg-gold-400 transition-all hover:shadow-gold-500/40 hover:scale-105"
         >
           <Calendar size={16} />
-          Book a Call
+          {locale === "en" ? "Book a Call" : "Planifier un appel"}
         </motion.a>
       )}
     </AnimatePresence>

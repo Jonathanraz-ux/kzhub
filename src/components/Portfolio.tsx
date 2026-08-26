@@ -9,7 +9,7 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 type FilterType = "all" | "gold" | "lithium" | "graphite" | "surveys";
 
 const Portfolio: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const [activeFilter, setActiveFilter] = useState<FilterType>("all");
   const [openId, setOpenId] = useState<number | null>(null);
 
@@ -136,7 +136,7 @@ const Portfolio: React.FC = () => {
                       {item.permitStatus && (
                         <span className="px-2 py-1 text-[9px] font-medium bg-emerald-500/20 backdrop-blur-md text-emerald-300 rounded border border-emerald-500/30 flex items-center gap-1">
                           <ShieldCheck size={10} />
-                          Vérifié
+                          {locale === "en" ? "Verified" : "Vérifié"}
                         </span>
                       )}
                     </div>
@@ -249,7 +249,9 @@ const Portfolio: React.FC = () => {
                 {/* Technical Specifications Table */}
                 <div className="p-6 md:p-8 border-t border-white/[0.08] space-y-6">
                   <h3 className="text-xs uppercase font-bold tracking-[0.2em] text-gold-400 mb-4">
-                    Profil Technique & Géologique du Projet
+                    {locale === "en"
+                      ? "Technical & Geological Project Profile"
+                      : "Profil technique et géologique du projet"}
                   </h3>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white/[0.02] border border-white/10 rounded-xl p-4 md:p-6 text-xs md:text-sm">
@@ -270,17 +272,17 @@ const Portfolio: React.FC = () => {
 
                     <div className="flex justify-between py-2 border-b border-white/5">
                       <span className="text-cream/40">{t.tableArea}:</span>
-                      <span className="font-semibold text-cream/90">{openItem.concessionArea || "Concession Vérifiée"}</span>
+                      <span className="font-semibold text-cream/90">{openItem.concessionArea || (locale === "en" ? "Verified concession" : "Concession vérifiée")}</span>
                     </div>
 
                     <div className="flex justify-between py-2 border-b border-white/5">
                       <span className="text-cream/40">{t.tablePermit}:</span>
-                      <span className="font-semibold text-emerald-400">{openItem.permitStatus || "Vérifié & Conforme"}</span>
+                      <span className="font-semibold text-emerald-400">{openItem.permitStatus || (locale === "en" ? "Verified & compliant" : "Vérifié et conforme")}</span>
                     </div>
 
                     <div className="flex justify-between py-2 border-b border-white/5">
                       <span className="text-cream/40">{t.tableAccess}:</span>
-                      <span className="font-semibold text-cream/90">{openItem.accessInfo || "Accès routier principal"}</span>
+                      <span className="font-semibold text-cream/90">{openItem.accessInfo || (locale === "en" ? "Main road access" : "Accès routier principal")}</span>
                     </div>
 
                     {openItem.geologyType && (
@@ -296,14 +298,16 @@ const Portfolio: React.FC = () => {
                   <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-white/5 text-xs text-cream/50">
                     <span className="flex items-center gap-2">
                       <ShieldCheck size={16} className="text-gold-400" />
-                      Dossier d&apos;acquisition & due-diligence disponible sur demande.
+                      {locale === "en"
+                        ? "Acquisition file and due diligence report available on request."
+                        : "Dossier d'acquisition et due diligence disponible sur demande."}
                     </span>
                     <a
                       href="#contact"
                       onClick={close}
                       className="px-6 py-2.5 bg-gold-500 text-graphite font-semibold rounded-md hover:bg-gold-400 transition-colors shadow-lg shadow-gold-500/20"
                     >
-                      Demander le dossier technique
+                      {locale === "en" ? "Request technical dossier" : "Demander le dossier technique"}
                     </a>
                   </div>
                 </div>

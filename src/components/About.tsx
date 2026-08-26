@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { about, values, team } from "@/data/mockData";
+import { values, team } from "@/data/mockData";
 import { Icon } from "@/components/Icon";
 import SafeImage from "@/components/SafeImage";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const About: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section id="about" className="py-20 md:py-28 bg-background relative overflow-hidden">
@@ -64,7 +64,7 @@ const About: React.FC = () => {
                     Kazak Ltd.
                   </span>
                   <p className="text-xs font-semibold text-cream">
-                    Leadership Exécutif
+                    {locale === "en" ? "Executive Leadership" : "Direction exécutive"}
                   </p>
                 </div>
               </motion.div>
@@ -87,7 +87,7 @@ const About: React.FC = () => {
                     Kazak Mining Hub
                   </span>
                   <p className="text-xs font-semibold text-cream">
-                    Direction Stratégique
+                    {locale === "en" ? "Strategic Leadership" : "Direction stratégique"}
                   </p>
                 </div>
               </motion.div>
@@ -119,19 +119,19 @@ const About: React.FC = () => {
               <div className="pt-2 grid grid-cols-2 gap-4 border-t border-white/10 text-xs md:text-sm text-cream/80">
                 <div className="flex items-center gap-2">
                   <Icon name="CheckCircle2" className="w-4 h-4 text-gold-400 shrink-0" />
-                  <span>Sites Miniers Vérifiés</span>
+                  <span>{locale === "en" ? "Verified Mining Sites" : "Sites miniers vérifiés"}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="CheckCircle2" className="w-4 h-4 text-gold-400 shrink-0" />
-                  <span>Accompagnement de Bout en Bout</span>
+                  <span>{locale === "en" ? "End-to-End Support" : "Accompagnement de bout en bout"}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="CheckCircle2" className="w-4 h-4 text-gold-400 shrink-0" />
-                  <span>Expertise Locale & Réseau</span>
+                  <span>{locale === "en" ? "Local Expertise & Network" : "Expertise locale et réseau"}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="CheckCircle2" className="w-4 h-4 text-gold-400 shrink-0" />
-                  <span>Exploitation Durable & ESG</span>
+                  <span>{locale === "en" ? "Sustainable Operations & ESG" : "Exploitation durable et ESG"}</span>
                 </div>
               </div>
             </div>
@@ -208,7 +208,7 @@ const About: React.FC = () => {
               {t.missionTitle}
             </h3>
             <p className="text-cream/70 leading-relaxed text-sm">
-              {about.mission}
+              {t.missionText}
             </p>
           </motion.div>
           <motion.div
@@ -225,7 +225,7 @@ const About: React.FC = () => {
               {t.visionTitle}
             </h3>
             <p className="text-cream/70 leading-relaxed text-sm">
-              {about.vision}
+              {t.visionText}
             </p>
           </motion.div>
         </div>
