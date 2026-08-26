@@ -7,14 +7,14 @@ export const fr: TranslationKeys = {
   navServices: "Services",
   navResources: "Ressources",
   navContact: "Contact",
-  investorPortal: "Portail investisseur",
+  investorPortal: "Contacter nos experts",
 
   heroBrand: "Kazak Mining Hub",
   heroTitle: "Votre partenaire de confiance pour l'investissement minier à Madagascar",
   heroSubtitle:
     "Achetez des sites miniers vérifiés et investissez en toute confiance : nous mettons en relation les investisseurs internationaux avec des opportunités d'affaires à fort potentiel à Madagascar.",
   heroCtaPrimary: "Explorer les opportunités",
-  heroCtaSecondary: "Télécharger le dossier",
+  heroCtaSecondary: "Demander des informations",
   heroTrustLine: "Projets vérifiés • Due diligence locale • Accompagnement réglementaire",
 
   statOpportunities: "Opportunités vérifiées",
@@ -149,7 +149,7 @@ export const fr: TranslationKeys = {
   serMiningSitesTitle: "Sites miniers vérifiés à vendre",
   serMiningSitesDesc: "Accédez à un portefeuille de sites miniers vérifiés, avec permis accordés et potentiel géologique prouvé, à Madagascar.",
   serAdvisoryTitle: "Accompagnement d'investissement de bout en bout",
-  serAdvisoryDesc: "Accompagnement complet avant, pendant et après l'acquisition — de l'évaluation du projet au suivi opérationnel.",
+  serAdvisoryDesc: "Un accompagnement complet avant, pendant et après l'acquisition, de l'évaluation du projet au suivi opérationnel.",
   serAdminTitle: "Assistance administrative et permis miniers",
   serAdminDesc: "Assistance pour l'obtention des permis et licences minières et pour toutes les démarches réglementaires auprès des autorités compétentes.",
   serDueDiligenceTitle: "Due diligence et évaluation",

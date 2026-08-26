@@ -29,10 +29,10 @@ const Footer: React.FC = () => {
                 {locale === "en" ? "Verified" : "Vérifié"}
               </span>
               <span className="inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-cream/30 border border-white/[0.06] rounded-full">
-                {locale === "en" ? "ESG Compliant" : "Conforme ESG"}
+                {locale === "en" ? "Local Expertise" : "Expertise locale"}
               </span>
               <span className="inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-cream/30 border border-white/[0.06] rounded-full">
-                {locale === "en" ? "Licensed" : "Autorisée"}
+                {locale === "en" ? "Responsible Mining" : "Exploitation responsable"}
               </span>
             </div>
           </div>

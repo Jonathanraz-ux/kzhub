@@ -7,14 +7,14 @@ export const en: TranslationKeys = {
   navServices: "Services",
   navResources: "Resources",
   navContact: "Contact",
-  investorPortal: "Investor Portal",
+  investorPortal: "Contact Our Experts",
 
   heroBrand: "Kazak Mining Hub",
   heroTitle: "Your Trusted Partner for Mining Investment in Madagascar",
   heroSubtitle:
     "Buy verified mining sites and invest with confidence: we connect international investors with high-potential business opportunities in Madagascar.",
   heroCtaPrimary: "Explore Opportunities",
-  heroCtaSecondary: "Download Investor Brief",
+  heroCtaSecondary: "Request Investment Information",
   heroTrustLine: "Verified Projects • Local Due Diligence • Regulatory Guidance",
 
   statOpportunities: "Verified Opportunities",
@@ -148,7 +148,7 @@ export const en: TranslationKeys = {
   serMiningSitesTitle: "Verified Mining Sites for Sale",
   serMiningSitesDesc: "Access a curated portfolio of verified mining sites with granted licenses and proven geological potential across Madagascar.",
   serAdvisoryTitle: "End-to-End Investment Support",
-  serAdvisoryDesc: "Comprehensive support before, during and after acquisition — from project evaluation to exit planning.",
+  serAdvisoryDesc: "Comprehensive support before, during and after acquisition — from project evaluation to ongoing operational support.",
   serAdminTitle: "Administrative & Permits Support",
   serAdminDesc: "Assistance with mining licenses, permits and administrative procedures — clear guidance through every step of Malagasy mining law.",
   serDueDiligenceTitle: "Due Diligence & Evaluation",
