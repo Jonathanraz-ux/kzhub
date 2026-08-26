@@ -388,8 +388,7 @@ export const portfolio = [
       description:
         "Pegmatites à spodumène dans la vallée de Sahatany, positionnées pour approvisionner la chaîne mondiale de batteries pour véhicules électriques en lithium haute pureté.",
     },
-    image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=85",
+    image: "/images/projects/sahatany-landscape.jpg",
     tall: true,
   },
   {
