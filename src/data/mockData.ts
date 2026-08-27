@@ -9,29 +9,6 @@ export const stats = [
   { id: 4, value: "24" },
 ];
 
-export const team = [
-  {
-    id: 1,
-    name: "Kazak Ltd. Executive Leadership",
-    role: "CEO & Founder - Kazak Ltd. & Kazak Mining Hub",
-    image: "/images/client/client-portrait-1.jpg",
-    fr: {
-      name: "Direction exécutive — Kazak Ltd.",
-      role: "PDG et Fondateur — Kazak Ltd. et Kazak Mining Hub",
-    },
-  },
-  {
-    id: 2,
-    name: "Business Development & Strategy",
-    role: "Director of Business Development & Mining Projects",
-    image: "/images/client/client-portrait-2.jpg",
-    fr: {
-      name: "Développement commercial et stratégie",
-      role: "Direction du développement commercial et des projets miniers",
-    },
-  },
-];
-
 export const expertTeam = [
   {
     id: 1,
@@ -71,6 +48,26 @@ export const expertTeam = [
     photoAlt: {
       en: "Portrait of Rova Minadrisoa, Visa, Travel and Accommodation Officer",
       fr: "Portrait de Rova Minadrisoa, responsable visas, voyages et hébergement",
+    },
+  },
+  {
+    id: 5,
+    name: "Kazak Ltd. Executive Leadership",
+    roleKey: "expertRole5",
+    photo: "/images/client/client-portrait-1.jpg",
+    photoAlt: {
+      en: "Portrait of Kazak Ltd. Executive Leadership, CEO & Founder",
+      fr: "Portrait de la direction exécutive de Kazak Ltd., PDG et Fondateur",
+    },
+  },
+  {
+    id: 6,
+    name: "Business Development & Strategy",
+    roleKey: "expertRole6",
+    photo: null as string | null,
+    photoAlt: {
+      en: "Portrait of Business Development & Strategy Director",
+      fr: "Portrait du directeur du développement commercial et des projets miniers",
     },
   },
 ];

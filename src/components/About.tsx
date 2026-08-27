@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { values, team } from "@/data/mockData";
+import { values } from "@/data/mockData";
 import { Icon } from "@/components/Icon";
 import SafeImage from "@/components/SafeImage";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
-import { localized } from "@/lib/i18n/localize";
 
 const About: React.FC = () => {
   const { t, locale } = useLanguage();
@@ -245,48 +244,6 @@ const About: React.FC = () => {
           ))}
         </div>
 
-        {/* Leadership Team Cards */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
-        >
-          <p className="text-sm text-gold-400 tracking-widest uppercase mb-2">
-            {t.teamTitle}
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-          {team.map((rawMember, idx) => {
-            const member = localized(locale, rawMember, rawMember.fr);
-            return (
-            <motion.div
-              key={member.id}
-              className="p-6 rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.03] to-transparent text-center group hover:border-gold-500/30 transition-all shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: idx * 0.15, duration: 0.5 }}
-            >
-              <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden border-2 border-gold-400/40 mx-auto mb-5 transition-all group-hover:border-gold-400 shadow-md">
-                <SafeImage
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  sizes="144px"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <h4 className="text-base md:text-lg font-semibold text-cream font-serif">
-                {member.name}
-              </h4>
-              <p className="text-xs text-gold-400/90 mt-1 font-medium">{member.role}</p>
-            </motion.div>
-            );
-          })}
-        </div>
       </div>
     </section>
   );

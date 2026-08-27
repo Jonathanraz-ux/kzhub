@@ -49,6 +49,8 @@ export const en: TranslationKeys = {
   expertRole2: "Mining Legal Expert",
   expertRole3: "Community Relations & Local Liaison Officer",
   expertRole4: "Visa, Travel and Accommodation Officer",
+  expertRole5: "CEO & Founder — Kazak Ltd. & Kazak Mining Hub",
+  expertRole6: "Director of Business Development & Mining Projects",
 
   videoLabel: "Kazak Immersive",
   videoTitle: "Inside Madagascar's Mining Sites",
