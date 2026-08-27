@@ -60,16 +60,6 @@ export const expertTeam = [
       fr: "Portrait de la direction exécutive de Kazak Ltd., PDG et Fondateur",
     },
   },
-  {
-    id: 6,
-    name: "Business Development & Strategy",
-    roleKey: "expertRole6",
-    photo: null as string | null,
-    photoAlt: {
-      en: "Portrait of Business Development & Strategy Director",
-      fr: "Portrait du directeur du développement commercial et des projets miniers",
-    },
-  },
 ];
 
 export const about = {

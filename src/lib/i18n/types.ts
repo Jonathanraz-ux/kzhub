@@ -46,7 +46,6 @@ export type TranslationKeys = {
   expertRole3: string;
   expertRole4: string;
   expertRole5: string;
-  expertRole6: string;
 
   videoLabel: string;
   videoTitle: string;
