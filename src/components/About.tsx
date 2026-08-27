@@ -45,8 +45,8 @@ const About: React.FC = () => {
           transition={{ duration: 0.7 }}
         >
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Client Portraits Grid */}
-            <div className="lg:col-span-5 grid grid-cols-2 gap-4 relative">
+            {/* Client Portrait */}
+            <div className="lg:col-span-5 grid grid-cols-1 gap-4 relative">
               <motion.div
                 className="relative rounded-xl overflow-hidden border-2 border-gold-500/30 shadow-xl group aspect-[3/4]"
                 whileHover={{ scale: 1.02 }}
@@ -66,29 +66,6 @@ const About: React.FC = () => {
                   </span>
                   <p className="text-xs font-semibold text-cream">
                     {locale === "en" ? "Executive Leadership" : "Direction exécutive"}
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="relative rounded-xl overflow-hidden border-2 border-gold-500/30 shadow-xl group aspect-[3/4] translate-y-4 md:translate-y-6"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                <SafeImage
-                  src="/images/client/client-portrait-2.jpg"
-                  alt={locale === "en" ? "Client Leadership Portrait 2" : "Portrait dirigeant 2"}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 300px"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
-                <div className="absolute bottom-3 left-3 right-3 text-left">
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-gold-400 block mb-0.5">
-                    Kazak Mining Hub
-                  </span>
-                  <p className="text-xs font-semibold text-cream">
-                    {locale === "en" ? "Strategic Leadership" : "Direction stratégique"}
                   </p>
                 </div>
               </motion.div>
