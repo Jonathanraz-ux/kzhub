@@ -38,6 +38,12 @@ export type TranslationKeys = {
   bioFounderTitle: string;
   bioFounderSub: string;
 
+  affiliationsLabel: string;
+  affiliationsTitle: string;
+  affiliationsSubtitle: string;
+  affiliationsDesc: string;
+  affiliationsBadge: string;
+
   expertsLabel: string;
   expertsTitle: string;
   expertsSubtitle: string;

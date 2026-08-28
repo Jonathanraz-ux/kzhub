@@ -42,6 +42,12 @@ export const fr: TranslationKeys = {
   bioFounderTitle: "Présidence et direction exécutive",
   bioFounderSub: "Kazak Ltd. et Kazak Mining Hub",
 
+  affiliationsLabel: "Écosystème Consulaire & Institutionnel",
+  affiliationsTitle: "Réseau International & Affiliations Consulaires",
+  affiliationsSubtitle: "Connecter les ressources stratégiques de Madagascar aux réseaux d'affaires nord-américains et mondiaux.",
+  affiliationsDesc: "Kazak Ltd. s'inscrit au sein des chambres de commerce et réseaux économiques internationaux, garantissant les plus hauts standards de gouvernance, de conformité transfrontalière et de coopération économique bilatérale.",
+  affiliationsBadge: "Réseau Consulaire & Économique",
+
   expertsLabel: "Notre équipe",
   expertsTitle: "Notre équipe d'experts",
   expertsSubtitle: "Des professionnels expérimentés qui vous accompagnent à chaque étape de votre projet.",

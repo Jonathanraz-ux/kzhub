@@ -142,14 +142,30 @@ const Hero: React.FC = () => {
             </a>
           </motion.div>
 
-          <motion.p
-            className="text-xs md:text-sm text-cream/30 tracking-wide whitespace-normal break-words"
+          <motion.div
+            className="flex flex-col items-center gap-3"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.75, duration: 0.6 }}
           >
-            {t.heroTrustLine}
-          </motion.p>
+            <p className="text-xs md:text-sm text-cream/30 tracking-wide whitespace-normal break-words">
+              {t.heroTrustLine}
+            </p>
+            
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md">
+              <span className="text-[10px] md:text-[11px] text-cream/50 tracking-wider uppercase font-medium">
+                {t.affiliationsBadge}
+              </span>
+              <span className="w-1 h-1 rounded-full bg-gold-400/50" />
+              <div className="px-2 py-0.5 bg-white rounded flex items-center justify-center shadow-sm">
+                <img
+                  src="/images/affiliations/njcc-logo.png"
+                  alt="New Jersey Chamber of Commerce"
+                  className="h-3.5 md:h-4 w-auto object-contain"
+                />
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         <motion.div

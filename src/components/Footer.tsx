@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                 ? "Your trusted partner for mining investment in Madagascar. We connect international investors with verified mineral projects."
                 : "Votre partenaire de confiance pour l'investissement minier à Madagascar. Nous mettons en relation les investisseurs internationaux et des projets miniers vérifiés."}
             </p>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-4">
               <span className="inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-gold-400/50 border border-gold-500/15 rounded-full">
                 <ShieldCheck size={10} />
                 {locale === "en" ? "Verified" : "Vérifié"}
@@ -33,6 +33,20 @@ const Footer: React.FC = () => {
               </span>
               <span className="inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-cream/30 border border-white/[0.06] rounded-full">
                 {locale === "en" ? "Responsible Mining" : "Exploitation responsable"}
+              </span>
+            </div>
+            
+            {/* Institutional Chamber of Commerce badge */}
+            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.06] hover:border-gold-500/20 transition-colors">
+              <div className="px-1.5 py-0.5 bg-white rounded flex items-center justify-center shadow-xs">
+                <img
+                  src="/images/affiliations/njcc-logo.png"
+                  alt="New Jersey Chamber of Commerce"
+                  className="h-3.5 w-auto object-contain"
+                />
+              </div>
+              <span className="text-[10px] text-cream/40 font-medium">
+                {locale === "en" ? "NJ Chamber of Commerce Network" : "Réseau Chambre de Commerce NJ"}
               </span>
             </div>
           </div>

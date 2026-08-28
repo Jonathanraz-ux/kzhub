@@ -42,6 +42,12 @@ export const en: TranslationKeys = {
   bioFounderTitle: "Executive Board & Leadership",
   bioFounderSub: "Kazak Ltd. & Kazak Mining Hub",
 
+  affiliationsLabel: "Institutional & Global Ecosystem",
+  affiliationsTitle: "International Network & Chamber Affiliations",
+  affiliationsSubtitle: "Connecting Madagascar's strategic resources to North American and global commercial networks.",
+  affiliationsDesc: "Kazak Ltd. actively interfaces with international business chambers and global trade ecosystems, upholding rigorous international compliance, cross-border due diligence, and bilateral economic cooperation.",
+  affiliationsBadge: "Trade & Commerce Ecosystem",
+
   expertsLabel: "Our Team",
   expertsTitle: "Our Expert Team",
   expertsSubtitle: "Experienced professionals supporting every stage of your project.",

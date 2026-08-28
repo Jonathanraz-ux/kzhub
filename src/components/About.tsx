@@ -5,6 +5,7 @@ import { values } from "@/data/mockData";
 import { Icon } from "@/components/Icon";
 import SafeImage from "@/components/SafeImage";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { Globe, ShieldCheck } from "lucide-react";
 
 const About: React.FC = () => {
   const { t, locale } = useLanguage();
@@ -165,6 +166,54 @@ const About: React.FC = () => {
               <p className="text-xs text-cream/60 leading-relaxed">
                 {t.pillar3Desc}
               </p>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Institutional & Global Chamber Ecosystem */}
+        <motion.div
+          className="mb-20 rounded-2xl border border-white/10 bg-gradient-to-r from-white/[0.03] via-gold-500/[0.04] to-white/[0.02] p-6 md:p-8 lg:p-10 backdrop-blur-md relative overflow-hidden shadow-xl"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="absolute -right-16 -top-16 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div className="lg:col-span-8 space-y-4 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/25 text-gold-400 text-xs font-medium tracking-wide">
+                <Globe size={13} className="shrink-0" />
+                <span>{t.affiliationsLabel}</span>
+              </div>
+
+              <h3 className="text-2xl md:text-3xl font-serif text-cream font-bold leading-snug">
+                {t.affiliationsTitle}
+              </h3>
+
+              <p className="text-gold-200/90 font-medium text-sm md:text-base border-l-2 border-gold-400/80 pl-4 py-0.5">
+                {t.affiliationsSubtitle}
+              </p>
+
+              <p className="text-cream/70 text-sm md:text-base leading-relaxed">
+                {t.affiliationsDesc}
+              </p>
+            </div>
+
+            <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center">
+              <div className="group relative p-5 md:p-6 rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-gold-500/30 transition-all duration-300 shadow-2xl w-full max-w-xs text-center">
+                <div className="p-4 bg-white rounded-xl shadow-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02]">
+                  <img
+                    src="/images/affiliations/njcc-logo.png"
+                    alt="New Jersey Chamber of Commerce"
+                    className="h-12 md:h-14 w-auto object-contain"
+                  />
+                </div>
+                <div className="mt-3 flex items-center justify-center gap-1.5 text-[11px] font-semibold text-gold-400/90 tracking-wider uppercase">
+                  <ShieldCheck size={13} />
+                  <span>{t.affiliationsBadge}</span>
+                </div>
+              </div>
             </div>
           </div>
         </motion.div>
