@@ -54,10 +54,11 @@ const Hero: React.FC = () => {
       />
 
       <motion.div
-        className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 lg:px-12 pt-28 md:pt-40 pb-20 md:pb-32 text-center"
+        className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-8 lg:px-12 pt-28 md:pt-40 pb-20 md:pb-32 text-center overflow-x-clip"
         style={{ y: contentY }}
       >
         <motion.div
+          className="w-full min-w-0"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -72,7 +73,7 @@ const Hero: React.FC = () => {
           </motion.p>
 
           <motion.h1
-            className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl text-cream leading-[1.1] max-w-5xl mx-auto mb-5 md:mb-6 font-serif"
+            className="text-[clamp(1.9rem,2.4rem+2vw,4.5rem)] sm:text-5xl md:text-6xl lg:text-7xl text-cream leading-[1.1] max-w-5xl mx-auto mb-5 md:mb-6 font-serif break-words"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -81,7 +82,7 @@ const Hero: React.FC = () => {
           </motion.h1>
 
           <motion.p
-            className="text-base md:text-lg text-cream/60 max-w-2xl mx-auto mb-6 leading-relaxed"
+            className="text-base md:text-lg text-cream/60 max-w-2xl mx-auto mb-6 leading-relaxed break-words"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.45, duration: 0.6 }}
@@ -91,14 +92,14 @@ const Hero: React.FC = () => {
 
           {/* Corporate Spotlight / Specs Bar */}
           <motion.div
-            className="relative inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.04] border border-gold-500/20 backdrop-blur-md mb-8 md:mb-10 text-xs text-cream/80 max-w-full sm:max-w-3xl mx-auto shadow-lg overflow-hidden"
+            className="relative inline-flex items-start sm:items-center gap-2.5 px-4 py-2.5 rounded-full bg-white/[0.04] border border-gold-500/20 backdrop-blur-md mb-8 md:mb-10 text-xs text-cream/80 w-full sm:w-fit sm:max-w-3xl mx-auto shadow-lg overflow-hidden text-left sm:text-center"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.55, duration: 0.5 }}
           >
-            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
+            <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0 mt-1 sm:mt-0" />
             <span
-              className="truncate min-w-0"
+              className="min-w-0 flex-1 whitespace-normal sm:whitespace-nowrap sm:truncate"
               title={t.heroSpecsTicker}
             >
               {t.heroSpecsTicker}
@@ -106,20 +107,20 @@ const Hero: React.FC = () => {
           </motion.div>
 
           <motion.div
-            className="flex w-full sm:w-auto flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-12"
+            className="flex w-full min-w-0 flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <a
               href="#portfolio"
-              className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-graphite font-semibold rounded-md hover:bg-gold-400 transition-all text-sm overflow-hidden"
+              className="group relative inline-flex min-w-0 w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-graphite font-semibold rounded-md hover:bg-gold-400 transition-all text-sm overflow-hidden"
             >
-              <span className="relative z-10 flex items-center gap-2">
+              <span className="relative z-10 flex items-center justify-center gap-2 min-w-0">
                 {t.heroCtaPrimary}
                 <ArrowRight
                   size={16}
-                  className="transition-transform group-hover:translate-x-1"
+                  className="shrink-0 transition-transform group-hover:translate-x-1"
                 />
               </span>
               <motion.span
@@ -131,18 +132,18 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center gap-2 px-8 py-4 border border-cream/20 text-cream font-semibold rounded-md hover:border-gold-500/50 hover:text-gold-400 transition-all text-sm"
+              className="group inline-flex min-w-0 w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 border border-cream/20 text-cream font-semibold rounded-md hover:border-gold-500/50 hover:text-gold-400 transition-all text-sm"
             >
               {t.heroCtaSecondary}
               <Download
                 size={16}
-                className="transition-transform group-hover:translate-y-0.5"
+                className="shrink-0 transition-transform group-hover:translate-y-0.5"
               />
             </a>
           </motion.div>
 
           <motion.p
-            className="text-xs md:text-sm text-cream/30 tracking-wide"
+            className="text-xs md:text-sm text-cream/30 tracking-wide whitespace-normal break-words"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.75, duration: 0.6 }}
@@ -152,7 +153,7 @@ const Hero: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto w-full"
+          className="mt-12 md:mt-20 grid grid-cols-1 [@media(min-width:340px)]:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto w-full min-w-0"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -160,13 +161,13 @@ const Hero: React.FC = () => {
           {stats.map((stat, idx) => (
             <motion.div
               key={stat.id}
-              className="relative border border-white/[0.06] rounded-lg px-3 py-5 md:px-4 md:py-6 text-center bg-white/[0.02] backdrop-blur-sm hover:border-gold-500/20 transition-colors"
+              className="relative min-w-0 border border-white/[0.06] rounded-lg px-3 py-5 md:px-4 md:py-6 text-center bg-white/[0.02] backdrop-blur-sm hover:border-gold-500/20 transition-colors"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 + idx * 0.1, duration: 0.5 }}
             >
               <AnimatedCounter value={stat.value} />
-              <span className="block text-xs text-cream/40 mt-1.5 uppercase tracking-wider">
+              <span className="block text-xs text-cream/40 mt-1.5 uppercase tracking-wider break-words">
                 {t[statKeys[idx]]}
               </span>
             </motion.div>

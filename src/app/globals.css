@@ -42,6 +42,13 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   overscroll-behavior-y: none;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+html {
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 h1, h2, h3, h4 {
