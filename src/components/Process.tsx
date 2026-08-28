@@ -25,7 +25,7 @@ const Process: React.FC = () => {
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="process" className="py-20 md:py-28 bg-anthracite">
+    <section id="process" className="py-16 md:py-28 bg-anthracite">
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
         <motion.div
           className="text-center mb-16"

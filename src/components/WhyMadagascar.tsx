@@ -152,7 +152,7 @@ const WhyMadagascar: React.FC = () => {
     : undefined;
 
   return (
-    <section id="minerals" className="py-20 md:py-28 bg-background relative overflow-hidden">
+    <section id="minerals" className="py-16 md:py-28 bg-background relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/[0.03] rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gold-500/[0.02] rounded-full blur-3xl" />
 

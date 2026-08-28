@@ -39,7 +39,7 @@ const VideoShowcase: React.FC = () => {
     <section
       id="showcase"
       ref={sectionRef}
-      className="relative py-20 md:py-28 bg-background overflow-hidden"
+      className="relative py-16 md:py-28 bg-background overflow-hidden"
     >
       {/* Ambient glows */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-gold-500/[0.06] rounded-full blur-[140px] pointer-events-none" />

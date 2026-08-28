@@ -12,7 +12,7 @@ const AnimatedCounter: React.FC<{ value: string; suffix?: string }> = ({
   const isNumeric = !isNaN(num);
 
   return (
-    <span ref={ref} className="block text-3xl md:text-4xl font-bold text-gold-400 font-serif">
+    <span ref={ref} className="block text-2xl md:text-4xl font-bold text-gold-400 font-serif">
       {isNumeric ? (
         <motion.span
           initial={{ opacity: 0 }}

@@ -9,7 +9,7 @@ const Responsible: React.FC = () => {
   const { t, locale } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section className="py-16 md:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
         <motion.div
           className="text-center mb-16"

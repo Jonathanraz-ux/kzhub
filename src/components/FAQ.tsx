@@ -18,7 +18,7 @@ const FAQ: React.FC = () => {
   const [openId, setOpenId] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-anthracite">
+    <section id="faq" className="py-16 md:py-28 bg-anthracite">
       <div className="mx-auto max-w-3xl px-4 md:px-8 lg:px-12">
         <motion.div
           className="text-center mb-12"

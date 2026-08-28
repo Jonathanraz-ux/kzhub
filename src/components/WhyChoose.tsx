@@ -9,7 +9,7 @@ const WhyChoose: React.FC = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 bg-anthracite">
+    <section className="py-16 md:py-28 bg-anthracite">
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
         <motion.div
           className="text-center mb-16"

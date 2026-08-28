@@ -38,7 +38,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-background">
+    <section id="contact" className="py-16 md:py-28 bg-background">
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
         <motion.div
           className="text-center mb-16"
@@ -195,7 +195,7 @@ const Contact: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <button
                     type="submit"
-                    className="px-8 py-3 bg-gold-500 text-graphite font-semibold text-sm rounded-lg hover:bg-gold-400 transition-all hover:shadow-lg hover:shadow-gold-500/20"
+                    className="w-full sm:w-auto px-8 py-3.5 bg-gold-500 text-graphite font-semibold text-sm rounded-lg hover:bg-gold-400 transition-all hover:shadow-lg hover:shadow-gold-500/20"
                   >
                     {t.formSubmit}
                   </button>

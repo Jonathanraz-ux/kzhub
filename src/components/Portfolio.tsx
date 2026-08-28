@@ -51,7 +51,7 @@ const Portfolio: React.FC = () => {
   }, [openId, close]);
 
   return (
-    <section id="portfolio" className="py-20 md:py-28 bg-anthracite relative overflow-hidden">
+    <section id="portfolio" className="py-16 md:py-28 bg-anthracite relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
         {/* Section Header */}
         <motion.div

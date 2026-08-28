@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
       />
 
       <motion.div
-        className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 lg:px-12 py-32 md:py-40 text-center"
+        className="relative z-10 mx-auto max-w-7xl px-4 md:px-8 lg:px-12 pt-28 md:pt-40 pb-20 md:pb-32 text-center"
         style={{ y: contentY }}
       >
         <motion.div
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.p
-            className="text-gold-400 text-sm md:text-base font-medium tracking-[0.2em] uppercase mb-6"
+            className="text-sm md:text-base text-gold-400 font-medium tracking-[0.2em] uppercase mb-5 md:mb-6"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.6 }}
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
           </motion.p>
 
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-7xl text-cream leading-[1.1] max-w-5xl mx-auto mb-6 font-serif"
+            className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl text-cream leading-[1.1] max-w-5xl mx-auto mb-5 md:mb-6 font-serif"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -91,24 +91,29 @@ const Hero: React.FC = () => {
 
           {/* Corporate Spotlight / Specs Bar */}
           <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-gold-500/20 backdrop-blur-md mb-10 text-xs text-cream/80 max-w-3xl mx-auto shadow-lg"
+            className="relative inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/[0.04] border border-gold-500/20 backdrop-blur-md mb-8 md:mb-10 text-xs text-cream/80 max-w-full sm:max-w-3xl mx-auto shadow-lg overflow-hidden"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.55, duration: 0.5 }}
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse shrink-0" />
-            <span className="truncate">{t.heroSpecsTicker}</span>
+            <span
+              className="truncate min-w-0"
+              title={t.heroSpecsTicker}
+            >
+              {t.heroSpecsTicker}
+            </span>
           </motion.div>
 
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+            className="flex w-full sm:w-auto flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <a
               href="#portfolio"
-              className="group relative inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-graphite font-semibold rounded-md hover:bg-gold-400 transition-all text-sm overflow-hidden"
+              className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold-500 text-graphite font-semibold rounded-md hover:bg-gold-400 transition-all text-sm overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">
                 {t.heroCtaPrimary}
@@ -126,7 +131,7 @@ const Hero: React.FC = () => {
             </a>
             <a
               href="#contact"
-              className="group inline-flex items-center gap-2 px-8 py-4 border border-cream/20 text-cream font-semibold rounded-md hover:border-gold-500/50 hover:text-gold-400 transition-all text-sm"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 border border-cream/20 text-cream font-semibold rounded-md hover:border-gold-500/50 hover:text-gold-400 transition-all text-sm"
             >
               {t.heroCtaSecondary}
               <Download
@@ -147,7 +152,7 @@ const Hero: React.FC = () => {
         </motion.div>
 
         <motion.div
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
+          className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto w-full"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
@@ -155,7 +160,7 @@ const Hero: React.FC = () => {
           {stats.map((stat, idx) => (
             <motion.div
               key={stat.id}
-              className="relative border border-white/[0.06] rounded-lg px-4 py-6 text-center bg-white/[0.02] backdrop-blur-sm hover:border-gold-500/20 transition-colors"
+              className="relative border border-white/[0.06] rounded-lg px-3 py-5 md:px-4 md:py-6 text-center bg-white/[0.02] backdrop-blur-sm hover:border-gold-500/20 transition-colors"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 + idx * 0.1, duration: 0.5 }}

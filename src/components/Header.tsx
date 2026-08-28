@@ -26,6 +26,17 @@ const Header: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -109,18 +120,19 @@ const Header: React.FC = () => {
         <div className="flex items-center gap-2 lg:hidden">
           <button
             onClick={toggle}
-            className="flex items-center gap-1 px-2 py-1.5 text-xs font-medium text-cream/50 border border-white/10 rounded-md"
+            className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-cream/50 border border-white/10 rounded-md hover:border-gold-500/30 hover:text-gold-400 transition-colors"
             aria-label={`Switch language to ${locale === "en" ? "French" : "English"}`}
           >
             <Globe size={14} />
             {locale === "en" ? "FR" : "EN"}
           </button>
           <button
-            className="text-cream p-2 hover:text-gold-400 transition-colors"
+            className="text-cream p-2.5 hover:text-gold-400 transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle navigation"
+            aria-expanded={mobileOpen}
           >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
@@ -131,23 +143,30 @@ const Header: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-graphite/95 backdrop-blur-xl border-t border-white/5 overflow-hidden"
+            className="lg:hidden bg-graphite/95 backdrop-blur-xl border-t border-white/5 overflow-hidden max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
-            <nav className="flex flex-col px-6 py-4 gap-1">
-              {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={handleNav}
-                  className="py-3 px-2 text-sm font-medium text-cream/70 hover:text-gold-400 border-b border-white/5 transition-colors"
-                >
-                  {t[item.key]}
-                </a>
-              ))}
+            <nav className="flex flex-col px-6 py-3 gap-0.5">
+              {NAV_ITEMS.map((item) => {
+                const isActive = activeSection === item.href.replace("#", "");
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={handleNav}
+                    className={`flex items-center justify-between py-3.5 px-2 rounded-lg text-base font-medium border-b border-white/5 transition-colors ${
+                      isActive
+                        ? "text-gold-400"
+                        : "text-cream/70 hover:text-gold-400"
+                    }`}
+                  >
+                    {t[item.key]}
+                  </a>
+                );
+              })}
               <a
                 href="#contact"
                 onClick={handleNav}
-                className="mt-3 px-5 py-3 text-sm font-semibold bg-gold-500 text-graphite rounded-md text-center hover:bg-gold-400 transition-colors"
+                className="mt-4 mb-2 px-5 py-3.5 text-sm font-semibold bg-gold-500 text-graphite rounded-md text-center hover:bg-gold-400 transition-colors"
               >
                 {t.investorPortal}
               </a>

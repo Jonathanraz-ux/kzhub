@@ -34,7 +34,7 @@ const ExpertTeam: React.FC = () => {
     <section
       id="team"
       aria-labelledby="team-heading"
-      className="py-20 md:py-28 bg-background relative overflow-hidden"
+      className="py-16 md:py-28 bg-background relative overflow-hidden"
     >
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[140px] pointer-events-none" />
 
