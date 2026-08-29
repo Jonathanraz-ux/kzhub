@@ -256,4 +256,21 @@ export const fr: TranslationKeys = {
 
   mapHoverHint: "Survolez ou cliquez sur un marqueur pour explorer les détails du gisement",
   mapViewDeposit: "Voir les détails du gisement",
+
+  // Notre site (Ambodilazana)
+  siteLabel: "Notre site",
+  siteTitle: "Site minier d'Ambodilazana",
+  siteSurtitle: "Localisation stratégique",
+  siteHeading: "Site minier d'Ambodilazana",
+  siteDesc: "Situé à Ambodilazana, à Madagascar, notre site s'inscrit dans un environnement naturel remarquable façonné par la rivière Ivondro. Cette localisation stratégique constitue le cœur géographique du projet Kazak Mining Hub.",
+  siteMapBtn: "Voir sur Google Maps",
+
+  // Périmètre du projet (PE n°36409)
+  perimeterLabel: "Périmètre du projet",
+  perimeterSurtitle: "Aperçu géographique",
+  perimeterTitle: "Périmètre du projet — PE n°36409",
+  perimeterDesc: "Cette carte présente la localisation géographique du périmètre PE n°36409 ainsi que sa position par rapport aux communes, fokontany et localités environnantes.",
+  perimeterCaption: "Carte de localisation du périmètre du projet PE n°36409 — système de coordonnées WGS 84.",
+  perimeterViewFull: "Agrandir la carte",
+  perimeterAlt: "Carte de localisation du périmètre du projet PE n°36409",
 };

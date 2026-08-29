@@ -14,7 +14,7 @@ export const expertTeam = [
     id: 1,
     name: "Willy Raharijaona",
     roleKey: "expertRole1",
-    photo: null as string | null,
+    photo: "/images/client/willy-raharijaona.jpg",
     photoAlt: {
       en: "Portrait of Willy Raharijaona, Mining Exploration Expert",
       fr: "Portrait de Willy Raharijaona, expert en exploration minière",
@@ -44,7 +44,7 @@ export const expertTeam = [
     id: 4,
     name: "Rova Minadrisoa",
     roleKey: "expertRole4",
-    photo: null as string | null,
+    photo: "/images/client/rova-minadrisoa.jpg",
     photoAlt: {
       en: "Portrait of Rova Minadrisoa, Visa, Travel and Accommodation Officer",
       fr: "Portrait de Rova Minadrisoa, responsable visas, voyages et hébergement",

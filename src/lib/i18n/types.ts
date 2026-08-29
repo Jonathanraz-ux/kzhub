@@ -237,5 +237,22 @@ export type TranslationKeys = {
 
   mapHoverHint: string;
   mapViewDeposit: string;
+
+  // Our Site (Ambodilazana)
+  siteLabel: string;
+  siteTitle: string;
+  siteSurtitle: string;
+  siteHeading: string;
+  siteDesc: string;
+  siteMapBtn: string;
+
+  // Project Perimeter (PE No. 36409)
+  perimeterLabel: string;
+  perimeterSurtitle: string;
+  perimeterTitle: string;
+  perimeterDesc: string;
+  perimeterCaption: string;
+  perimeterViewFull: string;
+  perimeterAlt: string;
 };
 

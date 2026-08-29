@@ -255,5 +255,22 @@ export const en: TranslationKeys = {
 
   mapHoverHint: "Hover over or click any mineral marker to explore its geological deposit details",
   mapViewDeposit: "View Deposit Details",
+
+  // Our Site (Ambodilazana)
+  siteLabel: "Our Site",
+  siteTitle: "Ambodilazana Mining Site",
+  siteSurtitle: "Strategic Location",
+  siteHeading: "Ambodilazana Mining Site",
+  siteDesc: "Located in Ambodilazana, Madagascar, our site lies within a distinctive natural setting shaped by the Ivondro River. This strategic location forms the geographical heart of the Kazak Mining Hub project.",
+  siteMapBtn: "View on Google Maps",
+
+  // Project Perimeter (PE No. 36409)
+  perimeterLabel: "Project Perimeter",
+  perimeterSurtitle: "Geographical Overview",
+  perimeterTitle: "Project Perimeter — PE No. 36409",
+  perimeterDesc: "This map provides a geographical overview of perimeter PE No. 36409 and its position in relation to the surrounding communes, fokontany and localities.",
+  perimeterCaption: "Location map of project perimeter PE No. 36409 — WGS 84 coordinate system.",
+  perimeterViewFull: "View full map",
+  perimeterAlt: "Location map of project perimeter PE No. 36409",
 };
 

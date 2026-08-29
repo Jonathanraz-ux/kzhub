@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import OurSite from "@/components/OurSite";
+import ProjectPerimeter from "@/components/ProjectPerimeter";
 import VideoShowcase from "@/components/VideoShowcase";
 import Services from "@/components/Services";
 import WhyMadagascar from "@/components/WhyMadagascar";
@@ -21,6 +23,8 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <OurSite />
+      <ProjectPerimeter />
       <VideoShowcase />
       <Services />
       <WhyMadagascar />
