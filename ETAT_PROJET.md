@@ -1,6 +1,6 @@
 # État du projet — KZHUB (Kazak Mining Hub)
 
-Site : Next.js 16 (App Router) — hébergement Netlify (`https://kazak-hub.netlify.app`)
+Site : Next.js 16 (App Router) — hébergement Netlify (`https://kazak-mining-hub.com`)
 Domaine final prévu : `.mg` (via registrar agréé NIC Madagascar)
 Référentiel de conformité : `public/images/image client et cahier de charge/Kazak Mining Hub website .docx`
 
@@ -54,7 +54,7 @@ Dernière mise à jour : 24/08/2026
 
 ### Au passage au domaine .mg
 5. Acheter le `.mg` (registrar agréé NIC Madagascar)
-6. Netlify : variable d'env `NEXT_PUBLIC_SITE_URL=https://<domaine>.mg` + attacher le domaine + redirection 301 depuis le sous-domaine netlify.app
+6. Netlify : variable d'env `NEXT_PUBLIC_SITE_URL=https://<domaine>.mg` + attacher le domaine + redirection 301 depuis les sous-domaines (netlify.app / kazak-mining-hub.com) vers le .mg
 7. Nouvelle propriété Search Console pour le `.mg` + re-soumettre `sitemap.xml`
 8. Créer la boîte mail pro (`contact@<domaine>.mg`) puis :
    - remplacer WhatsApp par un vrai backend formulaire (Netlify Forms / Formspree / Resend)
@@ -74,5 +74,6 @@ Dernière mise à jour : 24/08/2026
 | Date | Décision |
 |---|---|
 | 24/08/2026 | URL de référence = `https://kazak-hub.netlify.app` (défaut), futur `.mg` via variable d'env |
+| 30/08/2026 | URL de référence = `https://kazak-mining-hub.com` (domaine réel), futur `.mg` via variable d'env |
 | 24/08/2026 | Partenaires + témoignages supprimés (contenus fictifs) plutôt que remplacés — à recréer avec de vrais contenus clients |
 | 24/08/2026 | Formulaire → WhatsApp en attendant une adresse email pro |

@@ -1,5 +1,5 @@
 export const siteUrl = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://kazak-hub.netlify.app"
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://kazak-mining-hub.com"
 ).replace(/\/$/, "");
 
 export const siteName = "Kazak Mining Hub";
