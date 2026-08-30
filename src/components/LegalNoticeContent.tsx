@@ -16,14 +16,14 @@ const CONTENT: Record<"en" | "fr", Content> = {
         heading: "Publisher",
         paras: [
           "This website is published by Kazak Ltd., a business development company operating in Madagascar, through its specialized division Kazak Mining Hub.",
-          `Address: 3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar\nEmail: ${contactInfo.email}\nPhone / WhatsApp: ${contactInfo.phone}`,
+          `Address: 3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar\nEmail: ${contactInfo.email}\nPhone / WhatsApp: ${contactInfo.phoneMadagascarDisplay} (Madagascar) — ${contactInfo.phoneIntlDisplay} (International)`,
           "Company registration details (NIF, STAT, RCS): to be completed.",
         ],
       },
       {
         heading: "Publication Director",
         paras: [
-          "Kazak Ltd. Executive Leadership — contact details as above.",
+          "Hery Zo ANDRIAMIARANA — CEO & Founder, Kazak Ltd. & Kazak Mining Hub. Contact details as above.",
         ],
       },
       {
@@ -60,14 +60,14 @@ const CONTENT: Record<"en" | "fr", Content> = {
         heading: "Éditeur",
         paras: [
           "Le présent site est édité par Kazak Ltd., société de développement commercial opérant à Madagascar, à travers sa division spécialisée Kazak Mining Hub.",
-          `Adresse : 3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar\nE-mail : ${contactInfo.email}\nTéléphone / WhatsApp : ${contactInfo.phone}`,
+          `Adresse : 3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar\nE-mail : ${contactInfo.email}\nTéléphone / WhatsApp : ${contactInfo.phoneMadagascarDisplay} (Madagascar) — ${contactInfo.phoneIntlDisplay} (International)`,
           "Numéros d'immatriculation de la société (NIF, STAT, RCS) : à compléter.",
         ],
       },
       {
         heading: "Directeur de la publication",
         paras: [
-          "Direction exécutive de Kazak Ltd. — coordonnées ci-dessus.",
+          "Hery Zo ANDRIAMIARANA — CEO & Founder, Kazak Ltd. & Kazak Mining Hub. Coordonnées ci-dessus.",
         ],
       },
       {

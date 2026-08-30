@@ -52,12 +52,12 @@ export const expertTeam = [
   },
   {
     id: 5,
-    name: "Kazak Ltd. Executive Leadership",
+    name: "Hery Zo ANDRIAMIARANA",
     roleKey: "expertRole5",
     photo: "/images/client/client-portrait-1.jpg",
     photoAlt: {
-      en: "Portrait of Kazak Ltd. Executive Leadership, CEO & Founder",
-      fr: "Portrait de la direction exécutive de Kazak Ltd., PDG et Fondateur",
+      en: "Portrait of Hery Zo ANDRIAMIARANA, CEO & Founder of Kazak Ltd. & Kazak Mining Hub",
+      fr: "Portrait de Hery Zo ANDRIAMIARANA, CEO & Founder de Kazak Ltd. & Kazak Mining Hub",
     },
   },
 ];
@@ -621,9 +621,13 @@ export const portfolio = [
 
 export const contactInfo = {
   address: "3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar",
-  email: "contact@kazakmininghub.com",
-  phone: "+261 34 56 789 01",
-  whatsapp: "+261 32 98 765 43",
+  email: "contact@kazak-mining-hub.com",
+  phoneMadagascarDisplay: "038 75 963 61",
+  phoneMadagascarTel: "tel:+261387596361",
+  phoneMadagascarWa: "https://wa.me/261387596361",
+  phoneIntlDisplay: "001 (848) 361-2502",
+  phoneIntlTel: "tel:+18483612502",
+  phoneIntlWa: "https://wa.me/18483612502",
   mapSrc:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.14329383084!2d46.876!3d-17.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDQ1JzAwLjAiUyA0NsKwNTInMzMuNiJF!5e0!3m2!1sfr!2smg!4v1",
 };

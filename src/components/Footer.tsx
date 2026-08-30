@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
-import { Globe, Share2, Mail, ShieldCheck } from "lucide-react";
+import { Globe, Share2, Mail, ShieldCheck, MessageCircle } from "lucide-react";
 
 const Footer: React.FC = () => {
   const { t, locale } = useLanguage();
@@ -9,6 +9,22 @@ const Footer: React.FC = () => {
   return (
     <footer className="border-t border-white/[0.04] bg-background">
       <div className="mx-auto max-w-7xl px-4 md:px-8 lg:px-12">
+        <div className="border-b border-white/[0.04] py-6 md:py-8 flex items-center justify-between gap-6">
+          <div className="shrink-0 min-w-0">
+            <img
+              src="/images/kazak-logo.png"
+              alt="Kazak Mining Hub"
+              className="h-6 sm:h-8 md:h-10 w-auto object-contain max-w-[45vw]"
+            />
+          </div>
+          <div className="shrink-0 min-w-0">
+            <img
+              src="/images/affiliations/njcc-logo.png"
+              alt="New Jersey Chamber of Commerce"
+              className="h-6 sm:h-8 md:h-10 w-auto object-contain max-w-[45vw]"
+            />
+          </div>
+        </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 py-12 md:py-16">
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
@@ -33,20 +49,6 @@ const Footer: React.FC = () => {
               </span>
               <span className="inline-flex items-center gap-1 px-2 py-1 text-[10px] font-medium text-cream/30 border border-white/[0.06] rounded-full">
                 {locale === "en" ? "Responsible Mining" : "Exploitation responsable"}
-              </span>
-            </div>
-            
-            {/* Institutional Chamber of Commerce badge */}
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.06] hover:border-gold-500/20 transition-colors">
-              <div className="px-1.5 py-0.5 bg-white rounded flex items-center justify-center shadow-xs">
-                <img
-                  src="/images/affiliations/njcc-logo.png"
-                  alt="New Jersey Chamber of Commerce"
-                  className="h-3.5 w-auto object-contain"
-                />
-              </div>
-              <span className="text-[10px] text-cream/40 font-medium">
-                {locale === "en" ? "NJ Chamber of Commerce Network" : "Réseau Chambre de Commerce NJ"}
               </span>
             </div>
           </div>
@@ -86,11 +88,34 @@ const Footer: React.FC = () => {
             <div className="space-y-2 mb-4">
               <p className="text-xs text-cream/30">3 Rue Ravoninahitriniarivo</p>
               <p className="text-xs text-cream/30">Antananarivo 101, Madagascar</p>
-              <a href="mailto:contact@kazakmininghub.com" className="block text-xs text-cream/30 hover:text-gold-400 transition-colors">
-                contact@kazakmininghub.com
+              <a href="mailto:contact@kazak-mining-hub.com" className="block text-xs text-cream/30 hover:text-gold-400 transition-colors break-words">
+                contact@kazak-mining-hub.com
               </a>
-              <a href="tel:+261345678901" className="block text-xs text-cream/30 hover:text-gold-400 transition-colors">
-                +261 34 56 789 01
+              <a href="tel:+261387596361" className="block text-xs text-cream/30 hover:text-gold-400 transition-colors">
+                038 75 963 61
+              </a>
+              <a href="tel:+18483612502" className="block text-xs text-cream/30 hover:text-gold-400 transition-colors">
+                001 (848) 361-2502
+              </a>
+            </div>
+            <div className="flex gap-2.5 mb-4">
+              <a
+                href="https://wa.me/261387596361"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center text-cream/30 hover:border-gold-500/30 hover:text-gold-400 transition-all"
+                aria-label="WhatsApp Madagascar — 038 75 963 61"
+              >
+                <MessageCircle size={14} />
+              </a>
+              <a
+                href="https://wa.me/18483612502"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center text-cream/30 hover:border-gold-500/30 hover:text-gold-400 transition-all"
+                aria-label="WhatsApp International — 001 (848) 361-2502"
+              >
+                <MessageCircle size={14} />
               </a>
             </div>
             <div className="flex gap-2.5">
@@ -109,7 +134,7 @@ const Footer: React.FC = () => {
                 <Share2 size={14} />
               </a>
               <a
-                href="mailto:contact@kazakmininghub.com"
+                href="mailto:contact@kazak-mining-hub.com"
                 className="w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center text-cream/30 hover:border-gold-500/30 hover:text-gold-400 transition-all"
                 aria-label="Email"
               >
@@ -122,13 +147,6 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/[0.04] py-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-cream/20">
             &copy; {new Date().getFullYear()} Kazak Mining Hub. {t.footerRights}
-          </p>
-          <p className="text-[10px] text-cream/10">
-            {locale === "en" ? (
-              <>Demo Version &mdash; Mockup Design</>
-            ) : (
-              <>Version de démonstration &mdash; Maquette</>
-            )}
           </p>
         </div>
       </div>

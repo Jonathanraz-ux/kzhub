@@ -54,18 +54,18 @@ const About: React.FC = () => {
               >
                 <SafeImage
                   src="/images/client/client-portrait-1.jpg"
-                  alt={locale === "en" ? "Client Leadership Portrait 1" : "Portrait dirigeant 1"}
+                  alt={locale === "en" ? "Portrait of Hery Zo ANDRIAMIARANA, CEO & Founder" : "Portrait de Hery Zo ANDRIAMIARANA, CEO & Founder"}
                   fill
                   sizes="(max-width: 768px) 50vw, 300px"
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 text-left">
                   <span className="text-[10px] uppercase font-bold tracking-widest text-gold-400 block mb-0.5">
-                    Kazak Ltd.
+                    Hery Zo ANDRIAMIARANA
                   </span>
-                  <p className="text-xs font-semibold text-cream">
-                    {locale === "en" ? "Executive Leadership" : "Direction exécutive"}
+                  <p className="text-xs font-semibold text-cream leading-snug">
+                    CEO & Founder — Kazak Ltd. & Kazak Mining Hub
                   </p>
                 </div>
               </motion.div>
@@ -85,6 +85,18 @@ const About: React.FC = () => {
               <p className="text-gold-200/90 font-medium text-sm md:text-base border-l-2 border-gold-400 pl-4 py-1">
                 {t.bioSubtitle}
               </p>
+
+              <div className="pt-1">
+                <p className="text-[10px] uppercase tracking-widest text-gold-400 font-bold mb-1">
+                  {t.bioFounderTitle}
+                </p>
+                <p className="text-lg md:text-xl font-serif font-bold text-cream leading-snug break-words">
+                  Hery Zo ANDRIAMIARANA
+                </p>
+                <p className="text-sm md:text-base font-medium text-gold-200/90 leading-snug break-words">
+                  CEO & Founder — Kazak Ltd. & Kazak Mining Hub
+                </p>
+              </div>
 
               <p className="text-cream/70 text-sm md:text-base leading-relaxed">
                 {t.bioDesc1}

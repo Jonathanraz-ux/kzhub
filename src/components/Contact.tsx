@@ -9,6 +9,30 @@ const Contact: React.FC = () => {
   const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
 
+  const phoneLines = [
+    {
+      display: contactInfo.phoneMadagascarDisplay,
+      href: contactInfo.phoneMadagascarTel,
+      aria: `${contactInfo.phoneMadagascarDisplay} — Madagascar`,
+    },
+    {
+      display: contactInfo.phoneIntlDisplay,
+      href: contactInfo.phoneIntlTel,
+      aria: `${contactInfo.phoneIntlDisplay} — International`,
+    },
+  ];
+
+  const whatsappLines = [
+    {
+      display: contactInfo.phoneMadagascarDisplay,
+      href: contactInfo.phoneMadagascarWa,
+    },
+    {
+      display: contactInfo.phoneIntlDisplay,
+      href: contactInfo.phoneIntlWa,
+    },
+  ];
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
@@ -30,7 +54,7 @@ const Contact: React.FC = () => {
       "",
       String(data.get("message") ?? ""),
     ];
-    const url = `https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(
+    const url = `${contactInfo.phoneMadagascarWa}?text=${encodeURIComponent(
       lines.join("\n")
     )}`;
     window.open(url, "_blank", "noopener,noreferrer");
@@ -92,30 +116,41 @@ const Contact: React.FC = () => {
             <div className="border border-white/[0.06] rounded-xl p-5 bg-gradient-to-b from-white/[0.02] to-transparent">
               <div className="flex items-start gap-4">
                 <Phone size={18} className="text-gold-400 mt-0.5 shrink-0" />
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm font-medium text-cream mb-1">{t.phoneLabel}</p>
-                  <a
-                    href={`tel:${contactInfo.phone}`}
-                    className="text-sm text-cream/40 hover:text-gold-400 transition-colors"
-                  >
-                    {contactInfo.phone}
-                  </a>
+                  <div className="space-y-1">
+                    {phoneLines.map((line) => (
+                      <a
+                        key={line.href}
+                        href={line.href}
+                        aria-label={line.aria}
+                        className="block text-sm text-cream/40 hover:text-gold-400 transition-colors break-words"
+                      >
+                        {line.display}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
             <div className="border border-white/[0.06] rounded-xl p-5 bg-gradient-to-b from-white/[0.02] to-transparent">
               <div className="flex items-start gap-4">
                 <MessageCircle size={18} className="text-gold-400 mt-0.5 shrink-0" />
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm font-medium text-cream mb-1">{t.whatsappLabel}</p>
-                  <a
-                    href={`https://wa.me/${contactInfo.whatsapp.replace(/\D/g, "")}`}
-                    className="text-sm text-cream/40 hover:text-gold-400 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {contactInfo.whatsapp}
-                  </a>
+                  <div className="space-y-1">
+                    {whatsappLines.map((line) => (
+                      <a
+                        key={line.href}
+                        href={line.href}
+                        className="block text-sm text-cream/40 hover:text-gold-400 transition-colors break-words"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {line.display}
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -144,7 +179,7 @@ const Contact: React.FC = () => {
                   {t.formSuccessDesc}
                 </p>
                 <p className="text-[10px] text-cream/20 mt-6 uppercase tracking-wider">
-                  WhatsApp &mdash; {contactInfo.whatsapp}
+                  WhatsApp &mdash; {contactInfo.phoneMadagascarDisplay}
                 </p>
               </motion.div>
             ) : (

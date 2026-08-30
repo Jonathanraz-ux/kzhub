@@ -16,6 +16,8 @@ export const en: TranslationKeys = {
   heroCtaPrimary: "Explore Opportunities",
   heroCtaSecondary: "Request Investment Information",
   heroTrustLine: "Verified Projects • Local Due Diligence • Regulatory Guidance",
+  heroInvestmentNotice:
+    "Selected investment opportunities are subject to our preliminary screening process.",
 
   statOpportunities: "Verified Opportunities",
   statMinerals: "Strategic Minerals",
@@ -47,6 +49,7 @@ export const en: TranslationKeys = {
   affiliationsSubtitle: "Connecting Madagascar's strategic resources to North American and global commercial networks.",
   affiliationsDesc: "Kazak Ltd. actively interfaces with international business chambers and global trade ecosystems, upholding rigorous international compliance, cross-border due diligence, and bilateral economic cooperation.",
   affiliationsBadge: "Trade & Commerce Ecosystem",
+  affiliationsPartnerLabel: "Institutional Partner",
 
   expertsLabel: "Our Team",
   expertsTitle: "Our Expert Team",

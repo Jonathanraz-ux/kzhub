@@ -53,6 +53,29 @@ const Hero: React.FC = () => {
         style={{ opacity: useTransform(scrollYProgress, [0, 0.5], [1, 0]) }}
       />
 
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-20 hidden lg:block">
+        <div className="mx-auto w-full max-w-7xl px-8 lg:px-12">
+          <div className="ml-auto w-fit pt-[76px]">
+            <a
+              href="https://www.njchamber.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group pointer-events-auto flex flex-col items-end gap-1.5 opacity-80 transition-opacity duration-300 hover:opacity-100"
+              aria-label="New Jersey Chamber of Commerce — Institutional Partner"
+            >
+              <span className="text-[9px] md:text-[10px] font-medium uppercase tracking-[0.22em] text-cream/45 whitespace-nowrap">
+                {t.affiliationsPartnerLabel}
+              </span>
+              <img
+                src="/images/affiliations/njcc-logo.png"
+                alt="New Jersey Chamber of Commerce"
+                className="h-auto w-[110px] object-contain opacity-90 shadow-none"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
       <motion.div
         className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-8 lg:px-12 pt-28 md:pt-40 pb-20 md:pb-32 text-center overflow-x-clip"
         style={{ y: contentY }}
@@ -107,7 +130,7 @@ const Hero: React.FC = () => {
           </motion.div>
 
           <motion.div
-            className="flex w-full min-w-0 flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-12"
+            className="flex w-full min-w-0 flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
@@ -141,6 +164,15 @@ const Hero: React.FC = () => {
               />
             </a>
           </motion.div>
+
+          <motion.p
+            className="text-[11px] md:text-xs text-cream/40 max-w-xl mx-auto px-4 min-w-0 break-words leading-relaxed mb-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.65, duration: 0.6 }}
+          >
+            {t.heroInvestmentNotice}
+          </motion.p>
 
           <motion.div
             className="flex flex-col items-center gap-3"

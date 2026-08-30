@@ -16,6 +16,8 @@ export const fr: TranslationKeys = {
   heroCtaPrimary: "Explorer les opportunités",
   heroCtaSecondary: "Demander des informations",
   heroTrustLine: "Projets vérifiés • Due diligence locale • Accompagnement réglementaire",
+  heroInvestmentNotice:
+    "Les opportunités d'investissement sélectionnées sont soumises à notre processus de sélection préliminaire.",
 
   statOpportunities: "Opportunités vérifiées",
   statMinerals: "Minéraux stratégiques",
@@ -47,6 +49,7 @@ export const fr: TranslationKeys = {
   affiliationsSubtitle: "Connecter les ressources stratégiques de Madagascar aux réseaux d'affaires nord-américains et mondiaux.",
   affiliationsDesc: "Kazak Ltd. s'inscrit au sein des chambres de commerce et réseaux économiques internationaux, garantissant les plus hauts standards de gouvernance, de conformité transfrontalière et de coopération économique bilatérale.",
   affiliationsBadge: "Réseau Consulaire & Économique",
+  affiliationsPartnerLabel: "Partenaire institutionnel",
 
   expertsLabel: "Notre équipe",
   expertsTitle: "Notre équipe d'experts",
@@ -55,7 +58,7 @@ export const fr: TranslationKeys = {
   expertRole2: "Expert juridique minier",
   expertRole3: "Responsable des relations communautaires et de la liaison locale",
   expertRole4: "Responsable visas, voyages et hébergement",
-  expertRole5: "PDG et Fondateur — Kazak Ltd. et Kazak Mining Hub",
+  expertRole5: "CEO & Founder — Kazak Ltd. & Kazak Mining Hub",
 
   videoLabel: "Kazak en immersion",
   videoTitle: "Au cœur des sites miniers de Madagascar",
