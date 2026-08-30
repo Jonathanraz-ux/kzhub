@@ -276,4 +276,22 @@ export const fr: TranslationKeys = {
   perimeterCaption: "Carte de localisation du périmètre du projet PE n°36409 — système de coordonnées WGS 84.",
   perimeterViewFull: "Agrandir la carte",
   perimeterAlt: "Carte de localisation du périmètre du projet PE n°36409",
+
+  // Permis d'exploitation
+  permitLabel: "Permis d’exploitation",
+  permitSurtitle: "Certification officielle",
+  permitTitle: "Permis d’exploitation",
+  permitDesc: "Permis officiel délivré par le Bureau du Cadastre Minier de Madagascar.",
+  permitCaption: "Permis officiel d’exploitation minière (PE n° 31153) — Bureau du Cadastre Minier de Madagascar.",
+  permitViewFull: "Agrandir le document",
+  permitAlt: "Permis officiel d’exploitation minière de Kazak Mining Hub",
+
+  // Localisation du site minier
+  siteLocationLabel: "Localisation du site minier",
+  siteLocationSurtitle: "Accès & Concession",
+  siteLocationTitle: "Localisation du site minier",
+  siteLocationDesc: "Voies d’accès et localisation du périmètre minier N°36409.",
+  siteLocationCaption: "Figure 2 : Carte des trajets vers le périmètre N°36409.",
+  siteLocationViewFull: "Agrandir la carte",
+  siteLocationAlt: "Voies d’accès et périmètre minier N°36409",
 };

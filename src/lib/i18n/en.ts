@@ -275,5 +275,23 @@ export const en: TranslationKeys = {
   perimeterCaption: "Location map of project perimeter PE No. 36409 — WGS 84 coordinate system.",
   perimeterViewFull: "View full map",
   perimeterAlt: "Location map of project perimeter PE No. 36409",
+
+  // Mining Permit
+  permitLabel: "Mining Permit",
+  permitSurtitle: "Official Certification",
+  permitTitle: "Mining Permit",
+  permitDesc: "Official operating permit issued by the Bureau du Cadastre Minier de Madagascar.",
+  permitCaption: "Official Mining Exploitation Permit (PE No. 31153) — Bureau du Cadastre Minier de Madagascar.",
+  permitViewFull: "View full document",
+  permitAlt: "Kazak Mining Hub official mining exploitation permit",
+
+  // Mining Site Location
+  siteLocationLabel: "Mining Site Location",
+  siteLocationSurtitle: "Access & Concession",
+  siteLocationTitle: "Mining Site Location",
+  siteLocationDesc: "Access routes and location of mining perimeter No. 36409.",
+  siteLocationCaption: "Figure 2: Access routes map to mining perimeter No. 36409.",
+  siteLocationViewFull: "View full map",
+  siteLocationAlt: "Access routes and mining perimeter No. 36409",
 };
 

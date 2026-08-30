@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import OurSite from "@/components/OurSite";
 import ProjectPerimeter from "@/components/ProjectPerimeter";
+import MiningPermit from "@/components/MiningPermit";
+import MiningSiteLocation from "@/components/MiningSiteLocation";
 import VideoShowcase from "@/components/VideoShowcase";
 import Services from "@/components/Services";
 import WhyMadagascar from "@/components/WhyMadagascar";
@@ -25,6 +27,8 @@ export default function Home() {
       <About />
       <OurSite />
       <ProjectPerimeter />
+      <MiningPermit />
+      <MiningSiteLocation />
       <VideoShowcase />
       <Services />
       <WhyMadagascar />

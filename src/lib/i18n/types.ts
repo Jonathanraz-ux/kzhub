@@ -256,5 +256,23 @@ export type TranslationKeys = {
   perimeterCaption: string;
   perimeterViewFull: string;
   perimeterAlt: string;
+
+  // Mining Permit
+  permitLabel: string;
+  permitSurtitle: string;
+  permitTitle: string;
+  permitDesc: string;
+  permitCaption: string;
+  permitViewFull: string;
+  permitAlt: string;
+
+  // Mining Site Location (Access routes & perimeter No. 36409)
+  siteLocationLabel: string;
+  siteLocationSurtitle: string;
+  siteLocationTitle: string;
+  siteLocationDesc: string;
+  siteLocationCaption: string;
+  siteLocationViewFull: string;
+  siteLocationAlt: string;
 };
 
