@@ -267,31 +267,43 @@ export const en: TranslationKeys = {
   siteDesc: "Located in Ambodilazana, Madagascar, our site lies within a distinctive natural setting shaped by the Ivondro River. This strategic location forms the geographical heart of the Kazak Mining Hub project.",
   siteMapBtn: "View on Google Maps",
 
-  // Project Perimeter (PE No. 36409)
-  perimeterLabel: "Project Perimeter",
-  perimeterSurtitle: "Geographical Overview",
-  perimeterTitle: "Project Perimeter — PE No. 36409",
-  perimeterDesc: "This map provides a geographical overview of perimeter PE No. 36409 and its position in relation to the surrounding communes, fokontany and localities.",
-  perimeterCaption: "Location map of project perimeter PE No. 36409 — WGS 84 coordinate system.",
-  perimeterViewFull: "View full map",
-  perimeterAlt: "Location map of project perimeter PE No. 36409",
+  // Documents and Location
+  docsLocationLabel: "Documents & Location",
+  docsLocationSurtitle: "Technical Documentation",
+  docsLocationTitle: "Documents and Location",
+  docsLocationDesc: "Explore anonymized sample operating documents and mining cartography.",
+  docsLocationViewFull: "Enlarge image",
+  docsLocationClose: "Close",
+  docsLocationZoomIn: "Zoom in",
+  docsLocationZoomOut: "Zoom out",
+  docsLocationResetZoom: "Reset zoom",
+  docsLocationSampleBadge: "Sample",
 
-  // Mining Permit
-  permitLabel: "Mining Permit",
-  permitSurtitle: "Official Certification",
-  permitTitle: "Mining Permit",
-  permitDesc: "Official operating permit issued by the Bureau du Cadastre Minier de Madagascar.",
-  permitCaption: "Official Mining Exploitation Permit (PE No. 31153) — Bureau du Cadastre Minier de Madagascar.",
-  permitViewFull: "View full document",
-  permitAlt: "Kazak Mining Hub official mining exploitation permit",
+  // 1. Mining Permit — Sample
+  permitDocLabel: "Mining Permit",
+  permitDocTitle: "Mining Permit — Sample",
+  permitDocDesc: "An anonymized sample of a mining exploitation permit. Certain information has been intentionally redacted.",
+  permitDocAlt: "Anonymized sample of a mining exploitation permit",
 
-  // Mining Site Location
-  siteLocationLabel: "Mining Site Location",
-  siteLocationSurtitle: "Access & Concession",
-  siteLocationTitle: "Mining Site Location",
-  siteLocationDesc: "Access routes and location of mining perimeter No. 36409.",
-  siteLocationCaption: "Figure 2: Access routes map to mining perimeter No. 36409.",
-  siteLocationViewFull: "View full map",
-  siteLocationAlt: "Access routes and mining perimeter No. 36409",
+  // 2. Site Access Routes — Sample
+  accessRoutesLabel: "Access Routes",
+  accessRoutesTitle: "Site Access Routes — Sample",
+  accessRoutesDesc: "An anonymized map showing the main access routes to a mining perimeter.",
+  accessRoutesAlt: "Sample map of access routes to a mining perimeter",
+
+  // 3. Location Map — Sample
+  locationMapLabel: "Cartography",
+  locationMapTitle: "Location Map — Sample",
+  locationMapDesc: "An anonymized sample showing the location of a mining perimeter.",
+  locationMapAlt: "Anonymized sample mining location map",
+
+  // Graphite — High Carbon Rate
+  graphiteSurtitle: "Flagship Resource",
+  graphiteTitle: "High Carbon Rate Graphite",
+  graphiteHighlight: "High Carbon Rate",
+  graphiteDesc: "Our crystalline flake graphite features an exceptionally high carbon content, meeting the most stringent requirements of the battery, refractory, and advanced composites industries.",
+  graphiteAlt: "High carbon rate crystalline flake graphite sample",
+  graphiteBadge: "Premium Quality",
+  graphiteCta: "Explore Our Resources",
 };
 

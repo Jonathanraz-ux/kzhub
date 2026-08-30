@@ -248,31 +248,43 @@ export type TranslationKeys = {
   siteDesc: string;
   siteMapBtn: string;
 
-  // Project Perimeter (PE No. 36409)
-  perimeterLabel: string;
-  perimeterSurtitle: string;
-  perimeterTitle: string;
-  perimeterDesc: string;
-  perimeterCaption: string;
-  perimeterViewFull: string;
-  perimeterAlt: string;
+  // Documents & Location
+  docsLocationLabel: string;
+  docsLocationSurtitle: string;
+  docsLocationTitle: string;
+  docsLocationDesc: string;
+  docsLocationViewFull: string;
+  docsLocationClose: string;
+  docsLocationZoomIn: string;
+  docsLocationZoomOut: string;
+  docsLocationResetZoom: string;
+  docsLocationSampleBadge: string;
 
-  // Mining Permit
-  permitLabel: string;
-  permitSurtitle: string;
-  permitTitle: string;
-  permitDesc: string;
-  permitCaption: string;
-  permitViewFull: string;
-  permitAlt: string;
+  // 1. Mining Permit — Sample
+  permitDocLabel: string;
+  permitDocTitle: string;
+  permitDocDesc: string;
+  permitDocAlt: string;
 
-  // Mining Site Location (Access routes & perimeter No. 36409)
-  siteLocationLabel: string;
-  siteLocationSurtitle: string;
-  siteLocationTitle: string;
-  siteLocationDesc: string;
-  siteLocationCaption: string;
-  siteLocationViewFull: string;
-  siteLocationAlt: string;
+  // 2. Site Access Routes — Sample
+  accessRoutesLabel: string;
+  accessRoutesTitle: string;
+  accessRoutesDesc: string;
+  accessRoutesAlt: string;
+
+  // 3. Location Map — Sample
+  locationMapLabel: string;
+  locationMapTitle: string;
+  locationMapDesc: string;
+  locationMapAlt: string;
+
+  // Graphite Showcase
+  graphiteSurtitle: string;
+  graphiteTitle: string;
+  graphiteHighlight: string;
+  graphiteDesc: string;
+  graphiteAlt: string;
+  graphiteBadge: string;
+  graphiteCta: string;
 };
 

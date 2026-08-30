@@ -1,10 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import GraphiteShowcase from "@/components/GraphiteShowcase";
 import OurSite from "@/components/OurSite";
-import ProjectPerimeter from "@/components/ProjectPerimeter";
-import MiningPermit from "@/components/MiningPermit";
-import MiningSiteLocation from "@/components/MiningSiteLocation";
+import DocumentsAndLocation from "@/components/DocumentsAndLocation";
 import VideoShowcase from "@/components/VideoShowcase";
 import Services from "@/components/Services";
 import WhyMadagascar from "@/components/WhyMadagascar";
@@ -25,10 +24,9 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
+      <GraphiteShowcase />
       <OurSite />
-      <ProjectPerimeter />
-      <MiningPermit />
-      <MiningSiteLocation />
+      <DocumentsAndLocation />
       <VideoShowcase />
       <Services />
       <WhyMadagascar />

@@ -268,30 +268,42 @@ export const fr: TranslationKeys = {
   siteDesc: "Situé à Ambodilazana, à Madagascar, notre site s'inscrit dans un environnement naturel remarquable façonné par la rivière Ivondro. Cette localisation stratégique constitue le cœur géographique du projet Kazak Mining Hub.",
   siteMapBtn: "Voir sur Google Maps",
 
-  // Périmètre du projet (PE n°36409)
-  perimeterLabel: "Périmètre du projet",
-  perimeterSurtitle: "Aperçu géographique",
-  perimeterTitle: "Périmètre du projet — PE n°36409",
-  perimeterDesc: "Cette carte présente la localisation géographique du périmètre PE n°36409 ainsi que sa position par rapport aux communes, fokontany et localités environnantes.",
-  perimeterCaption: "Carte de localisation du périmètre du projet PE n°36409 — système de coordonnées WGS 84.",
-  perimeterViewFull: "Agrandir la carte",
-  perimeterAlt: "Carte de localisation du périmètre du projet PE n°36409",
+  // Documents et localisation
+  docsLocationLabel: "Documents & Localisation",
+  docsLocationSurtitle: "Documentation technique",
+  docsLocationTitle: "Documents et localisation",
+  docsLocationDesc: "Consultez les exemples de documents d’exploitation et de cartographie minière.",
+  docsLocationViewFull: "Agrandir l’image",
+  docsLocationClose: "Fermer",
+  docsLocationZoomIn: "Zoom avant",
+  docsLocationZoomOut: "Zoom arrière",
+  docsLocationResetZoom: "Réinitialiser le zoom",
+  docsLocationSampleBadge: "Exemple / Sample",
 
-  // Permis d'exploitation
-  permitLabel: "Permis d’exploitation",
-  permitSurtitle: "Certification officielle",
-  permitTitle: "Permis d’exploitation",
-  permitDesc: "Permis officiel délivré par le Bureau du Cadastre Minier de Madagascar.",
-  permitCaption: "Permis officiel d’exploitation minière (PE n° 31153) — Bureau du Cadastre Minier de Madagascar.",
-  permitViewFull: "Agrandir le document",
-  permitAlt: "Permis officiel d’exploitation minière de Kazak Mining Hub",
+  // 1. Permis d'exploitation — Exemple
+  permitDocLabel: "Permis minier",
+  permitDocTitle: "Permis d’exploitation — Exemple",
+  permitDocDesc: "Exemple anonymisé d’un permis d’exploitation minière. Certaines informations ont été volontairement masquées.",
+  permitDocAlt: "Exemple anonymisé d’un permis d’exploitation minière",
 
-  // Localisation du site minier
-  siteLocationLabel: "Localisation du site minier",
-  siteLocationSurtitle: "Accès & Concession",
-  siteLocationTitle: "Localisation du site minier",
-  siteLocationDesc: "Voies d’accès et localisation du périmètre minier N°36409.",
-  siteLocationCaption: "Figure 2 : Carte des trajets vers le périmètre N°36409.",
-  siteLocationViewFull: "Agrandir la carte",
-  siteLocationAlt: "Voies d’accès et périmètre minier N°36409",
+  // 2. Voies d'accès au site — Exemple
+  accessRoutesLabel: "Voies d'accès",
+  accessRoutesTitle: "Voies d’accès au site — Exemple",
+  accessRoutesDesc: "Carte anonymisée présentant les principales voies d’accès à un périmètre minier.",
+  accessRoutesAlt: "Exemple de carte des voies d’accès à un périmètre minier",
+
+  // 3. Carte de localisation — Exemple
+  locationMapLabel: "Cartographie",
+  locationMapTitle: "Carte de localisation — Exemple",
+  locationMapDesc: "Exemple anonymisé de localisation d’un périmètre minier.",
+  locationMapAlt: "Exemple anonymisé de carte de localisation minière",
+
+  // Graphite — Taux de carbone élevé
+  graphiteSurtitle: "Ressource phare",
+  graphiteTitle: "Graphite à haute teneur en carbone",
+  graphiteHighlight: "High Carbon Rate",
+  graphiteDesc: "Notre graphite en paillettes cristallines affiche un taux de carbone exceptionnellement élevé, répondant aux exigences les plus strictes de l'industrie des batteries, des réfractaires et des composites avancés.",
+  graphiteAlt: "Échantillon de graphite en paillettes à haute teneur en carbone",
+  graphiteBadge: "Qualité premium",
+  graphiteCta: "Découvrir nos ressources",
 };
