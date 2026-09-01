@@ -22,6 +22,16 @@ export const expertTeam = [
   },
   {
     id: 2,
+    name: "Dr Tiandray Mandimby, PhD",
+    roleKey: "expertRole6",
+    photo: "/images/client/tiandray-mandimby.jpg",
+    photoAlt: {
+      en: "Portrait of Dr Tiandray Mandimby, PhD, Mineral Processing & Chemical Expert",
+      fr: "Portrait du Dr Tiandray Mandimby, PhD, expert en traitement des minerais et procédés chimiques",
+    },
+  },
+  {
+    id: 3,
     name: "Hery Rakoto be",
     roleKey: "expertRole2",
     photo: null as string | null,
@@ -31,7 +41,7 @@ export const expertTeam = [
     },
   },
   {
-    id: 3,
+    id: 4,
     name: "Lalao Rabeson",
     roleKey: "expertRole3",
     photo: null as string | null,
@@ -41,7 +51,7 @@ export const expertTeam = [
     },
   },
   {
-    id: 4,
+    id: 5,
     name: "Rova Minadrisoa",
     roleKey: "expertRole4",
     photo: "/images/client/rova-minadrisoa.jpg",
@@ -51,7 +61,7 @@ export const expertTeam = [
     },
   },
   {
-    id: 5,
+    id: 6,
     name: "Hery Zo ANDRIAMIARANA",
     roleKey: "expertRole5",
     photo: "/images/client/client-portrait-1.jpg",

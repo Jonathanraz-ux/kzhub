@@ -18,6 +18,12 @@ export const en: TranslationKeys = {
   heroTrustLine: "Verified Projects • Local Due Diligence • Regulatory Guidance",
   heroInvestmentNotice:
     "Selected investment opportunities are subject to our preliminary screening process.",
+  heroCard1Badge: "Raw Mineral Sample",
+  heroCard1Title: "Tourmaline noir",
+  heroCard1Tag: "PR Certified",
+  heroCard2Badge: "Purified Mineral Concentrate",
+  heroCard2Title: "High Carbon Rate Graphite",
+  heroCard2Tag: "Export Grade",
 
   statOpportunities: "Verified Opportunities",
   statMinerals: "Strategic Minerals",
@@ -59,6 +65,7 @@ export const en: TranslationKeys = {
   expertRole3: "Community Relations & Local Liaison Officer",
   expertRole4: "Visa, Travel and Accommodation Officer",
   expertRole5: "CEO & Founder — Kazak Ltd. & Kazak Mining Hub",
+  expertRole6: "Mineral Processing & Chemical Expert",
 
   videoLabel: "Kazak Immersive",
   videoTitle: "Inside Madagascar's Mining Sites",

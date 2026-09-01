@@ -60,7 +60,7 @@ const ExpertTeam: React.FC = () => {
           </p>
         </motion.div>
 
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {expertTeam.map((member, idx) => {
             const altText =
               locale === "en" ? member.photoAlt.en : member.photoAlt.fr;
@@ -82,6 +82,7 @@ const ExpertTeam: React.FC = () => {
                       fill
                       sizes="(max-width: 640px) 112px, 128px"
                       className="object-cover"
+                      loading="eager"
                     />
                   </div>
                 ) : (

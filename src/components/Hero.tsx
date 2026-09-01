@@ -76,6 +76,96 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
+      {/* Floating Card 1 — Left Flank (Desktop XL+) */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 bottom-0 z-20 hidden xl:block">
+        <div className="relative mx-auto w-full max-w-[1400px] h-full">
+          <motion.div
+            className="pointer-events-auto absolute left-4 2xl:left-8 top-[41%] -translate-y-1/2 w-64 2xl:w-72"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            <motion.div
+              className="rounded-2xl bg-graphite/90 backdrop-blur-xl border border-gold-500/30 p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.7)] hover:border-gold-400/60 transition-all duration-300 group"
+              animate={{ y: [-8, 8, -8], rotate: [-0.5, 0.5, -0.5] }}
+              transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+            >
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-gold-400 truncate">
+                    {t.heroCard1Badge}
+                  </span>
+                </div>
+                <span className="text-[9px] px-2 py-0.5 rounded-full bg-white/[0.06] border border-white/10 text-cream/70 font-medium shrink-0">
+                  {t.heroCard1Tag}
+                </span>
+              </div>
+
+              <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-black/40 border border-white/5">
+                <SafeImage
+                  src="/images/hero/sample-crystal.jpg"
+                  alt={t.heroCard1Title}
+                  fill
+                  sizes="300px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              </div>
+
+              <div className="mt-2.5 text-left">
+                <h3 className="text-xs 2xl:text-sm font-serif font-bold text-cream group-hover:text-gold-300 transition-colors truncate">
+                  {t.heroCard1Title}
+                </h3>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Floating Card 2 — Right Flank (Desktop XL+) */}
+          <motion.div
+            className="pointer-events-auto absolute right-4 2xl:right-8 top-[41%] -translate-y-1/2 w-64 2xl:w-72"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
+            <motion.div
+              className="rounded-2xl bg-graphite/90 backdrop-blur-xl border border-gold-500/30 p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.7)] hover:border-gold-400/60 transition-all duration-300 group"
+              animate={{ y: [8, -8, 8], rotate: [0.5, -0.5, 0.5] }}
+              transition={{ repeat: Infinity, duration: 6.5, ease: "easeInOut", delay: 0.5 }}
+            >
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <span className="w-2 h-2 rounded-full bg-gold-400 animate-pulse shrink-0" />
+                  <span className="text-[10px] uppercase font-semibold tracking-wider text-gold-400 truncate">
+                    {t.heroCard2Badge}
+                  </span>
+                </div>
+                <span className="text-[9px] px-2 py-0.5 rounded-full bg-white/[0.06] border border-white/10 text-cream/70 font-medium shrink-0">
+                  {t.heroCard2Tag}
+                </span>
+              </div>
+
+              <div className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-black/40 border border-white/5">
+                <SafeImage
+                  src="/images/hero/sample-graphite.jpg"
+                  alt={t.heroCard2Title}
+                  fill
+                  sizes="300px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              </div>
+
+              <div className="mt-2.5 text-left">
+                <h3 className="text-xs 2xl:text-sm font-serif font-bold text-cream group-hover:text-gold-300 transition-colors truncate">
+                  {t.heroCard2Title}
+                </h3>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </div>
+
       <motion.div
         className="relative z-10 mx-auto w-full max-w-7xl px-5 md:px-8 lg:px-12 pt-28 md:pt-40 pb-20 md:pb-32 text-center overflow-x-clip"
         style={{ y: contentY }}
@@ -200,8 +290,64 @@ const Hero: React.FC = () => {
           </motion.div>
         </motion.div>
 
+        {/* Mobile / Tablet Floating Sample Showcase (< xl) */}
         <motion.div
-          className="mt-12 md:mt-20 grid grid-cols-1 [@media(min-width:340px)]:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto w-full min-w-0"
+          className="mt-10 mb-4 grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-xl mx-auto xl:hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
+          {/* Card 1 Mobile */}
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-graphite/90 backdrop-blur-md border border-gold-500/25 text-left shadow-lg">
+            <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-black/40 border border-white/5">
+              <SafeImage
+                src="/images/hero/sample-crystal.jpg"
+                alt={t.heroCard1Title}
+                fill
+                sizes="64px"
+                className="object-cover"
+              />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-1.5 mb-0.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                <span className="text-[9px] uppercase font-semibold tracking-wider text-gold-400 truncate">
+                  {t.heroCard1Badge}
+                </span>
+              </div>
+              <h4 className="text-xs font-bold text-cream truncate">
+                {t.heroCard1Title}
+              </h4>
+            </div>
+          </div>
+
+          {/* Card 2 Mobile */}
+          <div className="flex items-center gap-3 p-3 rounded-xl bg-graphite/90 backdrop-blur-md border border-gold-500/25 text-left shadow-lg">
+            <div className="relative w-16 h-16 rounded-lg overflow-hidden shrink-0 bg-black/40 border border-white/5">
+              <SafeImage
+                src="/images/hero/sample-graphite.jpg"
+                alt={t.heroCard2Title}
+                fill
+                sizes="64px"
+                className="object-cover"
+              />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-1.5 mb-0.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse shrink-0" />
+                <span className="text-[9px] uppercase font-semibold tracking-wider text-gold-400 truncate">
+                  {t.heroCard2Badge}
+                </span>
+              </div>
+              <h4 className="text-xs font-bold text-cream truncate">
+                {t.heroCard2Title}
+              </h4>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="mt-10 md:mt-16 grid grid-cols-1 [@media(min-width:340px)]:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-3xl mx-auto w-full min-w-0"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}

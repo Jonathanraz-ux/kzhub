@@ -16,6 +16,12 @@ export type TranslationKeys = {
   heroCtaSecondary: string;
   heroTrustLine: string;
   heroInvestmentNotice: string;
+  heroCard1Badge: string;
+  heroCard1Title: string;
+  heroCard1Tag: string;
+  heroCard2Badge: string;
+  heroCard2Title: string;
+  heroCard2Tag: string;
 
   statOpportunities: string;
   statMinerals: string;
@@ -54,6 +60,7 @@ export type TranslationKeys = {
   expertRole3: string;
   expertRole4: string;
   expertRole5: string;
+  expertRole6: string;
 
   videoLabel: string;
   videoTitle: string;
