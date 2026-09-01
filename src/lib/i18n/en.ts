@@ -19,10 +19,10 @@ export const en: TranslationKeys = {
   heroInvestmentNotice:
     "Selected investment opportunities are subject to our preliminary screening process.",
   heroCard1Badge: "Raw Mineral Sample",
-  heroCard1Title: "Tourmaline noir",
+  heroCard1Title: "Black tourmaline",
   heroCard1Tag: "PR Certified",
   heroCard2Badge: "Purified Mineral Concentrate",
-  heroCard2Title: "High Carbon Rate Graphite",
+  heroCard2Title: "High-carbon fake graphite",
   heroCard2Tag: "Export Grade",
 
   statOpportunities: "Verified Opportunities",
@@ -306,10 +306,10 @@ export const en: TranslationKeys = {
 
   // Graphite — High Carbon Rate
   graphiteSurtitle: "Flagship Resource",
-  graphiteTitle: "High Carbon Rate Graphite",
-  graphiteHighlight: "High Carbon Rate",
+  graphiteTitle: "High-carbon fake graphite",
+  graphiteHighlight: "High-carbon fake graphite",
   graphiteDesc: "Our crystalline flake graphite features an exceptionally high carbon content, meeting the most stringent requirements of the battery, refractory, and advanced composites industries.",
-  graphiteAlt: "High carbon rate crystalline flake graphite sample",
+  graphiteAlt: "High-carbon fake graphite crystalline flake sample",
   graphiteBadge: "Premium Quality",
   graphiteCta: "Explore Our Resources",
 };

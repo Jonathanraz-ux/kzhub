@@ -19,10 +19,10 @@ export const fr: TranslationKeys = {
   heroInvestmentNotice:
     "Les opportunités d'investissement sélectionnées sont soumises à notre processus de sélection préliminaire.",
   heroCard1Badge: "Échantillon Minier Brut",
-  heroCard1Title: "Tourmaline noir",
+  heroCard1Title: "Tourmaline noire",
   heroCard1Tag: "Certification PR",
   heroCard2Badge: "Concentré Minéral Purifié",
-  heroCard2Title: "High Carbon Rate Graphite",
+  heroCard2Title: "Graphite synthétique à haute teneur en carbone",
   heroCard2Tag: "Qualité Export",
 
   statOpportunities: "Opportunités vérifiées",
@@ -307,8 +307,8 @@ export const fr: TranslationKeys = {
 
   // Graphite — Taux de carbone élevé
   graphiteSurtitle: "Ressource phare",
-  graphiteTitle: "Graphite à haute teneur en carbone",
-  graphiteHighlight: "High Carbon Rate",
+  graphiteTitle: "Graphite synthétique à haute teneur en carbone",
+  graphiteHighlight: "Graphite synthétique à haute teneur en carbone",
   graphiteDesc: "Notre graphite en paillettes cristallines affiche un taux de carbone exceptionnellement élevé, répondant aux exigences les plus strictes de l'industrie des batteries, des réfractaires et des composites avancés.",
   graphiteAlt: "Échantillon de graphite en paillettes à haute teneur en carbone",
   graphiteBadge: "Qualité premium",
