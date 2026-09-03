@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
       payload.append("interest", interest);
       payload.append("message", message);
 
-      const res = await fetch("/", {
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: payload.toString(),
