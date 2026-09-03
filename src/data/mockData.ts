@@ -9,7 +9,21 @@ export const stats = [
   { id: 4, value: "24" },
 ];
 
-export const expertTeam = [
+export type ExpertTeamMember = {
+  id: number;
+  name: string;
+  roleKey: string;
+  titleKey?: string;
+  expertiseKey?: string;
+  initials?: string;
+  photo: string | null;
+  photoAlt: {
+    en: string;
+    fr: string;
+  };
+};
+
+export const expertTeam: ExpertTeamMember[] = [
   {
     id: 1,
     name: "Willy Raharijaona",
@@ -68,6 +82,19 @@ export const expertTeam = [
     photoAlt: {
       en: "Portrait of Hery Zo ANDRIAMIARANA, CEO & Founder of Kazak Ltd. & Kazak Mining Hub",
       fr: "Portrait de Hery Zo ANDRIAMIARANA, CEO & Founder de Kazak Ltd. & Kazak Mining Hub",
+    },
+  },
+  {
+    id: 7,
+    name: "Xavier R.",
+    roleKey: "expertRole7",
+    titleKey: "expertTitle7",
+    expertiseKey: "expertExpertise7",
+    initials: "XR",
+    photo: null as string | null,
+    photoAlt: {
+      en: "Portrait of Xavier R., Director of Security & Legal Compliance",
+      fr: "Portrait de Xavier R., directeur de la sécurité et de la conformité juridique",
     },
   },
 ];

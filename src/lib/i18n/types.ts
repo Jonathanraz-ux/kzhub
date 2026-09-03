@@ -61,6 +61,9 @@ export type TranslationKeys = {
   expertRole4: string;
   expertRole5: string;
   expertRole6: string;
+  expertRole7: string;
+  expertTitle7: string;
+  expertExpertise7: string;
 
   videoLabel: string;
   videoTitle: string;
@@ -108,6 +111,12 @@ export type TranslationKeys = {
   contactLabel: string;
   contactTitle: string;
   contactDesc: string;
+  legalInfoTitle: string;
+  legalFormLabel: string;
+  legalNifLabel: string;
+  legalRcsLabel: string;
+  legalStatLabel: string;
+  legalSiegeLabel: string;
   officeLabel: string;
   emailLabel: string;
   phoneLabel: string;

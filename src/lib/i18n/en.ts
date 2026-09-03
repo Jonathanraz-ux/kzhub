@@ -66,6 +66,9 @@ export const en: TranslationKeys = {
   expertRole4: "Visa, Travel and Accommodation Officer",
   expertRole5: "CEO & Founder — Kazak Ltd. & Kazak Mining Hub",
   expertRole6: "Mineral Processing & Chemical Expert",
+  expertRole7: "Director of Security & Legal Compliance",
+  expertTitle7: "Retired Colonel",
+  expertExpertise7: "Mining Site Security & Emergency Response Expert",
 
   videoLabel: "Kazak Immersive",
   videoTitle: "Inside Madagascar's Mining Sites",
@@ -126,6 +129,12 @@ export const en: TranslationKeys = {
   contactTitle: "Start the Conversation",
   contactDesc:
     "Ready to explore Madagascar's mining potential? Our team is standing by to discuss opportunities tailored to your investment criteria.",
+  legalInfoTitle: "Legal Information",
+  legalFormLabel: "Legal form",
+  legalNifLabel: "Tax Identification Number (NIF)",
+  legalRcsLabel: "Trade and Companies Register (RCS)",
+  legalStatLabel: "Statistical Identification Number (STAT)",
+  legalSiegeLabel: "Headquarters",
   officeLabel: "Office",
   emailLabel: "Email",
   phoneLabel: "Phone",

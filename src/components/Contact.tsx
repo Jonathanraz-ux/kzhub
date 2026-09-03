@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { contactInfo } from "@/data/mockData";
-import { Mail, Phone, MapPin, MessageCircle, Send } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Send, Building2 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const Contact: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
 
   const phoneLines = [
@@ -150,6 +150,34 @@ const Contact: React.FC = () => {
                         {line.display}
                       </a>
                     ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="border border-white/[0.06] rounded-xl p-5 bg-gradient-to-b from-white/[0.02] to-transparent">
+              <div className="flex items-start gap-4">
+                <Building2 size={18} className="text-gold-400 mt-0.5 shrink-0" />
+                <div className="min-w-0">
+                  <p className="text-sm font-medium text-cream mb-2">{t.legalInfoTitle}</p>
+                  <div className="space-y-1">
+                    <p className="text-sm text-cream/40">
+                      <span className="font-medium text-cream/60">Kazak Ltd</span>
+                    </p>
+                    <p className="text-sm text-cream/40">
+                      {t.legalFormLabel}: <span className="text-cream/60">S.A.R.L.</span>
+                    </p>
+                    <p className="text-sm text-cream/40">
+                      {t.legalNifLabel}: <span className="text-cream/60">5011843954</span>
+                    </p>
+                    <p className="text-sm text-cream/40">
+                      {t.legalRcsLabel}: <span className="text-cream/60">Antananarivo 2022 B 00685</span>
+                    </p>
+                    <p className="text-sm text-cream/40">
+                      {t.legalStatLabel}: <span className="text-cream/60">66122 11 2022 0 10703</span>
+                    </p>
+                    <p className="text-sm text-cream/40">
+                      {t.legalSiegeLabel}: <span className="text-cream/60">ASI 341 Bis Ambodifasina</span>
+                    </p>
                   </div>
                 </div>
               </div>

@@ -66,6 +66,9 @@ export const fr: TranslationKeys = {
   expertRole4: "Responsable visas, voyages et hébergement",
   expertRole5: "CEO & Founder — Kazak Ltd. & Kazak Mining Hub",
   expertRole6: "Mineral Processing & Chemical Expert (Expert en traitement des minerais et procédés chimiques)",
+  expertRole7: "Directeur de la sécurité et de la conformité juridique",
+  expertTitle7: "Colonel à la retraite",
+  expertExpertise7: "Expert en sécurité des sites miniers et en intervention d'urgence",
 
   videoLabel: "Kazak en immersion",
   videoTitle: "Au cœur des sites miniers de Madagascar",
@@ -127,6 +130,12 @@ export const fr: TranslationKeys = {
   contactTitle: "Entrons en contact",
   contactDesc:
     "Envie d'explorer le potentiel minier de Madagascar ? Notre équipe est à votre écoute pour étudier les opportunités adaptées à vos critères d'investissement.",
+  legalInfoTitle: "Informations légales",
+  legalFormLabel: "Forme juridique",
+  legalNifLabel: "NIF",
+  legalRcsLabel: "RCS",
+  legalStatLabel: "STAT",
+  legalSiegeLabel: "Siège social",
   officeLabel: "Bureau",
   emailLabel: "E-mail",
   phoneLabel: "Téléphone",

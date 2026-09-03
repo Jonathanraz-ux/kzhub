@@ -5,25 +5,34 @@ import { expertTeam } from "@/data/mockData";
 import SafeImage from "@/components/SafeImage";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-const ExpertAvatar: React.FC<{ label: string }> = ({ label }) => (
+const ExpertAvatar: React.FC<{ label: string; initials?: string }> = ({
+  label,
+  initials,
+}) => (
   <div
     role="img"
     aria-label={label}
     className="relative w-28 h-28 md:w-32 md:h-32 rounded-full bg-gold-500/[0.06] border border-gold-500/20 flex items-center justify-center shrink-0 transition-colors duration-300 group-hover:border-gold-500/40 group-hover:bg-gold-500/10"
   >
-    <svg
-      viewBox="0 0 64 64"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2.5}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="w-14 h-14 md:w-16 md:h-16 text-gold-400/80"
-      aria-hidden="true"
-    >
-      <circle cx="32" cy="24" r="9.5" />
-      <path d="M15 54c2.8-10.4 9.6-15.5 17-15.5S46.2 43.6 49 54" />
-    </svg>
+    {initials ? (
+      <span className="text-gold-400/80 font-semibold text-2xl md:text-3xl tracking-widest">
+        {initials}
+      </span>
+    ) : (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2.5}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="w-14 h-14 md:w-16 md:h-16 text-gold-400/80"
+        aria-hidden="true"
+      >
+        <circle cx="32" cy="24" r="9.5" />
+        <path d="M15 54c2.8-10.4 9.6-15.5 17-15.5S46.2 43.6 49 54" />
+      </svg>
+    )}
   </div>
 );
 
@@ -88,6 +97,7 @@ const ExpertTeam: React.FC = () => {
                 ) : (
                   <div className="mb-6">
                     <ExpertAvatar
+                      initials={member.initials}
                       label={
                         locale === "en"
                           ? `Illustrative portrait of ${member.name}`
@@ -98,11 +108,19 @@ const ExpertTeam: React.FC = () => {
                 )}
 
                 <h3 className="text-base md:text-lg font-semibold text-cream font-serif mb-2">
+                  {member.titleKey
+                    ? `${t[member.titleKey as keyof typeof t]} `
+                    : ""}
                   {member.name}
                 </h3>
                 <p className="text-xs md:text-sm text-cream/50 leading-relaxed max-w-[26ch] mt-auto">
                   {t[member.roleKey as keyof typeof t]}
                 </p>
+                {member.expertiseKey && (
+                  <p className="text-xs md:text-sm text-cream/30 leading-relaxed max-w-[26ch] mt-2">
+                    {t[member.expertiseKey as keyof typeof t]}
+                  </p>
+                )}
               </motion.li>
             );
           })}
