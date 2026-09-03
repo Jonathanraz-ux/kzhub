@@ -151,9 +151,12 @@ export const fr: TranslationKeys = {
   formInterestOther: "Autre",
   formMessage: "Votre message",
   formSubmit: "Envoyer le message",
-  formSuccessTitle: "Message reçu",
+  formSending: "Envoi en cours\u2026",
+  formSuccessTitle: "Message re\u00e7u",
   formSuccessDesc:
-    "Merci pour votre intérêt. Notre équipe vous répondra sous 48 heures.",
+    "Merci pour votre int\u00e9r\u00eat. Notre \u00e9quipe vous r\u00e9pondra sous 48 heures.",
+  formErrorDesc:
+    "Votre message n\u2019a pas pu \u00eatre envoy\u00e9. Veuillez r\u00e9essayer ou nous contacter directement par e-mail.",
 
   footerHome: "Accueil",
   footerOpportunities: "Opportunités",

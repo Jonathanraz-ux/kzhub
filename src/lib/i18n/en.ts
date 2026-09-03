@@ -150,9 +150,12 @@ export const en: TranslationKeys = {
   formInterestOther: "Other",
   formMessage: "Your Message",
   formSubmit: "Send Message",
+  formSending: "Sending\u2026",
   formSuccessTitle: "Message Received",
   formSuccessDesc:
     "Thank you for your interest. Our team will respond within 48 hours.",
+  formErrorDesc:
+    "Your message could not be sent. Please try again or contact us directly by email.",
 
   footerHome: "Home",
   footerOpportunities: "Opportunities",

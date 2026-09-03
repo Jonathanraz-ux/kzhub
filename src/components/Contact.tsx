@@ -1,13 +1,18 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { contactInfo } from "@/data/mockData";
 import { Mail, Phone, MapPin, MessageCircle, Send, Building2 } from "lucide-react";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const Contact: React.FC = () => {
   const { t, locale } = useLanguage();
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
 
   const phoneLines = [
     {
@@ -33,32 +38,64 @@ const Contact: React.FC = () => {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const interest = String(data.get("interest") ?? "");
-    const interestLabels: Record<string, string> = {
-      "buy-site": t.formInterestInvestment,
-      "joint-venture": t.formInterestPartnership,
-      "expand-portfolio": t.formInterestPortfolio,
-      "due-diligence": t.formInterestDueDiligence,
-      other: t.formInterestOther,
-    };
-    const lines = [
-      t.waGreeting,
-      "",
-      `${t.formName}: ${data.get("name")}`,
-      `${t.formEmail}: ${data.get("email")}`,
-      `${t.formCompany}: ${data.get("company") || "-"}`,
-      `${t.formInterest}: ${interestLabels[interest] ?? "-"}`,
-      "",
-      String(data.get("message") ?? ""),
-    ];
-    const url = `${contactInfo.phoneMadagascarWa}?text=${encodeURIComponent(
-      lines.join("\n")
-    )}`;
-    window.open(url, "_blank", "noopener,noreferrer");
-    setSubmitted(true);
+    if (loading) return;
+
+    setErrorMessage("");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    const name = String(data.get("name") ?? "").trim();
+    const email = String(data.get("email") ?? "").trim();
+    const company = String(data.get("company") ?? "").trim();
+    const interest = String(data.get("interest") ?? "").trim();
+    const message = String(data.get("message") ?? "").trim();
+
+    if (!name) {
+      setErrorMessage(locale === "fr" ? "Veuillez saisir votre nom." : "Please enter your name.");
+      return;
+    }
+    if (!email || !EMAIL_RE.test(email)) {
+      setErrorMessage(locale === "fr" ? "Veuillez saisir une adresse e-mail valide." : "Please enter a valid email address.");
+      return;
+    }
+    if (!interest) {
+      setErrorMessage(locale === "fr" ? "Veuillez sélectionner un domaine d\u2019intérêt." : "Please select an area of interest.");
+      return;
+    }
+    if (!message) {
+      setErrorMessage(locale === "fr" ? "Veuillez saisir votre message." : "Please enter your message.");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const payload = new URLSearchParams();
+      payload.append("form-name", "kazak-contact");
+      payload.append("name", name);
+      payload.append("email", email);
+      payload.append("company", company);
+      payload.append("interest", interest);
+      payload.append("message", message);
+
+      const res = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: payload.toString(),
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      setSubmitted(true);
+      form.reset();
+    } catch {
+      setErrorMessage(t.formErrorDesc);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -206,61 +243,110 @@ const Contact: React.FC = () => {
                 <p className="text-sm text-cream/40">
                   {t.formSuccessDesc}
                 </p>
-                <p className="text-[10px] text-cream/20 mt-6 uppercase tracking-wider">
-                  WhatsApp &mdash; {contactInfo.phoneMadagascarDisplay}
-                </p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <form
+                ref={formRef}
+                name="kazak-contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="flex flex-col gap-4"
+                noValidate
+              >
+                <input type="hidden" name="form-name" value="kazak-contact" />
+                <p className="hidden" aria-hidden="true">
+                  <label>
+                    Don&apos;t fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                  </label>
+                </p>
+
                 <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="contact-name" className="sr-only">{t.formName}</label>
+                    <input
+                      id="contact-name"
+                      type="text"
+                      name="name"
+                      placeholder={t.formName}
+                      required
+                      maxLength={100}
+                      autoComplete="name"
+                      className="w-full rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm placeholder:text-cream/40 focus:outline-none focus:border-gold-500/40 transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="contact-email" className="sr-only">{t.formEmail}</label>
+                    <input
+                      id="contact-email"
+                      type="email"
+                      name="email"
+                      placeholder={t.formEmail}
+                      required
+                      maxLength={254}
+                      autoComplete="email"
+                      className="w-full rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm placeholder:text-cream/40 focus:outline-none focus:border-gold-500/40 transition-colors"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="contact-company" className="sr-only">{t.formCompany}</label>
                   <input
+                    id="contact-company"
                     type="text"
-                    name="name"
-                    placeholder={t.formName}
-                    required
-                    className="rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm placeholder:text-cream/20 focus:outline-none focus:border-gold-500/40 transition-colors"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder={t.formEmail}
-                    required
-                    className="rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm placeholder:text-cream/20 focus:outline-none focus:border-gold-500/40 transition-colors"
+                    name="company"
+                    placeholder={t.formCompany}
+                    maxLength={150}
+                    autoComplete="organization"
+                    className="w-full rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm placeholder:text-cream/40 focus:outline-none focus:border-gold-500/40 transition-colors"
                   />
                 </div>
-                <input
-                  type="text"
-                  name="company"
-                  placeholder={t.formCompany}
-                  className="rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm placeholder:text-cream/20 focus:outline-none focus:border-gold-500/40 transition-colors"
-                />
-                <select
-                  name="interest"
-                  className="rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm focus:outline-none focus:border-gold-500/40 transition-colors"
-                  defaultValue=""
-                >
-                  <option value="" disabled className="bg-anthracite">
-                    {t.formInterest}
-                  </option>
-                  <option value="buy-site" className="bg-anthracite">{t.formInterestInvestment}</option>
-                  <option value="joint-venture" className="bg-anthracite">{t.formInterestPartnership}</option>
-                  <option value="expand-portfolio" className="bg-anthracite">{t.formInterestPortfolio}</option>
-                  <option value="due-diligence" className="bg-anthracite">{t.formInterestDueDiligence}</option>
-                  <option value="other" className="bg-anthracite">{t.formInterestOther}</option>
-                </select>
-                <textarea
-                  name="message"
-                  placeholder={t.formMessage}
-                  required
-                  rows={4}
-                  className="rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm placeholder:text-cream/20 focus:outline-none focus:border-gold-500/40 transition-colors resize-none"
-                />
+                <div>
+                  <label htmlFor="contact-interest" className="sr-only">{t.formInterest}</label>
+                  <select
+                    id="contact-interest"
+                    name="interest"
+                    required
+                    defaultValue=""
+                    className="w-full rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm focus:outline-none focus:border-gold-500/40 transition-colors"
+                  >
+                    <option value="" disabled className="bg-anthracite">
+                      {t.formInterest}
+                    </option>
+                    <option value="buy-site" className="bg-anthracite">{t.formInterestInvestment}</option>
+                    <option value="joint-venture" className="bg-anthracite">{t.formInterestPartnership}</option>
+                    <option value="expand-portfolio" className="bg-anthracite">{t.formInterestPortfolio}</option>
+                    <option value="due-diligence" className="bg-anthracite">{t.formInterestDueDiligence}</option>
+                    <option value="other" className="bg-anthracite">{t.formInterestOther}</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="contact-message" className="sr-only">{t.formMessage}</label>
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    placeholder={t.formMessage}
+                    required
+                    rows={4}
+                    maxLength={2000}
+                    className="w-full rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm placeholder:text-cream/40 focus:outline-none focus:border-gold-500/40 transition-colors resize-none"
+                  />
+                </div>
+
+                {errorMessage && (
+                  <p className="text-sm text-red-400" role="alert">
+                    {errorMessage}
+                  </p>
+                )}
+
                 <div className="flex items-center justify-between">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto px-8 py-3.5 bg-gold-500 text-graphite font-semibold text-sm rounded-lg hover:bg-gold-400 transition-all hover:shadow-lg hover:shadow-gold-500/20"
+                    disabled={loading}
+                    className="w-full sm:w-auto px-8 py-3.5 bg-gold-500 text-graphite font-semibold text-sm rounded-lg hover:bg-gold-400 transition-all hover:shadow-lg hover:shadow-gold-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {t.formSubmit}
+                    {loading ? t.formSending : t.formSubmit}
                   </button>
                 </div>
               </form>

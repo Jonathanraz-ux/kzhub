@@ -132,8 +132,10 @@ export type TranslationKeys = {
   formInterestOther: string;
   formMessage: string;
   formSubmit: string;
+  formSending: string;
   formSuccessTitle: string;
   formSuccessDesc: string;
+  formErrorDesc: string;
 
   footerHome: string;
   footerOpportunities: string;

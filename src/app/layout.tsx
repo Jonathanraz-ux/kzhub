@@ -106,6 +106,20 @@ export default function RootLayout({
         <LanguageProvider>
           <LangUpdater />
           <Preloader />
+          <form
+            name="kazak-contact"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            hidden
+          >
+            <input type="hidden" name="form-name" value="kazak-contact" />
+            <input name="bot-field" />
+            <input name="name" />
+            <input name="email" />
+            <input name="company" />
+            <input name="interest" />
+            <textarea name="message" />
+          </form>
           <Layout>{children}</Layout>
         </LanguageProvider>
       </body>
