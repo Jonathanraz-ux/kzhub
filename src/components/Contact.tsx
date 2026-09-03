@@ -47,10 +47,10 @@ const Contact: React.FC = () => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    const name = String(data.get("name") ?? "").trim();
+    const name = String(data.get("fullName") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const company = String(data.get("company") ?? "").trim();
-    const interest = String(data.get("interest") ?? "").trim();
+    const interest = String(data.get("areaOfInterest") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
 
     if (!name) {
@@ -75,10 +75,10 @@ const Contact: React.FC = () => {
     try {
       const payload = new URLSearchParams();
       payload.append("form-name", "kazak-contact");
-      payload.append("name", name);
+      payload.append("fullName", name);
       payload.append("email", email);
       payload.append("company", company);
-      payload.append("interest", interest);
+      payload.append("areaOfInterest", interest);
       payload.append("message", message);
 
       const res = await fetch("/__forms.html", {
@@ -268,7 +268,7 @@ const Contact: React.FC = () => {
                     <input
                       id="contact-name"
                       type="text"
-                      name="name"
+                      name="fullName"
                       placeholder={t.formName}
                       required
                       maxLength={100}
@@ -306,7 +306,7 @@ const Contact: React.FC = () => {
                   <label htmlFor="contact-interest" className="sr-only">{t.formInterest}</label>
                   <select
                     id="contact-interest"
-                    name="interest"
+                    name="areaOfInterest"
                     required
                     defaultValue=""
                     className="w-full rounded-lg px-4 py-3 bg-black/20 border border-white/[0.08] text-cream text-sm focus:outline-none focus:border-gold-500/40 transition-colors"

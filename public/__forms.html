@@ -1,14 +1,24 @@
-<html>
-  <head></head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Netlify Forms</title>
+  </head>
   <body>
-    <form name="kazak-contact" data-netlify="true" hidden>
+    <form
+      name="kazak-contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
       <input type="hidden" name="form-name" value="kazak-contact" />
-      <input name="name" type="text" />
-      <input name="email" type="text" />
-      <input name="company" type="text" />
-      <input name="interest" type="text" />
+      <input type="text" name="bot-field" />
+      <input type="text" name="fullName" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="areaOfInterest" />
       <textarea name="message"></textarea>
-      <input name="bot-field" />
     </form>
   </body>
 </html>
