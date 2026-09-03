@@ -90,7 +90,6 @@ export const expertTeam: ExpertTeamMember[] = [
     roleKey: "expertRole7",
     titleKey: "expertTitle7",
     expertiseKey: "expertExpertise7",
-    initials: "XR",
     photo: null as string | null,
     photoAlt: {
       en: "Portrait of Xavier R., Director of Security & Legal Compliance",
