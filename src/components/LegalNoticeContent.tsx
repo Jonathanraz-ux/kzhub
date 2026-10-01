@@ -16,7 +16,7 @@ const CONTENT: Record<"en" | "fr", Content> = {
         heading: "Publisher",
         paras: [
           "This website is published by Kazak Ltd., a business development company operating in Madagascar, through its specialized division Kazak Mining Hub.",
-          `Address: 3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar\nEmail: ${contactInfo.email}\nPhone / WhatsApp: ${contactInfo.phoneMadagascarDisplay} (Madagascar) — ${contactInfo.phoneIntlDisplay} (International)`,
+          `Address: 3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar\nEmail: ${contactInfo.email}\nPhone / WhatsApp: ${contactInfo.phoneMadagascarDisplay} (Madagascar)`,
           "Company registration details (NIF, STAT, RCS): to be completed.",
         ],
       },
@@ -60,7 +60,7 @@ const CONTENT: Record<"en" | "fr", Content> = {
         heading: "Éditeur",
         paras: [
           "Le présent site est édité par Kazak Ltd., société de développement commercial opérant à Madagascar, à travers sa division spécialisée Kazak Mining Hub.",
-          `Adresse : 3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar\nE-mail : ${contactInfo.email}\nTéléphone / WhatsApp : ${contactInfo.phoneMadagascarDisplay} (Madagascar) — ${contactInfo.phoneIntlDisplay} (International)`,
+          `Adresse : 3 Rue Ravoninahitriniarivo, Antananarivo 101, Madagascar\nE-mail : ${contactInfo.email}\nTéléphone / WhatsApp : ${contactInfo.phoneMadagascarDisplay} (Madagascar)`,
           "Numéros d'immatriculation de la société (NIF, STAT, RCS) : à compléter.",
         ],
       },

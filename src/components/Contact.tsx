@@ -20,21 +20,12 @@ const Contact: React.FC = () => {
       href: contactInfo.phoneMadagascarTel,
       aria: `${contactInfo.phoneMadagascarDisplay} — Madagascar`,
     },
-    {
-      display: contactInfo.phoneIntlDisplay,
-      href: contactInfo.phoneIntlTel,
-      aria: `${contactInfo.phoneIntlDisplay} — International`,
-    },
   ];
 
   const whatsappLines = [
     {
       display: contactInfo.phoneMadagascarDisplay,
       href: contactInfo.phoneMadagascarWa,
-    },
-    {
-      display: contactInfo.phoneIntlDisplay,
-      href: contactInfo.phoneIntlWa,
     },
   ];
 

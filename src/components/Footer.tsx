@@ -94,9 +94,6 @@ const Footer: React.FC = () => {
               <a href="tel:+261387596361" className="block text-xs text-cream/30 hover:text-gold-400 transition-colors">
                 038 75 963 61
               </a>
-              <a href="tel:+18483612502" className="block text-xs text-cream/30 hover:text-gold-400 transition-colors">
-                001 (848) 361-2502
-              </a>
             </div>
             <div className="flex gap-2.5 mb-4">
               <a
@@ -105,15 +102,6 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center text-cream/30 hover:border-gold-500/30 hover:text-gold-400 transition-all"
                 aria-label="WhatsApp Madagascar — 038 75 963 61"
-              >
-                <MessageCircle size={14} />
-              </a>
-              <a
-                href="https://wa.me/18483612502"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full border border-white/[0.08] flex items-center justify-center text-cream/30 hover:border-gold-500/30 hover:text-gold-400 transition-all"
-                aria-label="WhatsApp International — 001 (848) 361-2502"
               >
                 <MessageCircle size={14} />
               </a>
